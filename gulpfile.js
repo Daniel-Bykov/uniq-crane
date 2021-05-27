@@ -13,10 +13,10 @@ let project_folder = "dist",
 
     src: {
       html: [source_folder + "/*.html", "!" + source_folder + "/~*.html"],
-      css: [source_folder + "/assets/styles/style.scss", source_folder + "/assets/styles/reset.css"],
+      css: [source_folder + "/assets/styles/style.scss", source_folder + "/assets/styles/reset.css", source_folder + "/assets/styles/helpers.scss"],
       js: [source_folder + "/assets/js/script.js", source_folder + "/assets/js/*.js"],
       img: source_folder + "/assets/img/**/*.{jpg,png,svg,ico,webp}",
-      fonts: source_folder + "/assets/fonts/*.otf"
+      fonts: source_folder + "/assets/fonts/*.ttf"
     },
 
     watch: {
