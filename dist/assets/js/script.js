@@ -13,5 +13,30 @@ categoryCrane.forEach((item,index)=>{
   })
 })
 
+let nextRevButt = document.querySelector('.review-next')
+let prevRevButt = document.querySelector('.review-prev')
+
+nextRevButt.addEventListener('click', ()=>{
+  swiper.slideNext();
+  })
+
+  prevRevButt.addEventListener('click', ()=>{
+    swiper.slidePrev();
+    })
  });
 
+
+
+
+ const swiper = new Swiper(".mySwiper", {
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+
+  width: 580,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
