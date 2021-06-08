@@ -199,8 +199,14 @@
   </div>
 </div>
 
+
 <div class="section section-bg-2">
   @@include('~header.html')
+
+         <div >
+            <img class="dual__background-right" src="./assets/img/backgrounds/3.png" alt="">
+          </div>
+
   <div class="dual">
     <div class="content-container">
       <div class="dual-box">
@@ -220,9 +226,7 @@
 
         <div class="services-list">
 
-          <div class="dual__background-right">
-            <img src="./assets/img/backgrounds/3.png" alt="">
-          </div>
+   
 
           <ul class="services-list-wrap">
             <li class="services-list-item"> <span class="services-list-item__number">01</span>
@@ -253,9 +257,9 @@
   </div>
 </div>
 
-
 <div class="section section-bg-2">
   @@include('~header.html')
+
   <div class="dual">
     <div class="content-container">
       <div class="dual-box">
@@ -467,8 +471,6 @@
   </div>
 </div>
 
-
-
 <div class="section section-bg-2">
   @@include('~header.html')
   <div class="dual">
@@ -517,8 +519,8 @@
 
         <div class="dual-box__right">
 
-          <div class="dual__background-right">
-            <img src="./assets/img/backgrounds/5.png" alt="">
+          <div >
+            <img class="dual__background-right" src="./assets/img/backgrounds/5.png" alt="">
           </div>
 
           <header class="clients__header">
@@ -556,7 +558,6 @@
   </div>
 </div>
 
-
 <div class="section section-bg-2">
   @@include('~header.html')
 
@@ -585,9 +586,9 @@
           кранах всех типов</p>
       </button>
     </div>
-    <div class="switch-catalog__description">
+    <div class="switch-catalog__description switch-catalog__description--features">
       <div class="description-item dsp-f">
-        <img class="description-item__img" src="./assets/img/backgrounds/services/1.png" alt="">
+        <img class="description-item__img description-item__img--features" src="./assets/img/backgrounds/services/1.png" alt="">
         <p class="description-item__text">Благодаря собственному отделу технического контролья мы добились высокого
           качества нашего оборудования, минимальный процент брака и рекламаций со стороны наших заказчиков.
           Именно по этому мы готовы предоставить расширенную гарантию на краны до 36 месяцев. Подробности уточняйте
@@ -595,7 +596,7 @@
         <button class="button"> <span class="button__text">Оставить заявку</span> </button>
       </div>
       <div class="description-item">
-        <img class="description-item__img" src="./assets/img/backgrounds/services/2.png" alt="">
+        <img class="description-item__img description-item__img--features" src="./assets/img/backgrounds/services/2.png" alt="">
         <p class="description-item__text">Для клиентов, чьи объекты расположены в пределах Москвы и близлежащих
           к ней городов, мы подготовили специальную программу, в рамках которой вы можете пригласить эксперта к себе
           на объект.
@@ -605,7 +606,7 @@
         <button class="button"> <span class="button__text">Оставить заявку</span> </button>
       </div>
       <div class="description-item">
-        <img class="description-item__img" src="./assets/img/backgrounds/services/3.png" alt="">
+        <img class="description-item__img description-item__img--features" src="./assets/img/backgrounds/services/3.png" alt="">
         <p class="description-item__text">Мы самостоятельно изготавливаем каретки подвесных мостовых кранов и кран-балок
           любой грузоподъёмности. Конструкция наших тележек позволяет увеличить строительную высоту подъёма в стеснённых
           условиях, кроме того наши тележки имеют плавающее крепление позволяя игнорировать небольшие неровности
@@ -613,7 +614,7 @@
         <button class="button"> <span class="button__text">Оставить заявку</span> </button>
       </div>
       <div class="description-item">
-        <img class="description-item__img" src="./assets/img/backgrounds/services/4.png" alt="">
+        <img class="description-item__img description-item__img--features" src="./assets/img/backgrounds/services/4.png" alt="">
         <p class="description-item__text">Для того, чтобы обеспечить комфортную работу консольных кранов на колонне
           с электрическим типом управления, мы предусмотрели установку частотной системы управления на поворот стрелы
           даже в базовых версиях крана. Такая система позволит избежать резкость в повороте и сделает работу с краном
@@ -621,7 +622,7 @@
         <button class="button"> <span class="button__text">Оставить заявку</span> </button>
       </div>
       <div class="description-item">
-        <img class="description-item__img" src="./assets/img/backgrounds/services/5.png" alt="">
+        <img class="description-item__img description-item__img--features" src="./assets/img/backgrounds/services/5.png" alt="">
         <p class="description-item__text">Для удобства монтажа и обслуживания наших кранов все узловые элементы
           выполнены из фланцевого соединения. Таким образом монтаж электрического мостового крана, или кран-балки может
           быть произведён без использования сварки.</p>
@@ -631,15 +632,14 @@
   </div>
 </div>
 
-
-<div class="section section-bg-2">
+<div class="section section-bg-2 fp-auto-height-responsive">
   @@include('~header.html')
 
   <div class="geography">
 
-    <div class="geography-map">
-      <img src="./assets/img/backgrounds/6.png" alt="">
-      <div class="map-country map-country--belarus">
+    <div >
+      <img class="geography-map" src="./assets/img/backgrounds/6.png" alt="">
+      <!-- <div class="map-country map-country--belarus">
         <div class="map-country__navi">
           <div class="map-country__dot"></div>
           <div class="map-country__line"></div>
@@ -666,7 +666,7 @@
           <div class="map-country__line"></div>
         </div>
         <p class="map-country__name">Туркменистан</p>
-      </div>
+      </div> -->
 
     </div>
 
@@ -763,13 +763,14 @@
 
 </div>
 
-
-<div class="footer section section-bg-2">
+<div class="footer section section-bg-2 fp-auto-height-responsive">
 
   @@include('~header.html')
 
 
   <div class="dual">
+    
+    <img class="men" src="./assets/img/backgrounds/men.png" alt="">
     <div class="content-container">
       <div class="dual-box">
 
@@ -822,7 +823,6 @@
             <img src="./assets/img/backgrounds/7.png" alt="">
           </div>
 
-          <img class="men" src="./assets/img/backgrounds/men.png" alt="">
 
           <div class="recall-wrap">
             <div class="recall-wrap-2">
@@ -837,6 +837,8 @@
 
               </div>
 
+              <div class="mg-bt-40">
+
               <div class="personal-data__input-box">
                 <input id="user-name" type="text" class="personal-data__input" placeholder="Введите ваше имя">
               </div>
@@ -845,7 +847,9 @@
                 <input id="phone-number" type="text" class="personal-data__input" placeholder="Введите ваш телефон">
               </div>
 
-              <button class="button mg-bt-25"> <span class="button__text">отправить запрос</span> </button>
+            </div>
+
+              <button class="button mg-bt-40"> <span class="button__text">отправить запрос</span> </button>
               <div>
                 <input type="checkbox" class="check__element" id="privacy-policy" name="privacy-policy" value="yes">
                 <label for="privacy-policy">
@@ -875,6 +879,7 @@
   </div>
 
 </div>
+
 </div>
 
 <script type="text/javascript" src="./assets/js/scrolloverflow.min.js"></script>

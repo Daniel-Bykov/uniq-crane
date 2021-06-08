@@ -112,19 +112,21 @@ nextRevButt.addEventListener('click', ()=>{
     let activeSlide = document.querySelector('.pagination-page--active');
 
     document.body.addEventListener('wheel', function(e) {
+      // fullpage_api.fitToSection();
       section.forEach((item, index) => {
         if(item.classList.contains("active")){
            activeSlide.innerHTML = fullpage_api.getActiveSection().index+1;
         }
       })
     })
+  
+    let dot = document.querySelectorAll(".fp-sr-only")
+
+    let active = fullpage_api.getActiveSection().index;
+    console.log(active)
 
     document.querySelector(".fp-right").addEventListener('click', function(e) {
-      section.forEach((item, index) => {
-        if(item.classList.contains("active")){
            activeSlide.innerHTML = fullpage_api.getActiveSection().index+1;
-        }
-      })
     })
       
  });
@@ -150,6 +152,9 @@ new fullpage('#fullpage', {
   
   navigation: true,
   navigationPosition: 'right',
-  // scrollOverflow:true,
+  autoScrolling: false,
+  fitToSection: true,
+  touchSensitivity: 100,
   bigSectionsDestination: 'top',
+
 });

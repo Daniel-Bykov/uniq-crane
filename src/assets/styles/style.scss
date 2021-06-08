@@ -520,6 +520,7 @@ body {
 .switch-catalog{
   height: calc(100% - 120px);
   display: flex;
+  max-height: 1000px;
   max-width: 1920px;
   margin: 0 auto;
   right: 0;
@@ -538,6 +539,10 @@ body {
   &__description{
     position: relative;
     width: 50%;
+
+    &--features{
+      position: unset;
+    }
 
     @media (max-width:1230px) {
     width: 100%;
@@ -559,6 +564,8 @@ body {
   justify-content: center;
   padding: 0;
   width: 100%;
+  max-height: 200px;
+  min-height: 110px;
 
   &--5{
       height: calc((100vh - 120px)/ 5);
@@ -649,6 +656,17 @@ body {
     bottom: 0;
     top: 0;
     height: 100%;
+
+    &--features{
+      position: absolute;
+      right: unset;
+      z-index: -1;
+      bottom: unset;
+      top: 0;
+      height: unset;
+      left: 0;
+      width: 100%;
+    }
 
     @media (max-width:1230px) {
       display: none;
@@ -769,6 +787,19 @@ body {
     }
   }
 
+  &__background{
+    position: absolute;
+    top: 0px;
+    z-index: -2;
+    left: 50%;
+    height: 100%;
+    min-width: 100%;
+
+    img{
+      width: 50%;
+    }
+  }
+
   &__background-left{
     position: absolute;
     top: -120px;
@@ -783,12 +814,19 @@ body {
   }
 
   &__background-right{
+    width: 50%;
     position: absolute;
-    top: -120px;
     z-index: -1;
     left: 50%;
     height: 100%;
-    min-width: 100%;
+    bottom: 0;
+
+    // position: absolute;
+    // top: -120px;
+    // z-index: -1;
+    // left: 50%;
+    // height: 100%;
+    // min-width: 100%;
 
     img{
       width: 50%;
@@ -835,8 +873,9 @@ min-width: 455px;
   border-left: 1px solid rgba(255,255,255,.2);
   border-right: 1px solid rgba(255,255,255,.2);
   box-sizing: border-box;
-  height: calc((100vh - 120px) / 7);
-  max-width: 880px;
+  // max-width: 880px;
+  height: calc((100vh - 120px)/ 7);
+  max-height: 200px;
 
   &__text{
     font-weight: 700;
@@ -1096,6 +1135,7 @@ min-width: 455px;
   position: absolute;
   top: 0;
   z-index: -3;
+  width: 100%;
 }
 
 .geography__header{
@@ -1361,7 +1401,7 @@ line-height: 35px;
   z-index: 1;
   position: absolute;
   right: 48%;
-  top: 20px;
+  bottom: 57px;
   transform: translateX(48%);
 }
 
@@ -1513,4 +1553,11 @@ a.active {
   height: 20px;
   cursor: pointer;
   text-decoration: none;
+}
+
+
+.fp-scroller {
+  overflow: hidden;
+  min-height: 100%;
+  height: 1000px;
 }
