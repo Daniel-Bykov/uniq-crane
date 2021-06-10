@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
+  
+  let header = document.querySelectorAll('.header');
+
+  let pageUpbutt = document.createElement('button');
+
+  //-----------------------Media Query 1
 
   const mediaQuery = window.matchMedia('(min-width: 1230px)')
   function handleTabletChange(e) {
@@ -6,16 +12,14 @@ document.addEventListener('DOMContentLoaded', function () {
     if (e.matches) {
       console.log('Media Query Matched!')
 
-  
-
-      let header = document.querySelectorAll('.header');
+       //___________________________Header Hidden
       header.forEach((item, index) => {
         if (index!=0){
           item.style.display = 'flex';
           console.log('hello');
         }
       })
-
+        //__________________________Initial FullPage
       new fullpage('#fullpage', {  
         navigation: true,
         navigationPosition: 'right',
@@ -24,11 +28,21 @@ document.addEventListener('DOMContentLoaded', function () {
         fitToSection: true,
         touchSensitivity: 100,
         bigSectionsDestination: 'top',
+
+        onLeave: function( section, origin, destination, direction){
+          var loadedSlide = this;
+          
+          let scroller = document.querySelectorAll('.fp-scroller');
+         
+          scroller.forEach((item, index) => {
+            item.style.transform = "translate(0px, 0px) translateZ(0px)";
+            })
+        }
       
       });
 
+      //__________________________Navigation
       let nav = document.querySelector('.fp-right')
-      let pageUpbutt = document.createElement('button');
       pageUpbutt.className = "page-up";
       pageUpbutt.innerHTML = "НАВЕРХ";
     
@@ -38,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function () {
       nav.append(paginationPage)
     
       nav.append(pageUpbutt)
-    
       let activeSlideNumber = 0;
     
       let pageUp =  document.querySelector('.page-up');
@@ -49,7 +62,6 @@ document.addEventListener('DOMContentLoaded', function () {
         let activeSlide = document.querySelector('.pagination-page--active');
     
         document.body.addEventListener('wheel', function(e) {
-          // fullpage_api.fitToSection();
           section.forEach((item, index) => {
             if(item.classList.contains("active")){
                activeSlide.innerHTML = fullpage_api.getActiveSection().index+1;
@@ -70,6 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
   mediaQuery.addListener(handleTabletChange);
   handleTabletChange(mediaQuery);
 
+  //-----------------------Media Query 2
 
   const mediaQuery1 = window.matchMedia('(max-width: 1230px)')
   function handleTabletChange1(e) {
@@ -91,17 +104,19 @@ document.addEventListener('DOMContentLoaded', function () {
   mediaQuery1.addListener(handleTabletChange1);
   handleTabletChange1(mediaQuery1);
 
-
+  //-----------------------Media Query 1
 
   const enterToProfile = document.getElementById('leave-request')
   const popupBlock = document.querySelector('.popup__block')
   const popupClose = document.querySelector('.popup__close')
   const popup = document.querySelector('.popup')
   const body = document.body;
-
-
+  let nav = document.querySelector('.fp-right')
   window.onclick = function (event) {
+
     if (event.target == popup) {
+      fullpage_api.setAllowScrolling(true);
+      nav.classList.remove('dsp-n')
       console.log(popup)
       popupBlock.classList.remove("popup__block--open");
       popup.classList.remove("popup--open");
@@ -114,6 +129,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   enterToProfile.addEventListener('click', () => {
+    fullpage_api.setAllowScrolling(false);
+    nav.classList.add('dsp-n')
     popupBlock.classList.add("popup__block--open")
     popup.classList.add("popup--open");
     const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
@@ -122,7 +139,9 @@ document.addEventListener('DOMContentLoaded', function () {
     body.classList.add('stop-scroll');
 
     popupClose.addEventListener('click', () => {
+      fullpage_api.setAllowScrolling(true);
       popupBlock.classList.remove("popup__block--open")
+      nav.classList.remove('dsp-n')
       popup.classList.remove("popup--open");
       const body = document.body;
       const scrollY = body.style.top;
