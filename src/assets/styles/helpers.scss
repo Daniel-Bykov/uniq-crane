@@ -20,6 +20,12 @@
     flex-wrap: wrap;
   }
 
+  &-fjc {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   &-fc {
     display: flex;
     flex-direction: column;

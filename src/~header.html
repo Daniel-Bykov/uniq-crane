@@ -32,10 +32,44 @@
             <a class="header-nav__item" href="">Контакты</a>
           </nav>
           <div class="dsp-f">
-            <a class="phone" href="tel:+74955405053">+7 495 540 50 53</a>
+            <a class="phone" href="tel:+74955405053"> <span class="phone__text">+7 495 540 50 53</span></a>
           </div>
         </div>
-        <button class="request">оставить заявку</button>
+        <button id="leave-request" class="request">оставить заявку</button>
       </div>
     </header>   
+  </div>
+
+
+  <div class="popup">
+    <div class="popup__block" style="max-width: 460px;">
+      <div class="popup__close"></div>
+      <div class="enter-form__header">
+        <p class="recall-popup__title">Оставьте заявку</p>
+        <p class="recall-popup__text">и мы вам перезвоним!</p>
+      </div>
+
+
+      <div class="personal-data__input-box">
+        <input id="user-name" type="text" class="personal-data__input personal-data__input--popup" placeholder="Введите ваше имя">
+      </div>
+
+      <div class="personal-data__input-box">
+        <input id="phone-number" type="text" class="personal-data__input personal-data__input--popup" placeholder="Введите ваш телефон">
+      </div>
+
+      <div class="enter-form__button-wrap">
+        <button class="button  button--popup mg-bt-40"> <span class="button__text">отправить запрос</span> </button>
+              <div>
+                <input type="checkbox" class="check__element" id="privacy-policy" name="privacy-policy" value="yes">
+                <label for="privacy-policy">
+                  <a href="#"><span>Нажимая на кнопку «Получить консультацию», вы соглашаетесь
+                      с политикой конфиденциальности</span></a> </label>
+              </div>
+      </div>
+
+      <div class="enter-form-footer">
+        <a href="#" class="title-12 link">Забыли пароль?</a>
+      </div>
+    </div>
   </div>

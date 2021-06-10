@@ -1,5 +1,141 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+  const mediaQuery = window.matchMedia('(min-width: 1230px)')
+  function handleTabletChange(e) {
+
+    if (e.matches) {
+      console.log('Media Query Matched!')
+
+  
+
+      let header = document.querySelectorAll('.header');
+      header.forEach((item, index) => {
+        if (index!=0){
+          item.style.display = 'flex';
+          console.log('hello');
+        }
+      })
+
+      new fullpage('#fullpage', {  
+        navigation: true,
+        navigationPosition: 'right',
+        autoScrolling: true,
+        scrollOverflow:true,
+        fitToSection: true,
+        touchSensitivity: 100,
+        bigSectionsDestination: 'top',
+      
+      });
+
+      let nav = document.querySelector('.fp-right')
+      let pageUpbutt = document.createElement('button');
+      pageUpbutt.className = "page-up";
+      pageUpbutt.innerHTML = "НАВЕРХ";
+    
+      let paginationPage = document.createElement('div');
+      paginationPage.className = "pagination-page";
+      paginationPage.innerHTML = "<span class=\"pagination-page--active\">1</span><span class=pagination-page--all>/9</span> ";
+      nav.append(paginationPage)
+    
+      nav.append(pageUpbutt)
+    
+      let activeSlideNumber = 0;
+    
+      let pageUp =  document.querySelector('.page-up');
+        pageUp.addEventListener('click', function(e) {
+        fullpage_api.moveTo(1); });
+    
+        let section = document.querySelectorAll('.section');
+        let activeSlide = document.querySelector('.pagination-page--active');
+    
+        document.body.addEventListener('wheel', function(e) {
+          // fullpage_api.fitToSection();
+          section.forEach((item, index) => {
+            if(item.classList.contains("active")){
+               activeSlide.innerHTML = fullpage_api.getActiveSection().index+1;
+            }
+          })
+        })
+      
+        let dot = document.querySelectorAll(".fp-sr-only")
+    
+        let active = fullpage_api.getActiveSection().index;
+        console.log(active)
+    
+        document.querySelector(".fp-right").addEventListener('click', function(e) {
+               activeSlide.innerHTML = fullpage_api.getActiveSection().index+1;
+        })
+    }
+  }
+  mediaQuery.addListener(handleTabletChange);
+  handleTabletChange(mediaQuery);
+
+
+  const mediaQuery1 = window.matchMedia('(max-width: 1230px)')
+  function handleTabletChange1(e) {
+
+    if (e.matches) {
+      console.log('Media Query Matched!')
+     
+      let header = document.querySelectorAll('.header');
+      header.forEach((item, index) => {
+        if (index!=0){
+          item.style.display = 'none';
+          console.log('hello');
+        }
+      })
+
+        fullpage_api.destroy('all');
+    }
+  }
+  mediaQuery1.addListener(handleTabletChange1);
+  handleTabletChange1(mediaQuery1);
+
+
+
+  const enterToProfile = document.getElementById('leave-request')
+  const popupBlock = document.querySelector('.popup__block')
+  const popupClose = document.querySelector('.popup__close')
+  const popup = document.querySelector('.popup')
+  const body = document.body;
+
+
+  window.onclick = function (event) {
+    if (event.target == popup) {
+      console.log(popup)
+      popupBlock.classList.remove("popup__block--open");
+      popup.classList.remove("popup--open");
+      const body = document.body;
+      const scrollY = body.style.top;
+      body.style.top = '';
+      body.classList.remove('stop-scroll');
+      window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    }
+  }
+
+  enterToProfile.addEventListener('click', () => {
+    popupBlock.classList.add("popup__block--open")
+    popup.classList.add("popup--open");
+    const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+    const body = document.body;
+    body.style.top = `-${scrollY}`;
+    body.classList.add('stop-scroll');
+
+    popupClose.addEventListener('click', () => {
+      popupBlock.classList.remove("popup__block--open")
+      popup.classList.remove("popup--open");
+      const body = document.body;
+      const scrollY = body.style.top;
+      body.style.top = '';
+      body.classList.remove('stop-scroll');
+      window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    })
+
+  })
+
+  window.addEventListener('scroll', () => {
+    document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+  });
 
 
 let categoryCrane = document.querySelectorAll('.list-item');
@@ -89,47 +225,9 @@ nextRevButt.addEventListener('click', ()=>{
     }
     input.classList.add('personal-data__input-succsess')
   }
-
-  let nav = document.querySelector('.fp-right')
-  let pageUpbutt = document.createElement('button');
-  pageUpbutt.className = "page-up";
-  pageUpbutt.innerHTML = "НАВЕРХ";
-
-  let paginationPage = document.createElement('div');
-  paginationPage.className = "pagination-page";
-  paginationPage.innerHTML = "<span class=\"pagination-page--active\">1</span><span class=pagination-page--all>/9</span> ";
-  nav.append(paginationPage)
-
-  nav.append(pageUpbutt)
-
-  let activeSlideNumber = 0;
-
-  let pageUp =  document.querySelector('.page-up');
-    pageUp.addEventListener('click', function(e) {
-    fullpage_api.moveTo(1); });
-
-    let section = document.querySelectorAll('.section');
-    let activeSlide = document.querySelector('.pagination-page--active');
-
-    document.body.addEventListener('wheel', function(e) {
-      // fullpage_api.fitToSection();
-      section.forEach((item, index) => {
-        if(item.classList.contains("active")){
-           activeSlide.innerHTML = fullpage_api.getActiveSection().index+1;
-        }
-      })
-    })
-  
-    let dot = document.querySelectorAll(".fp-sr-only")
-
-    let active = fullpage_api.getActiveSection().index;
-    console.log(active)
-
-    document.querySelector(".fp-right").addEventListener('click', function(e) {
-           activeSlide.innerHTML = fullpage_api.getActiveSection().index+1;
-    })
       
  });
+
 
 
 
@@ -139,22 +237,33 @@ nextRevButt.addEventListener('click', ()=>{
     type: "fraction",
   },
 
-  width: 580,
+  width: 290,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+
+  breakpoints: {
+    // when window width is >= 320px
+
+    380:{
+      width: 320,
+    },
+
+    580: { 
+      width:450,
+    },
+
+    1480: { 
+      width: 580,
+    }
+
+  }
 });
 
+ 
 
-new fullpage('#fullpage', {
-	//options here
-  
-  navigation: true,
-  navigationPosition: 'right',
-  autoScrolling: false,
-  fitToSection: true,
-  touchSensitivity: 100,
-  bigSectionsDestination: 'top',
 
-});
+
+
+
