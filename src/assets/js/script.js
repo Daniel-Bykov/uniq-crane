@@ -41,6 +41,8 @@ document.addEventListener('DOMContentLoaded', function () {
       
       });
 
+      
+
       //__________________________Navigation
       let nav = document.querySelector('.fp-right')
       pageUpbutt.className = "page-up";
@@ -104,57 +106,6 @@ document.addEventListener('DOMContentLoaded', function () {
   mediaQuery1.addListener(handleTabletChange1);
   handleTabletChange1(mediaQuery1);
 
-  //-----------------------Media Query 1
-
-  const enterToProfile = document.getElementById('leave-request')
-  const popupBlock = document.querySelector('.popup__block')
-  const popupClose = document.querySelector('.popup__close')
-  const popup = document.querySelector('.popup')
-  const body = document.body;
-  let nav = document.querySelector('.fp-right')
-  window.onclick = function (event) {
-
-    if (event.target == popup) {
-      fullpage_api.setAllowScrolling(true);
-      nav.classList.remove('dsp-n')
-      console.log(popup)
-      popupBlock.classList.remove("popup__block--open");
-      popup.classList.remove("popup--open");
-      const body = document.body;
-      const scrollY = body.style.top;
-      body.style.top = '';
-      body.classList.remove('stop-scroll');
-      window.scrollTo(0, parseInt(scrollY || '0') * -1);
-    }
-  }
-
-  enterToProfile.addEventListener('click', () => {
-    fullpage_api.setAllowScrolling(false);
-    nav.classList.add('dsp-n')
-    popupBlock.classList.add("popup__block--open")
-    popup.classList.add("popup--open");
-    const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
-    const body = document.body;
-    body.style.top = `-${scrollY}`;
-    body.classList.add('stop-scroll');
-
-    popupClose.addEventListener('click', () => {
-      fullpage_api.setAllowScrolling(true);
-      popupBlock.classList.remove("popup__block--open")
-      nav.classList.remove('dsp-n')
-      popup.classList.remove("popup--open");
-      const body = document.body;
-      const scrollY = body.style.top;
-      body.style.top = '';
-      body.classList.remove('stop-scroll');
-      window.scrollTo(0, parseInt(scrollY || '0') * -1);
-    })
-
-  })
-
-  window.addEventListener('scroll', () => {
-    document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
-  });
 
 
 let categoryCrane = document.querySelectorAll('.list-item');

@@ -101,6 +101,10 @@ html {
   overflow: hidden;
   min-height: 1000px;
 
+  &--regular{
+    min-height: unset;
+  }
+
   @media (max-width: 1230px) {
     min-height: unset;
   }
@@ -1082,6 +1086,13 @@ html {
       }
     }
 
+
+    
+    &--regular {
+      top: unset;
+
+    }
+
     // position: absolute;
     // top: -120px;
     // z-index: -1;
@@ -1816,6 +1827,10 @@ html {
   bottom: 57px;
   transform: translateX(48%);
 
+  &--regular{
+    bottom: 0;
+  }
+
   @media (max-width: 1400px) {
     display: none;
   }
@@ -1890,6 +1905,17 @@ html {
     display: flex;
     margin-top: 100px;
     justify-content: space-between;
+
+
+    &--regular{
+      display: flex;
+      padding-bottom: 50px;
+      padding-top: 50px;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      z-index: 1;
+      position: relative;
+    }
 
     @media (max-width: 1400px) {
       margin-top: 30px;
