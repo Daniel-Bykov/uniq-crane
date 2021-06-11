@@ -1,0 +1,113 @@
+
+
+.input-fields-footer{
+
+.input-group {
+  position: relative;
+  margin: 40px 0 20px;
+}
+
+input {
+  font-size: 18px;
+  padding: 26px 22px 12px 22px;
+  display: block;
+  width: 100%;
+  background: 0 0;
+  border: 1px solid #616d7d;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 0px;
+  font-family: "Noto Sans";
+  color: #ffff;
+}
+
+input:focus {
+  outline: none;
+}
+
+label {
+  font-family: "Noto Sans Light";
+  font-size: 18px;
+  line-height: 35px;
+  color: #FFFFFF;
+  position: absolute;
+  pointer-events: none;
+  left: 23px;
+  top: 12px;
+  transition: .2s ease all;
+  -moz-transition: .2s ease all;
+  -webkit-transition: .2s ease all;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+  top: 0px;
+  color: #616D7D;
+  font-family: "Noto Sans Light";
+    font-size: 12px;
+  line-height: 35px;
+}
+
+input:required:invalid label {
+  border: 1px solid #DD4956;
+  color: #DD4956;
+}
+
+}
+
+
+.input-fields-popup{
+
+  .input-group {
+    position: relative;
+    margin: 40px 0 20px;
+  }
+  
+  input {
+    font-size: 18px;
+    padding: 26px 22px 12px 22px;
+    display: block;
+    width: 100%;
+    background: 0 0;
+    border: 1px solid #616d7d;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 0px;
+    font-family: "Noto Sans";
+    color: #051223;
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  
+  label {
+    font-family: "Noto Sans Light";
+    font-size: 18px;
+    line-height: 35px;
+    color: #616D7D;
+    position: absolute;
+    pointer-events: none;
+    left: 23px;
+    top: 12px;
+    transition: .2s ease all;
+    -moz-transition: .2s ease all;
+    -webkit-transition: .2s ease all;
+  }
+  
+  input:focus ~ label,
+  input:valid ~ label {
+    top: 0px;
+    color: #616D7D;
+    font-family: "Noto Sans Light";
+      font-size: 12px;
+    line-height: 35px;
+  }
+  
+  input:required:invalid label {
+    border: 1px solid #DD4956;
+    color: #DD4956;
+  }
+  
+  
+  }
