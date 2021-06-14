@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="./assets/styles/reset.min.css">
+  <link rel="stylesheet" href="./assets/styles/style.min.css">
+  <link rel="stylesheet" href="./assets/styles/helpers.min.css">
+  <!-- <link rel="stylesheet" href="./assets/styles/nice-select.css"> -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"
+    type="text/css"> -->
+  <title>Home</title>
+</head>
+
+<body class="regular-page">
+
+
+
+  <div class="container container--regular">
+    <header class="header">
+      <a href="#" class="logo"><img src="./assets/img/logo-r.svg" alt=""></a>
+      <div class="dsp-f">
+        <div class="header__content">
+          <button class="product-catalog product-catalog--regular">
+            <div class="burger">
+              <div class="burger__lines"></div>
+            </div>
+            <span class="product-catalog__title product-catalog__title--regular">Каталог продукции</span>
+          </button>
+          <nav class="header-nav">
+            <a class="header-nav__item" href="">Прайс</a>
+            <a class="header-nav__item" href="equipment.html">Оборудование</a>
+            <a class="header-nav__item" href="crane-service.html">Сервис</a>
+            <a class="header-nav__item" href="">Информация</a>
+            <a class="header-nav__item" href="about-factory.html">О заводе</a>
+            <a class="header-nav__item" href="contacts.html">Контакты</a>
+          </nav>
+          <div class="dsp-f">
+            <a class="phone phone--regular" href="tel:+74955405053"> <span class="phone__text">+7 495 540 50 53</span></a>
+          </div>
+        </div>
+        <button class="leave-request request request--regular">оставить заявку</button>
+      </div>
+    </header>   
+  </div>
+
+
+  <div class="popup">
+    <div class="popup__block" style="max-width: 460px;">
+      <div class="popup__close"></div>
+      <div class="enter-form__header">
+        <p class="recall-popup__title">Оставьте заявку</p>
+        <p class="recall-popup__text">и мы вам перезвоним!</p>
+      </div>
+
+
+      <div class="input-fields-popup">
+
+        <div class="input-group">
+          <input type="text" required>
+          <label>Введите ваше имя</label>
+        </div>
+        
+        <div class="input-group">
+          <input type="number" required>
+          <label>Введите ваш телефон</label>
+        </div>
+    </div>
+
+      <div class="enter-form__button-wrap">
+        <button class="button  button--popup mg-bt-40"> <span class="button__text">отправить запрос</span> </button>
+              <div>
+                <input type="checkbox" class="check__element" id="privacy-policy" name="privacy-policy" value="yes">
+                <label for="privacy-policy">
+                  <a href="#"><span>Нажимая на кнопку «Получить консультацию», вы соглашаетесь
+                      с политикой конфиденциальности</span></a> </label>
+              </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+<div id="regular-page" class="content-container content-container--regular ">
+  
+  <nav class="site-navigation">
+    <nav class="mg-bt-35">
+      <a class="nav-pages" href="index.html">Главная</a>
+      <span class="nav-pages__slash">/</span>
+      <a class="nav-pages" href="crane-service.html">Крановый сервис</a>
+    </nav>
+  </nav>
+
+  <section class="mg-bt-50">
+    <h1 class="section__title mg-bt-35">Контакты</h1>
+    </section>
+
+
+</div>
+
+<div id="map" style="width: 100%; height: 800px">
+
+  <div id="regular-page" class="content-container content-container--regular ">
+  <div class="page-navigation__wrap page-navigation__wrap--map">
+
+    <div class="page-navigation page-navigation--map">
+    
+      <button class="page-navigation__button page-navigation__button--active"> <span>г. Москва г. Московский
+        ул. Хабарова д. 2
+        </span> </button>
+      <button class="page-navigation__button"> <span>д. Машково, Новомарусинский
+        проезд, д. 10
+        </span> </button>
+      <button class="page-navigation__button"> <span>Район, п. Шолоховский, 
+        ул. Социалистическая д.7
+        </span> </button>
+
+    </div></div>
+  </div>
+</div>
+
+<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script type="text/javascript">
+  ymaps.ready(init);
+  
+  function init () {
+      var myMap = new ymaps.Map("map", {
+          center:[55.593873, 37.351905],
+          zoom: 12,
+          controls: ['smallMapDefaultSet']
+      }); 
+              
+      var myGeoObjects = [];
+      
+      // Метка 1
+      myGeoObjects[0] = new ymaps.Placemark([55.593873, 37.351905],{
+                      balloonContentBody: 'Текст в балуне',
+                      },{
+                      iconLayout: 'default#image',
+                      iconImageHref: './assets/img/icons/map.svg', 
+                      iconImageSize: [70, 70],
+                      iconImageOffset: [-35, -35]
+      });
+      
+      // Метка 2
+      myGeoObjects[1] = new ymaps.Placemark([56.800151390638646,38.61400201562497],{
+                      balloonContentBody: 'Текст в балуне',
+                      },{
+                      iconLayout: 'default#image',
+                      iconImageHref: './assets/img/address.png', 
+                      iconImageSize: [70, 70],
+                      iconImageOffset: [-35, -35]
+      });
+                  
+      var clusterer = new ymaps.Clusterer({
+          clusterDisableClickZoom: false,
+          clusterOpenBalloonOnClick: false,
+      });
+      
+      clusterer.add(myGeoObjects);
+      myMap.geoObjects.add(clusterer);
+      // myMap.behaviors.disable('scrollZoom');
+  
+  }
+  </script>    

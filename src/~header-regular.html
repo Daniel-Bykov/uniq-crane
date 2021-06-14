@@ -4,7 +4,7 @@
       <a href="#" class="logo"><img src="./assets/img/logo-r.svg" alt=""></a>
       <div class="dsp-f">
         <div class="header__content">
-          <button class="product-catalog">
+          <button class="product-catalog product-catalog--regular">
             <div class="burger">
               <div class="burger__lines"></div>
             </div>
@@ -15,14 +15,14 @@
             <a class="header-nav__item" href="equipment.html">Оборудование</a>
             <a class="header-nav__item" href="crane-service.html">Сервис</a>
             <a class="header-nav__item" href="">Информация</a>
-            <a class="header-nav__item" href="">О заводе</a>
-            <a class="header-nav__item" href="">Контакты</a>
+            <a class="header-nav__item" href="about-factory.html">О заводе</a>
+            <a class="header-nav__item" href="contacts.html">Контакты</a>
           </nav>
           <div class="dsp-f">
-            <a class="phone" href="tel:+74955405053"> <span class="phone__text">+7 495 540 50 53</span></a>
+            <a class="phone phone--regular" href="tel:+74955405053"> <span class="phone__text">+7 495 540 50 53</span></a>
           </div>
         </div>
-        <button id="leave-request" class="request request--regular">оставить заявку</button>
+        <button class="leave-request request request--regular">оставить заявку</button>
       </div>
     </header>   
   </div>
@@ -37,13 +37,18 @@
       </div>
 
 
-      <div class="personal-data__input-box">
-        <input id="user-name" type="text" class="personal-data__input personal-data__input--popup" placeholder="Введите ваше имя">
-      </div>
+      <div class="input-fields-popup">
 
-      <div class="personal-data__input-box">
-        <input id="phone-number" type="text" class="personal-data__input personal-data__input--popup" placeholder="Введите ваш телефон">
-      </div>
+        <div class="input-group">
+          <input type="text" required>
+          <label>Введите ваше имя</label>
+        </div>
+        
+        <div class="input-group">
+          <input type="number" required>
+          <label>Введите ваш телефон</label>
+        </div>
+    </div>
 
       <div class="enter-form__button-wrap">
         <button class="button  button--popup mg-bt-40"> <span class="button__text">отправить запрос</span> </button>
@@ -55,8 +60,5 @@
               </div>
       </div>
 
-      <div class="enter-form-footer">
-        <a href="#" class="title-12 link">Забыли пароль?</a>
-      </div>
     </div>
   </div>
