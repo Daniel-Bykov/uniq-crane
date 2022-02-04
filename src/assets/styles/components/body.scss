@@ -1,0 +1,171 @@
+body,
+html {
+  min-width: 320px;
+  color: #ffffff;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 16px;
+  white-space: nowrap;
+  font-weight: 300;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+
+  &.stop-scroll {
+    overflow: hidden !important;
+  }
+}
+
+// .container {
+//   border-bottom: 1px rgba(255, 255, 255, 0.3) solid;
+
+//   &--regular {
+//     border: 1px solid rgba(5, 18, 35, 0.1);
+//     margin-bottom: 23px;
+//   }
+// }
+
+.regular-page {
+  position: relative;
+  color: #000000;
+}
+
+.section {
+  height: 100vh;
+  min-height: 920px;
+  position: relative;
+  overflow: hidden;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+  &--regular{
+    height: 100% !important;
+    min-height: unset;
+   border-bottom:  1px solid #DBDBDB;
+   padding: 120px 0 120px 0;
+
+  }
+
+  &--footer{
+    height: 100% !important;
+    min-height: unset;
+   border-bottom:  1px solid #DBDBDB;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 70px;
+    letter-spacing: 0.05em;
+    margin-bottom: 33px;
+    margin: 0 auto;
+    white-space: initial;
+
+    @media (max-width: 700px) {
+      font-size: 30px;
+    }
+
+    &--1 {
+      font-size: 48px;
+    }
+  }
+
+
+  &__text  {
+    font-family: "Noto Sans Light";
+    font-size: 24px;
+    line-height: 36px;
+    white-space: initial;
+
+    &-1{
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
+}
+
+  &__link {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.05em;
+    color: $red-reg;
+    display: flex;
+    align-items: center;
+
+    transition: 0.2s linear;
+
+    &:hover {
+      color: $red-hover;
+    }
+
+    &:hover::after {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17' height='11' viewBox='0 0 17 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.05 10.4498L10.636 9.0358L13.172 6.4998L-2.60083e-07 6.4998L-1.7266e-07 4.4998L13.172 4.4998L10.636 1.9648L12.05 0.549804L17 5.4998L12.05 10.4498Z' fill='%23dd4956'/%3e%3c/svg%3e ");
+    }
+
+    &:after {
+      margin-left: 13px;
+      content: "";
+      display: block;
+      height: 11px;
+      width: 17px;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17' height='11' viewBox='0 0 17 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.05 10.4498L10.636 9.0358L13.172 6.4998L-2.60083e-07 6.4998L-1.7266e-07 4.4998L13.172 4.4998L10.636 1.9648L12.05 0.549804L17 5.4998L12.05 10.4498Z' fill='%23B5212E'/%3e%3c/svg%3e ");
+    }
+  }
+
+  &-bg-1 {
+    background: url("../img/backgrounds/1.png") no-repeat center center;
+    background-size: cover;
+  }
+
+  &-bg-2 {
+    background: #051223;
+    content: "";
+    display: block;
+    z-index: 0;
+  }
+
+  &-bg-3 {
+    background: url("../img/backgrounds/2.png") no-repeat center center;
+    background-size: cover;
+  }
+
+  &-bg-4 {
+    background: url("../img/backgrounds/6.png") no-repeat center center;
+    background-size: cover;
+  }
+
+  &-bg-5 {
+    background-image: url("../img/backgrounds/men.png");
+    background-position: center bottom;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-color: #051223;
+  }
+}
+.container {
+  height: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0;
+
+  &--footer {
+    @media (max-width: 1230px) {
+      height: 100%;
+    }
+  }
+
+  &--regular {
+    max-width: 1485px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+  }
+}
+
+
+.content{
+  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
