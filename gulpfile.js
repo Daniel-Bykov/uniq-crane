@@ -59,12 +59,6 @@ function browserSync(done) {
 
 function images() {
   return src(path.src.img)
-    .pipe(imagemin({
-      interlaced: true,
-      progressive: true,
-      svgoPlugins: [{ removeViewBox: true }],
-      optimizationLevel: 5
-    }))
     .pipe(dest(path.build.img))
     .pipe(browsersync.stream())
 }

@@ -15,41 +15,31 @@ html {
   }
 }
 
-// .container {
-//   border-bottom: 1px rgba(255, 255, 255, 0.3) solid;
-
-//   &--regular {
-//     border: 1px solid rgba(5, 18, 35, 0.1);
-//     margin-bottom: 23px;
-//   }
-// }
-
 .regular-page {
   position: relative;
   color: #000000;
 }
 
 .section {
+  position: relative;
   height: 100vh;
   min-height: 920px;
-  position: relative;
   overflow: hidden;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
 
-  &--regular{
+  &--regular {
     height: 100% !important;
     min-height: unset;
-   border-bottom:  1px solid #DBDBDB;
-   padding: 120px 0 120px 0;
-
+    border-bottom: 1px solid #dbdbdb;
+    padding: 120px 0 120px 0;
   }
 
-  &--footer{
+  &--footer {
     height: 100% !important;
     min-height: unset;
-   border-bottom:  1px solid #DBDBDB;
+    border-bottom: 1px solid #dbdbdb;
   }
 
   &__title {
@@ -70,19 +60,18 @@ html {
     }
   }
 
-
-  &__text  {
+  &__text {
     font-family: "Noto Sans Light";
     font-size: 24px;
     line-height: 36px;
     white-space: initial;
 
-    &-1{
+    &-1 {
       font-size: 16px;
       line-height: 24px;
       margin-bottom: 20px;
     }
-}
+  }
 
   &__link {
     font-weight: bold;
@@ -143,6 +132,7 @@ html {
     background-color: #051223;
   }
 }
+
 .container {
   height: 100%;
   max-width: 1920px;
@@ -163,8 +153,7 @@ html {
   }
 }
 
-
-.content{
+.content {
   height: 100%;
   max-width: 1440px;
   margin: 0 auto;
