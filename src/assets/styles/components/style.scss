@@ -335,39 +335,22 @@
 }
 
 .advantages {
-  margin-top: 81px;
-
-  @media (max-width: 1230px) {
-    .content-container {
-      padding: 0;
-    }
-  }
+  margin: 80px 10px;
 }
 
 .advantages-box {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin: 0 auto;
   flex-wrap: wrap;
   outline: 2px solid gray;
 
-  &--regular {
-    border-left: 1px #dbdbdb solid;
-    border-top: 1px #dbdbdb solid;
-  }
-
-  @media (max-width: 1700px) {
-    margin: 0 100px 0 100px;
-    justify-content: center;
-  }
-
   @media (max-width: 1230px) {
-    padding-bottom: 0;
+    margin: 10px;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (max-width: 600px) {
-    margin: 0;
-    left: 0;
+    grid-template-columns: repeat(1, 1fr);
   }
 
   &__wrap {
@@ -380,17 +363,14 @@
   border-collapse: collapse;
   outline: 1px solid gray;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 
-  &--regular {
-    border-right: 1px #dbdbdb solid;
-    border-bottom: 1px #dbdbdb solid;
-  }
-
-  @media (max-width: 499px) {
-    width: unset;
-    border-left: unset;
-    border-right: unset;
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   &__logo {
@@ -398,7 +378,6 @@
     border-radius: 41px;
     height: 78px;
     padding: 18px;
-    margin-right: 31px;
     max-width: 78px;
     display: flex;
     justify-content: center;
@@ -417,6 +396,7 @@
     padding-top: 8px;
     white-space: pre-line;
     margin-bottom: 14px;
+    text-align: center;
 
     @media (max-width: 499px) {
     }
