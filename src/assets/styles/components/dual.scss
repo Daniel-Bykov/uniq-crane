@@ -1,0 +1,214 @@
+.dual {
+    position: relative;
+    min-height: inherit;
+    padding: 0 30px;
+
+    &__background {
+        position: absolute;
+        top: 0px;
+        z-index: -2;
+        left: 50%;
+        height: 100%;
+        min-width: 100%;
+
+        img {
+            width: 50%;
+        }
+    }
+
+    &__background-left {
+        position: absolute;
+        top: -120px;
+        z-index: -2;
+        right: 50%;
+
+        @media (max-width: 1230px) {
+            top: 0;
+            height: 100%;
+            right: 0;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            height: 100%;
+        }
+
+        img {
+            width: 50%;
+
+            @media (max-width: 1230px) {
+                width: 100%;
+                height: 100%;
+
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__background-right {
+        position: absolute;
+        left: 50%;
+        height: 100%;
+        bottom: 0;
+        width: 50%;
+        
+        object-fit: cover;
+        z-index: -1;
+
+        @media (min-width: 1230px) {
+            min-height: calc(100% + 120px);
+        }
+
+        &--news {
+            top: -120px;
+
+            @media (max-width: 1230px) {
+                width: unset;
+                position: absolute;
+                z-index: -1;
+                left: 0;
+                top: 0;
+                height: 100%;
+                bottom: unset;
+                right: unset;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &--footer {
+            top: -120px;
+
+            @media (max-width: 1230px) {
+                width: unset;
+                position: absolute;
+                z-index: -1;
+                left: 0;
+                top: 0;
+                height: 100%;
+                bottom: unset;
+                right: unset;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &--regular {
+            top: unset;
+        }
+
+        img {
+            width: 50%;
+        }
+    }
+}
+
+
+.dual-box {
+    display: flex;
+    min-height: inherit;
+
+    @media (max-width: 1230px) {
+        flex-wrap: wrap;
+    }
+
+    &--review {
+        @media (max-width: 1230px) {
+            flex-wrap: wrap-reverse;
+        }
+    }
+
+    &__left {
+        width: 50%;
+        padding: 85px 140px 0 0;
+       
+        @media (max-width: 1230px) {
+            position: relative;
+            width: 100%;
+            padding: 45px 15px;
+        }
+
+        .services-list__background {
+            left: 0px;
+        }
+    }
+
+    &__right {
+        padding: 82px 0 0 130px;
+        width: 50%;
+
+        @media (max-width: 1230px) {
+            width: 610px;
+            padding: 0;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        @media (max-width: 380px) {
+            width: 320px;
+            padding: 15px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 580px) {
+            width: 100%;
+            position: relative;
+            padding: 0;
+            margin: 0;
+        }
+
+        &--news {
+            @media (max-width: 1230px) {
+                position: relative;
+            }
+
+            @media (max-width: 379px) {
+                width: 100%;
+                position: relative;
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        &--footer {
+            @media (max-width: 1230px) {
+                position: relative;
+            }
+
+            @media (max-width: 379px) {
+                width: 100%;
+                position: relative;
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        .services-list__background {
+            left: 0px;
+        }
+    }
+}
+
+.dual-background-desk {
+    @media (max-width: 1230px) {
+        display: none;
+    }
+}
+
+.dual-background-mobile {
+    display: none;
+
+    @media (max-width: 1230px) {
+        display: block;
+    }
+
+    img {
+        width: unset;
+        position: absolute;
+        z-index: -1;
+        left: unset;
+        width: 100%;
+        object-fit: cover;
+    }
+}

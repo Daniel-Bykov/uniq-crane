@@ -14,7 +14,7 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 0px;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans Light";
     color: #ffff;
   }
 
@@ -36,8 +36,8 @@
     -webkit-transition: 0.2s ease all;
   }
 
-  input:focus ~ label,
-  input:valid ~ label {
+  input:focus _ label,
+  input:valid _ label {
     top: 0px;
     color: #616d7d;
     font-family: "Noto Sans Light";
@@ -67,7 +67,7 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 0px;
-    font-family: "Noto Sans";
+    font-family: "Noto Sans Light";
     color: #051223;
   }
 
@@ -89,8 +89,8 @@
     -webkit-transition: 0.2s ease all;
   }
 
-  input:focus ~ label,
-  input:valid ~ label {
+  input:focus _ label,
+  input:valid _ label {
     top: 0px;
     color: #616d7d;
     font-family: "Noto Sans Light";

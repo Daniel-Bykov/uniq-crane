@@ -12,7 +12,7 @@ let project_folder = "dist",
     },
 
     src: {
-      html: [source_folder + "/*.html", "!" + source_folder + "/~*.html"],
+      html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
       css: source_folder + "/assets/styles/main.scss",
       js: [source_folder + "/assets/js/script.js", source_folder + "/assets/js/*.js"],
       img: source_folder + "/assets/img/**/*.{jpg,png,svg,ico,webp}",

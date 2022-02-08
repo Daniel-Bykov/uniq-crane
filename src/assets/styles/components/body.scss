@@ -28,6 +28,10 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
 
+  @media (min-width: 1190px) {
+    min-height: calc(100vh - 120px);
+  }
+
   &--regular {
     height: 100% !important;
     min-height: unset;
@@ -133,7 +137,7 @@ html {
 }
 
 .container {
-  height: 100%;
+  min-height: inherit;
   max-width: 1920px;
   margin: 0 auto;
   padding: 0;
@@ -153,7 +157,7 @@ html {
 }
 
 .content {
-  height: 100%;
-  max-width: 1440px;
+  min-height: inherit;
+  max-width: 1460px;
   margin: 0 auto;
 }

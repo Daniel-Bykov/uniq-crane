@@ -3,6 +3,14 @@
   text-align: center;
 }
 
+.show{
+  opacity: 1!important;
+  height: 100%!important;
+  visibility: visible!important;
+  padding-left: 110px;
+  padding-bottom: 150px;
+}
+
 .dsp {
   &-n {
     display: none;

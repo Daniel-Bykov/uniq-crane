@@ -1,0 +1,138 @@
+
+.geography {
+    display: block;
+  
+    @media (max-width: 1230px) {
+      display: none;
+    }
+  }
+  
+  .geography-mobile {
+    display: none;
+  
+    @media (max-width: 1230px) {
+      display: block;
+    }
+  }
+  
+  .geography-box {
+    display: flex;
+  }
+  
+  .geography-map {
+    position: absolute;
+    top: 0;
+    z-index: -3;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  
+    @media (max-width: 1230px) {
+      position: relative;
+      z-index: -3;
+      width: 100%;
+      right: 50%;
+      transform: scale(2);
+    }
+  }
+  
+  .geography__header {
+    margin-top: 83px;
+    margin-bottom: 46px;
+  }
+  
+  .country {
+    max-height: 510px;
+    margin-right: 46px;
+  
+    &-item {
+      margin-bottom: 40px;
+  
+      @media (max-width: 1230px) {
+        margin-bottom: 40px;
+        max-height: 400px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+    }
+  
+    &__name {
+      font-family: "Bebas Neue";
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 30px;
+      letter-spacing: 0.05em;
+      margin-bottom: 15px;
+    }
+  
+    &__city {
+      font-family: "Noto Sans Light";
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 28px;
+    }
+  }
+  
+  .map-country {
+    position: absolute;
+  
+    &--belarus {
+      top: 564px;
+      right: 889px;
+    }
+  
+    &--russia {
+      top: 519px;
+      right: 520px;
+    }
+  
+    &--kazakhstan {
+      top: 609px;
+      right: 462px;
+    }
+  
+    &--turkmenistan {
+      bottom: 176px;
+      right: 516px;
+    }
+  
+    &__dot {
+      width: 12px;
+      height: 12px;
+      background-color: white;
+      border-radius: 9px;
+      box-shadow: rgb(255 255 255 / 29%) 0 0 0px 9px;
+    }
+  
+    &__line {
+      width: 72.04px;
+      height: 1px;
+      top: -31px;
+      right: 6px;
+      position: relative;
+      background: #fff;
+      transform: rotate(-45deg);
+    }
+  
+    &__name {
+      position: relative;
+      top: -104px;
+      right: -66px;
+      font-family: "Bebas Neue";
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 80px;
+      letter-spacing: 0.05em;
+  
+      &--kazakhstan {
+        font-size: 46px;
+        line-height: 80px;
+      }
+  
+      &--russia {
+        font-size: 90px;
+        line-height: 80px;
+      }
+    }
+  }
