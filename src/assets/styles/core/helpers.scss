@@ -4,11 +4,14 @@
 }
 
 .show{
+  display: flex!important;
+  padding-bottom: 150px!important;
   opacity: 1!important;
   height: 100%!important;
-  visibility: visible!important;
-  padding-left: 110px;
-  padding-bottom: 150px;
+  img{
+    opacity: 1;
+  }
+
 }
 
 .dsp {

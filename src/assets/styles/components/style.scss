@@ -986,7 +986,9 @@
     z-index: -1;
     bottom: 0;
     width: 100%;
+    object-fit: cover;
     min-width: 758px;
+    height: 100%;
     right: 0;
   }
 }
@@ -1001,6 +1003,7 @@
   background-size: cover;
   background-color: unset;
   overflow: hidden;
+  position: relative;
 }
 
 .container {
@@ -1009,7 +1012,6 @@
 
 .accordion-body {
   padding: 0;
-  position: relative;
 }
 
 .accordion-wrap {

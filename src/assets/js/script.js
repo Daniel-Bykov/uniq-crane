@@ -153,15 +153,15 @@ function dualSwitcher(switcherCategory) {
     catalog.forEach((item, index) => {
       item.addEventListener("click", () => {
         catalog.forEach((item, index) => {
-          item.classList.remove("list-item--active");
+          item.classList.remove("product-selector__item--active");
         });
 
-        item.classList.add("list-item--active");
+        item.classList.add("product-selector__item--active");
 
         description.forEach((item) => {
-          item.classList.remove("show");
+          item.classList.remove("description-item--active");
         });
-        description[index].classList.add("show");
+        description[index].classList.add("description-item--active");
       });
     });
   }
