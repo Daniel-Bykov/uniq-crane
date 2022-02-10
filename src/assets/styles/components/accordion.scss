@@ -1,0 +1,91 @@
+.accordion{}
+
+
+.accordion-button {
+    border-top: 1px gray solid;
+    background-color: unset;
+    color: #ffffff;
+    white-space: initial;
+  }
+  
+  .accordion-collapse{
+    transition: all 0.1s linear 0s;
+  }
+  
+  .accordion-button:focus {
+    z-index: 3;
+    border-color: unset;
+    outline: 0;
+    box-shadow: unset;
+  }
+  
+  .accordion-button::after {
+    margin-right: 30px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transform: rotateZ(271deg);
+  }
+  
+  .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23b5212e'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transform: rotate(0deg);
+  }
+  
+  .services-wrap {
+    min-height: inherit;
+    padding: 0 20px;
+    @media (min-width: 1230px) {
+      display: none;
+    }
+  }
+  
+  .accordion-services {
+    &-text {
+      font-family:"Noto Sans Light";
+      font-size: 13px;
+      line-height: 18px;
+      white-space: initial;
+      font-weight: 400;
+      margin-bottom: 30px;
+      width: 315px;
+    }
+  
+    &-background {
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      width: 100%;
+      object-fit: cover;
+      min-width: 758px;
+      height: 100%;
+      right: 0;
+    }
+  }
+  
+  .accordion-button:not(.collapsed) {
+    color: $red-reg;
+    background-color: unset;
+    box-shadow: unset;
+  }
+  
+  .accordion-item {
+    background-size: cover;
+    background-color: unset;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .container {
+    max-width: unset !important;
+  }
+  
+  .accordion-body {
+    padding: 0;
+  }
+  
+  .accordion-wrap {
+    padding: 20px;
+  }
+  
+  .accordion-button:focus {
+    border-color: #808080;
+  }

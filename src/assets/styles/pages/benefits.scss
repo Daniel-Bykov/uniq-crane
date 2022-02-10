@@ -19,12 +19,17 @@
   
     &__wrap {
       text-align: initial;
+      padding-left: 30px;
+
+      @media (max-width: 1230px) {
+        padding-left: 0px;
+      }
     }
   }
   
   .benefits-item {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     padding: 25px 30px;
@@ -32,15 +37,9 @@
     outline: 1px solid gray;
   
     @media (min-width: 1230px) {
-      justify-content: space-between;
       flex-direction: row;
       align-items: flex-start;
-    }
-  
-    @media (min-width: 1230px) {
-      justify-content: space-between;
-      flex-direction: row;
-      align-items: flex-start;
+      
     }
   
     &__logo {
@@ -62,10 +61,10 @@
     &__title {
       font-weight: bold;
       font-size: 24px;
+      white-space: initial;
       line-height: 30px;
       letter-spacing: 0.05em;
       padding-top: 8px;
-      white-space: pre-line;
       margin-bottom: 14px;
       text-align: center;
   

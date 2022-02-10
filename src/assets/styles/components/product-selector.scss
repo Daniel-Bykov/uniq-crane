@@ -113,27 +113,19 @@
   }
   
   .description-item {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: flex-end;
-    height: 0;
-    opacity: 0;
-    visibility: hidden;
     width: 100%;
-    transition: .1s linear;
+    height: 100%;
     padding-left: 110px;
+    padding-bottom: 150px;
 
     &--active{
       display: flex;
-      padding-bottom: 150px;
-      opacity: 1;
-      height: 100%;
-      visibility: visible;
 
       img{
-        opacity: 1;
-        max-height: 100%;
-        visibility: visible;
+        display: block;
       }
     }
 
@@ -191,16 +183,15 @@
   
     &__img {
       position: absolute;
+      display: none;
+      object-fit: cover;
       right: 0;
       z-index: 0;
       bottom: 0;
       top: 0;
       max-height: 100%;
       width: 100%;
-      opacity: 0;
-      visibility: hidden;
-      transition: 0.4s linear;
-  
+
       @media (max-width: 1230px) {
         position: relative;
         right: 0;
