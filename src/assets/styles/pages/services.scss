@@ -1,0 +1,113 @@
+
+.services-description {
+    flex: 1;
+    min-width: 455px;
+    white-space: normal;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  
+    @media (max-width: 1230px) {
+      width: unset;
+      padding: 0px 10px;
+      margin-bottom: 50px;
+      text-align: center;
+      min-width: unset;
+    }
+  
+    @media (max-width: 1400px) {
+      padding-top: 80px;
+    }
+  
+    &__text {
+      font-family:"Noto Sans Light";
+      font-weight: 300;
+      font-size: 23px;
+      line-height: 35px;
+      margin-bottom: 94px;
+      margin-top: 37px;
+      white-space: pre-line;
+  
+      @media (max-width: 1230px) {
+        font-size: 13px;
+        line-height: 23px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        white-space: normal;
+      }
+    }
+  }
+  
+  .services-list {
+    flex: 1;
+    min-width: 455px;
+    margin-bottom: 20px;
+  
+    @media (max-width: 1230px) {
+      width: 100%;
+    }
+  }
+  
+  .services-list-wrap {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+  
+    @media (max-width: 1230px) {
+      position: relative;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  }
+  
+  .services-list-item {
+    display: flex;
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+    height: calc((100% - 120px) / 7);
+    max-height: 200px;
+  
+    @media (max-width: 1230px) {
+      height: calc((100% / 7));
+    }
+  
+    &__text {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 41px;
+      padding: 43px 36px;
+      letter-spacing: 1.5px;
+  
+      @media (max-width: 1465px) {
+        font-size: 20px;
+      }
+  
+      @media (max-width: 1230px) {
+        font-size: 20px;
+        line-height: 20px;
+        padding: 15px 18px;
+        white-space: normal;
+        width: 57%;
+        height: calc((100% / 7));
+      }
+    }
+  
+    &__number {
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 40px;
+      padding: 43px 36px;
+      color: $red-reg;
+      border-right: 1px solid rgba(255, 255, 255, 0.2);
+  
+      @media (max-width: 1230px) {
+        padding: 15px 15px;
+      }
+    }
+  }

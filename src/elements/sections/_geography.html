@@ -2,248 +2,203 @@
   @@include('..\_header.html')
 
   <div class="container">
-    <div class="geography-mobile">
+    <img class="geography__map" src="./assets/img/backgrounds/6.png" alt="" />
+
+    <div class="geography--mobile">
+
       <header class="clients__header clients__header--news">
         <h2 class="section__title">ГЕОГРАФИЯ ДЕЯТЕЛЬНОСТИ</h2>
       </header>
-      <div class="accordion" id="accordionExample2">
+
+      <div class="accordion" id="countriesToggle">
         <div class="accordion-item">
-          <h2 class="accordion-header" id="headingSix">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseSix"
-              aria-expanded="false"
-              aria-controls="collapseSix"
-            >
+          <header class="accordion-header" id="country__header-1">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#country-1" aria-expanded="false" aria-controls="country-1">
               <h3 class="country__name">Россия</h3>
             </button>
-          </h2>
-          <div
-            id="collapseSix"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingSix"
-            data-bs-parent="#accordionExample2"
-          >
+          </header>
+          <div id="country-1" class="accordion-collapse collapse" aria-labelledby="country__header-1"
+            data-bs-parent="#countriesToggle">
             <div class="accordion-body">
               <div class="accordion-wrap">
-                <div class="country-item">
-                  <div class="country__city">Санкт Петербург</div>
-                  <div class="country__city">Тюмень</div>
-                  <div class="country__city">Новосибирск</div>
-                  <div class="country__city">Владивосток</div>
-                  <div class="country__city">Хабаровск</div>
-                  <div class="country__city">Нижний Новгород</div>
-                  <div class="country__city">Уфа</div>
-                  <div class="country__city">Южно-Сахалинск</div>
-                  <div class="country__city">Екатеринбург</div>
-                  <div class="country__city">Нижневартовск</div>
-                  <div class="country__city">Красноярск</div>
-                  <div class="country__city">Кемерово</div>
-                  <div class="country__city">Иркутск</div>
-                  <div class="country__city">Ростов-на-Дону</div>
-                  <div class="country__city">Анадырь</div>
-                  <div class="country__city">Волгоград</div>
-                  <div class="country__city">Петропавловск Камчатский</div>
-                  <div class="country__city">Нальчик</div>
-                  <div class="country__city">Белгород</div>
-                  <div class="country__city">Брянск</div>
-                  <div class="country__city">Краснодар</div>
-                  <div class="country__city">Вологда</div>
-                  <div class="country__city">Ярославль</div>
-                  <div class="country__city">Иваново</div>
-                  <div class="country__city">Киров</div>
-                  <div class="country__city">Калининград</div>
-                  <div class="country__city">Петрозаводск</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingSeven">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseSeven"
-                aria-expanded="false"
-                aria-controls="collapseSeven"
-              >
-                <h3 class="country__name">Казахстан</h3>
-              </button>
-            </h2>
-            <div
-              id="collapseSeven"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingSeven"
-              data-bs-parent="#accordionExample2"
-            >
-              <div class="accordion-body">
-                <div class="accordion-wrap">
-                  <div class="country__city">Тараз</div>
-                  <div class="country__city">Алматы</div>
-                  <div class="country__city">Нур-Султан</div>
-                  <div class="country__city">Караганда</div>
-                  <div class="country__city">Уштобе</div>
-                  <div class="country__city">Талдыкорган</div>
-                  <div class="country__city">г. Туркестан</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingEight">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseEight"
-                aria-expanded="false"
-                aria-controls="collapseEight"
-              >
-                <h3 class="country__name">Беларусь</h3>
-              </button>
-            </h2>
-            <div
-              id="collapseEight"
-              class="accordion-collapse collapse"
-              aria-labelledby="headingEight"
-              data-bs-parent="#accordionExample2"
-            >
-              <div class="accordion-body">
-                <div class="accordion-wrap">
-                  <div class="country__city">Минск</div>
-                  <div class="country__city">Могилев</div>
-                  <div class="country__city">Жлобин</div>
-                  <div class="country__city">Гомель</div>
-                  <div class="country__city">Житковичи</div>
-                  <div class="country__city">Витебск</div>
-                  <div class="country__city">Борисов</div>
-                  <div class="country__city">Гродно</div>
-                </div>
+                <ul class="countries__list">
+                  <li class="countries__city">Санкт Петербург</li>
+                  <li class="countries__city">Тюмень</li>
+                  <li class="countries__city">Новосибирск</li>
+                  <li class="countries__city">Владивосток</li>
+                  <li class="countries__city">Хабаровск</li>
+                  <li class="countries__city">Нижний Новгород</li>
+                  <li class="countries__city">Уфа</li>
+                  <li class="countries__city">Южно-Сахалинск</li>
+                  <li class="countries__city">Екатеринбург</li>
+                  <li class="countries__city">Нижневартовск</li>
+                  <li class="countries__city">Красноярск</li>
+                  <li class="countries__city">Кемерово</li>
+                  <li class="countries__city">Иркутск</li>
+                  <li class="countries__city">Ростов-на-Дону</li>
+                  <li class="countries__city">Анадырь</li>
+                  <li class="countries__city">Волгоград</li>
+                  <li class="countries__city">Петропавловск Камчатский</li>
+                  <li class="countries__city">Нальчик</li>
+                  <li class="countries__city">Белгород</li>
+                  <li class="countries__city">Брянск</li>
+                  <li class="countries__city">Краснодар</li>
+                  <li class="countries__city">Вологда</li>
+                  <li class="countries__city">Ярославль</li>
+                  <li class="countries__city">Иваново</li>
+                  <li class="countries__city">Киров</li>
+                  <li class="countries__city">Калининград</li>
+                  <li class="countries__city">Петрозаводск</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="accordion-item accordion-item--1">
-          <h2 class="accordion-header" id="headingNine">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseNine"
-              aria-expanded="false"
-              aria-controls="collapseNine"
-            >
+        <div class="accordion-item">
+          <header class="accordion-header" id="country__header-2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#country-2" aria-expanded="false" aria-controls="country-2">
+              <h3 class="country__name">Казахстан</h3>
+            </button>
+          </header>
+          <div id="country-2" class="accordion-collapse collapse" aria-labelledby="country__header-2"
+            data-bs-parent="#countriesToggle">
+            <div class="accordion-body">
+              <div class="accordion-wrap">
+                <ul class="country__list">
+                  <p class="countries__city">Тараз</p>
+                  <p class="countries__city">Алматы</p>
+                  <p class="countries__city">Нур-Султан</p>
+                  <p class="countries__city">Караганда</p>
+                  <p class="countries__city">Уштобе</p>
+                  <p class="countries__city">Талдыкорган</p>
+                  <p class="countries__city">г. Туркестан</p>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <header class="accordion-header" id="country__header-3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#country-3" aria-expanded="false" aria-controls="country-3">
+              <h3 class="country__name">Беларусь</h3>
+            </button>
+          </header>
+          <div id="country-3" class="accordion-collapse collapse" aria-labelledby="country__header-3"
+            data-bs-parent="#countriesToggle">
+            <div class="accordion-body">
+              <div class="accordion-wrap">
+                <ul class="countries__list">
+                  <li class="countries__city">Минск</li>
+                  <li class="countries__city">Могилев</li>
+                  <li class="countries__city">Жлобин</li>
+                  <li class="countries__city">Гомель</li>
+                  <li class="countries__city">Житковичи</li>
+                  <li class="countries__city">Витебск</li>
+                  <li class="countries__city">Борисов</li>
+                  <li class="countries__city">Гродно</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <header class="accordion-header" id="country__header-4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#country-4" aria-expanded="false" aria-controls="country-4">
               <h3 class="country__name">Туркменистан</h3>
             </button>
-          </h2>
-          <div
-            id="collapseNine"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingNine"
-            data-bs-parent="#accordionExample2"
-          >
+          </header>
+          <div id="country-4" class="accordion-collapse collapse" aria-labelledby="country__header-4"
+            data-bs-parent="#countriesToggle">
             <div class="accordion-body">
               <div class="accordion-wrap">
-                <div class="country__city">Ашхабад</div>
+                <ul class="countries__list">
+                  <li class="countries__city">Ашхабад</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-        <img
-          class="geography-map"
-          src="./assets/img/backgrounds/6.png"
-          alt=""
-        />
+
       </div>
     </div>
 
-    <div class="geography">
-      <img class="geography-map" src="./assets/img/backgrounds/6.png" alt="" />
+    <div class="geography--desktop">
 
-      <div class="content">
-        <header class="geography__header">
-          <h2 class="section__title">География деятельности</h2>
-        </header>
 
-        <div class="geography-box">
-          <div class="country">
-            <div class="country-item">
-              <h3 class="country__name">Россия</h3>
+      <header class="geography__header">
+        <h2 class="section__title">География деятельности</h2>
+      </header>
 
-              <div class="country__city">Санкт Петербург</div>
-              <div class="country__city">Тюмень</div>
-              <div class="country__city">Новосибирск</div>
-              <div class="country__city">Владивосток</div>
-              <div class="country__city">Хабаровск</div>
-              <div class="country__city">Нижний Новгород</div>
-              <div class="country__city">Уфа</div>
-              <div class="country__city">Южно-Сахалинск</div>
-              <div class="country__city">Екатеринбург</div>
-              <div class="country__city">Нижневартовск</div>
-              <div class="country__city">Красноярск</div>
-              <div class="country__city">Кемерово</div>
-              <div class="country__city">Иркутск</div>
-              <div class="country__city">Ростов-на-Дону</div>
-              <div class="country__city">Анадырь</div>
-              <div class="country__city">Волгоград</div>
-              <div class="country__city">Петропавловск Камчатский</div>
-            </div>
-          </div>
+      <div class="countries">
+        <ul class="countries__list">
+          <h3 class="countries__name">Россия</h3>
+          <li class="countries__city">Санкт Петербург</li>
+          <li class="countries__city">Тюмень</li>
+          <li class="countries__city">Новосибирск</li>
+          <li class="countries__city">Владивосток</li>
+          <li class="countries__city">Хабаровск</li>
+          <li class="countries__city">Нижний Новгород</li>
+          <li class="countries__city">Уфа</li>
+          <li class="countries__city">Южно-Сахалинск</li>
+          <li class="countries__city">Екатеринбург</li>
+          <li class="countries__city">Нижневартовск</li>
+          <li class="countries__city">Красноярск</li>
+          <li class="countries__city">Кемерово</li>
+          <li class="countries__city">Иркутск</li>
+          <li class="countries__city">Ростов-на-Дону</li>
+          <li class="countries__city">Анадырь</li>
+          <li class="countries__city">Волгоград</li>
+          <li class="countries__city">Петропавловск Камчатский</li>
+        </ul>
 
-          <div class="country">
-            <div class="country-item">
-              <h3 class="country__name">Россия</h3>
+        <ul class="countries__list">
+          <h3 class="countries__name">Россия</h3>
+          <li class="countries__city">Нальчик</li>
+          <li class="countries__city">Белгород</li>
+          <li class="countries__city">Брянск</li>
+          <li class="countries__city">Краснодар</li>
+          <li class="countries__city">Вологда</li>
+          <li class="countries__city">Ярославль</li>
+          <li class="countries__city">Иваново</li>
+          <li class="countries__city">Киров</li>
+          <li class="countries__city">Калининград</li>
+          <li class="countries__city">Петрозаводск</li>
+        </ul>
 
-              <div class="country__city">Нальчик</div>
-              <div class="country__city">Белгород</div>
-              <div class="country__city">Брянск</div>
-              <div class="country__city">Краснодар</div>
-              <div class="country__city">Вологда</div>
-              <div class="country__city">Ярославль</div>
-              <div class="country__city">Иваново</div>
-              <div class="country__city">Киров</div>
-              <div class="country__city">Калининград</div>
-              <div class="country__city">Петрозаводск</div>
-            </div>
-            <div class="country-item">
-              <h3 class="country__name">Туркменистан</h3>
+        <ul class="countries__list">
+          <h3 class="countries__name">Казахстан</h3>
+          <li class="countries__city">Тараз</li>
+          <li class="countries__city">Алматы</li>
+          <li class="countries__city">Нур-Султан</li>
+          <li class="countries__city">Караганда</li>
+          <li class="countries__city">Уштобе</li>
+          <li class="countries__city">Талдыкорган</li>
+          <li class="countries__city">г. Туркестан</li>
+        </ul>
 
-              <div class="country__city">Ашхабад</div>
-            </div>
-          </div>
+        <ul class="countries__list">
+          <h3 class="countries__name">Беларусь</h3>
+          <li class="countries__city">Минск</li>
+          <li class="countries__city">Могилев</li>
+          <li class="countries__city">Жлобин</li>
+          <li class="countries__city">Гомель</li>
+          <li class="countries__city">Житковичи</li>
+          <li class="countries__city">Витебск</li>
+          <li class="countries__city">Борисов</li>
+          <li class="countries__city">Гродно</li>
+        </ul>
 
-          <div class="country">
-            <div class="country-item">
-              <h3 class="country__name">Казахстан</h3>
-
-              <div class="country__city">Тараз</div>
-              <div class="country__city">Алматы</div>
-              <div class="country__city">Нур-Султан</div>
-              <div class="country__city">Караганда</div>
-              <div class="country__city">Уштобе</div>
-              <div class="country__city">Талдыкорган</div>
-              <div class="country__city">г. Туркестан</div>
-            </div>
-            <div class="country-item">
-              <h3 class="country__name">Беларусь</h3>
-
-              <div class="country__city">Минск</div>
-              <div class="country__city">Могилев</div>
-              <div class="country__city">Жлобин</div>
-              <div class="country__city">Гомель</div>
-              <div class="country__city">Житковичи</div>
-              <div class="country__city">Витебск</div>
-              <div class="country__city">Борисов</div>
-              <div class="country__city">Гродно</div>
-            </div>
-          </div>
-        </div>
+        <ul class="countries__list">
+          <h3 class="countries__name">Туркменистан</h3>
+          <li class="countries__city">Ашхабад</li>
+        </ul>
       </div>
     </div>
   </div>

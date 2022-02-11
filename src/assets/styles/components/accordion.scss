@@ -6,6 +6,10 @@
     background-color: unset;
     color: #ffffff;
     white-space: initial;
+
+    h2{
+      font-size: 25px;
+    }
   }
   
   .accordion-collapse{
@@ -41,16 +45,17 @@
   .accordion-services {
     &-text {
       font-family:"Noto Sans Light";
-      font-size: 13px;
-      line-height: 18px;
+      font-size: 20px;
+      text-align: justify;
+      line-height: 25px;
       white-space: initial;
       font-weight: 400;
       margin-bottom: 30px;
-      width: 315px;
     }
   
     &-background {
       position: absolute;
+      filter: brightness(0.5);
       z-index: -1;
       bottom: 0;
       width: 100%;

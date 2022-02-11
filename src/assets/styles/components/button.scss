@@ -3,7 +3,8 @@
 .button {
     font-family: "Bebas Neue", sans-serif;
     padding: 18px 50px 15px;
-    width: 295px;
+    width: 100%;
+    max-width: 295px;
     height: 80px;
     color: white;
     background: $red-reg;
@@ -36,6 +37,7 @@
     &__text {
       display: flex;
       align-items: center;
+      justify-content: center;
   
       &::after {
         content: "";

@@ -1,0 +1,139 @@
+
+.review {
+    &-box {
+      display: flex;
+      margin-bottom: 20px;
+      overflow: hidden;
+      position: relative;
+  
+      .swiper-container{
+        width: 100%;
+      }
+  
+      @media (max-width: 579px) {
+        margin-bottom: 40px;
+      }
+    }
+  
+    &-wrap {
+      border: solid rgba(255, 255, 255, 0.2);
+      height: 100%;
+  
+      &--regular {
+        border: 1px solid #dbdbdb;
+      }
+    }
+  
+    &__text {
+      white-space: initial;
+      font-family:"Noto Sans Light";
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 30px;
+      padding: 15px 15px 75px;
+  
+      @media (max-width: 580px) {
+        font-size: 13px;
+        line-height: 21px;
+      }
+    }
+  }
+  
+  .review-header {
+    display: flex;
+    border-bottom: solid rgba(255, 255, 255, 0.2);
+    justify-content: space-between;
+    padding: 30px;
+  
+    &--regular {
+      border-bottom: 1px solid #dbdbdb;
+    }
+  
+    @media (max-width: 1230px) {
+      padding: 20px;
+    }
+  
+    @media (max-width: 580px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    &__title {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 30px;
+      letter-spacing: 0.05em;
+      margin-right: 21px;
+    }
+  
+    &__scan-link {
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 30px;
+      letter-spacing: 0.05em;
+      color: $red-reg;
+      display: flex;
+      align-items: center;
+      transition: 0.2s linear;
+  
+      &:hover:before {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14 6.00016V13.9955C14.0006 14.083 13.984 14.1699 13.951 14.251C13.9181 14.3321 13.8695 14.4059 13.808 14.4683C13.7466 14.5306 13.6734 14.5802 13.5928 14.6143C13.5121 14.6484 13.4255 14.6662 13.338 14.6668H2.662C2.48654 14.6668 2.31826 14.5972 2.19413 14.4732C2.07 14.3492 2.00018 14.181 2 14.0055V1.99483C2 1.63683 2.298 1.3335 2.66533 1.3335H9.33333V5.3335C9.33333 5.51031 9.40357 5.67988 9.5286 5.8049C9.65362 5.92992 9.82319 6.00016 10 6.00016H14ZM14 4.66683H10.6667V1.3355L14 4.66683Z' fill='%23DD4956'/%3e%3c/svg%3e ");
+      }
+  
+      &:hover {
+        color: $red-hover;
+      }
+  
+      &:before {
+        content: "";
+        height: 16px;
+        width: 16px;
+        display: block;
+        margin-right: 7px;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14 6.00016V13.9955C14.0006 14.083 13.984 14.1699 13.951 14.251C13.9181 14.3321 13.8695 14.4059 13.808 14.4683C13.7466 14.5306 13.6734 14.5802 13.5928 14.6143C13.5121 14.6484 13.4255 14.6662 13.338 14.6668H2.662C2.48654 14.6668 2.31826 14.5972 2.19413 14.4732C2.07 14.3492 2.00018 14.181 2 14.0055V1.99483C2 1.63683 2.298 1.3335 2.66533 1.3335H9.33333V5.3335C9.33333 5.51031 9.40357 5.67988 9.5286 5.8049C9.65362 5.92992 9.82319 6.00016 10 6.00016H14ZM14 4.66683H10.6667V1.3355L14 4.66683Z' fill='%23B5212E'/%3e%3c/svg%3e ");
+      }
+    }
+  }
+  
+  .review-prev {
+    height: 20px;
+    width: 46px;
+    bottom: 20px;
+    left: 122px;
+    position: absolute;
+    z-index: 11;
+    padding: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='47' height='10' viewBox='0 0 47 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.95 9.9L6.364 8.486L3.828 5.95L47 5.95L47 3.95L3.828 3.95L6.364 1.415L4.95 -2.16371e-07L2.16371e-07 4.95L4.95 9.9Z' fill='%23B5212E'/%3e%3c/svg%3e ");
+  
+    &:hover {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='47' height='10' viewBox='0 0 47 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.95 9.9L6.364 8.486L3.828 5.95L47 5.95L47 3.95L3.828 3.95L6.364 1.415L4.95 -2.16371e-07L2.16371e-07 4.95L4.95 9.9Z' fill='%23dd4956'/%3e%3c/svg%3e ");
+    }
+  
+    @media (max-width: 580px) {
+      left: 70px;
+    }
+  }
+  
+  .review-next {
+    height: 20px;
+    width: 46px;
+    bottom: 20px;
+    right: 122px;
+    z-index: 11;
+    padding: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    transform: rotateZ(180deg);
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='47' height='10' viewBox='0 0 47 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.95 9.9L6.364 8.486L3.828 5.95L47 5.95L47 3.95L3.828 3.95L6.364 1.415L4.95 -2.16371e-07L2.16371e-07 4.95L4.95 9.9Z' fill='%23B5212E'/%3e%3c/svg%3e ");
+  
+    &:hover {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='47' height='10' viewBox='0 0 47 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.95 9.9L6.364 8.486L3.828 5.95L47 5.95L47 3.95L3.828 3.95L6.364 1.415L4.95 -2.16371e-07L2.16371e-07 4.95L4.95 9.9Z' fill='%23dd4956'/%3e%3c/svg%3e ");
+    }
+  
+    @media (max-width: 580px) {
+      right: 70px;
+    }
+  }
