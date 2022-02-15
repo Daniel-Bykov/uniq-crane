@@ -10,53 +10,54 @@
   <div class="pagination__dot"></div>
 </div>
 
-<div class="popup">
-  <div class="popup__block" style="max-width: 460px">
-    <div class="popup__close"></div>
-    <div class="enter-form__header">
-      <p class="recall-popup__title">Оставьте заявку</p>
-      <p class="recall-popup__text">и мы вам перезвоним!</p>
-    </div>
 
-    <div class="input-fields-popup">
-      <div class="input-group">
-        <input type="text" required />
-        <label>Введите ваше имя</label>
+
+<div class="modal fade" tabindex="-1" id="requestModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-request modal-body">
+        <button type="button"  class="modal-request__close" data-bs-dismiss="modal" aria-label="Close" ></button>
+
+        <header class="modal-request__header">
+          <h1 class="modal-request__title">Оставьте заявку</h1>
+          <h3>и мы вам перезвоним!</p>
+        </header>
+
+        <form class="form">
+          <div class="form__row">
+            <input type="text" class="input__field" value="" required>
+            <label class="label__field">Введите ваше имя</label>
+          </div>
+
+          <div class="form__row">
+            <input type="number" class="input__field" value="" required>
+            <label class="label__field">Введите ваш телефон</label>
+          </div>
+
+          <button class="button mg-bt-40" type="submit">оставить заявку</button>
+
+          <footer class="form__footer">
+            <input type="checkbox" class="default-checkbox" id="privacy-policy" name="privacy-policy" required>
+            <label for="privacy-policy"> <span>Нажимая на кнопку «Получить консультацию», вы соглашаетесь</span>
+              <a href="#"> с политикой конфиденциальности</a> </label>
+          </footer>
+        </form>
+
       </div>
 
-      <div class="input-group">
-        <input type="number" required />
-        <label>Введите ваш телефон</label>
-      </div>
-    </div>
-
-    <div class="enter-form__button-wrap">
-      <button class="button button--popup mg-bt-40">
-        <span class="button__text">отправить запрос</span>
-      </button>
-      <div>
-        <input
-          type="checkbox"
-          class="check__element"
-          id="privacy-policy"
-          name="privacy-policy"
-          value="yes"
-        />
-        <label for="privacy-policy">
-          <a href="#"
-            ><span
-              >Нажимая на кнопку «Получить консультацию», вы соглашаетесь с
-              политикой конфиденциальности</span
-            ></a
-          >
-        </label>
-      </div>
     </div>
   </div>
 </div>
 
+
+
+<div class="popup">
+
+</div>
+
 <header class="header">
-  <a href="#" class="logo"><img src="./assets/img/logo-w.svg" alt="Uniq Crane"/></a>
+  <a href="#" class="logo"><img src="./assets/img/logo-w.svg" alt="Uniq Crane" /></a>
 
   <div class="header__content">
     <button class="product-catalog">
@@ -79,5 +80,6 @@
       <span class="phone__text">+7 495 540 50 53</span></a>
   </div>
 
-  <button class="leave-request request">оставить заявку</button>
+  <button type="button" class="leave-request request" data-bs-toggle="modal" data-bs-target="#requestModal">оставить
+    заявку</button>
 </header>

@@ -41,7 +41,7 @@
 .default-checkbox + label::before {
   content: "";
   position: absolute;
-  z-index: -2;
+  z-index: 0;
   left: 0;
   width: 20px;
   height: 20px;
@@ -93,7 +93,7 @@
   font-size: 18px;
   line-height: 0px;
   font-family: "Noto Sans Light";
-  color: #ffff;
+  color: inherit;
 }
 
 .input__field:focus {
@@ -104,7 +104,7 @@
   font-family: "Noto Sans Light";
   font-size: 18px;
   line-height: 35px;
-  color: #ffffff;
+  color: inherit;
   position: absolute;
   pointer-events: none;
   left: 23px;
