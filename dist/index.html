@@ -1802,7 +1802,7 @@
 
   <div class="dual">
 
-    <img class="men" src="./assets/img/backgrounds/men.png" alt="">
+    <img class="man" src="./assets/img/backgrounds/men.png" alt="">
 
     <div class="container content-container--footer">
       <div class="content">
@@ -1865,45 +1865,29 @@
               <form class="form">
 
                 <div class="form__row">
-                  <input type="text" required>
-                  <label>Введите ваше имя</label>
+                  <input type="text" class="input__field" value="" required>
+                  <label class="label__field">Введите ваше имя</label>
                 </div>
 
                 <div class="form__row">
-                  <input type="number" required>
-                  <label>Введите ваш телефон</label>
+                  <input type="number" class="input__field" value="" required>
+                  <label class="label__field">Введите ваш телефон</label>
                 </div>
 
                 <button class="button mg-bt-40" type="submit">отправить запрос</button>
 
                 <footer class="form__footer">
-                  <input type="checkbox" class="check__element" id="privacy-policy-footer" name="privacy-policy"
-                    value="yes">
-                  <label for="privacy-policy">
-                    <a href="#"><span>Нажимая на кнопку «Получить консультацию», вы соглашаетесь
-                        с политикой конфиденциальности</span></a> </label>
+                  <input type="checkbox" class="default-checkbox" id="privacy-policy" name="privacy-policy" required>
+                  <label for="privacy-policy"> <span>Нажимая на кнопку «Получить консультацию», вы соглашаетесь</span>
+                    <a href="#"> с политикой конфиденциальности</a> </label>
                 </footer>
               </form>
 
             </div>
-
-            <div class="footer__bottom--mobile">
-              <div class="copyright">
-                <p>© 2021 «Uniq Crane» Все права защищены</p>
-              </div>
-              <div class="studio">
-                <a href="" class="dsp-f">
-                  <p>Разработка сайта —</p>
-                  <div class="studio__logo"> <img src="./assets/img/Forestweb-tree.svg" alt=""><img
-                      src="./assets/img/Forestweb.svg" alt=""></div>
-                </a>
-              </div>
-            </div>
           </div>
-
         </div>
 
-        <div class="footer__bottom">
+        <footer class="footer__bottom">
           <div class="copyright">
             <p>© 2021 «Uniq Crane» Все права защищены</p>
           </div>
@@ -1914,14 +1898,10 @@
                   src="./assets/img/Forestweb.svg" alt=""></div>
             </a>
           </div>
-        </div>
+        </footer>
       </div>
-    </div>
 
-
-
-
-  </div>
+</div>
 
 </section>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

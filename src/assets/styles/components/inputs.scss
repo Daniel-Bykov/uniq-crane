@@ -1,54 +1,134 @@
+.form {
+  position: relative;
 
-  .form__row{
+  &__row {
     position: relative;
     margin: 40px 0 20px;
   }
 
-  input {
-    font-size: 18px;
-    padding: 26px 22px 12px 22px;
-    display: block;
-    width: 100%;
-    background: 0 0;
-    border: 1px solid #616d7d;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 0px;
+  &__footer {
+    position: relative;
+    margin-bottom: 25px;
     font-family: "Noto Sans Light";
-    color: #ffff;
   }
 
-  input:focus {
-    outline: none;
+  &__footer a{
+    color: #7aaae2;
   }
 
-  label {
-    font-family: "Noto Sans Light";
-    font-size: 18px;
-    line-height: 35px;
-    color: #ffffff;
-    position: absolute;
-    pointer-events: none;
-    left: 23px;
-    top: 12px;
-    transition: 0.2s ease all;
-    -moz-transition: 0.2s ease all;
-    -webkit-transition: 0.2s ease all;
+  &__footer a:hover {
+    text-decoration: underline;
   }
+}
 
-  input:focus _ label,
-  input:valid _ label {
-    top: 0px;
-    color: #616d7d;
-    font-family: "Noto Sans Light";
-    font-size: 12px;
-    line-height: 35px;
-  }
+.default-checkbox {
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  width: 20px;
+  height: 20px;
+}
 
-  input:required:invalid label {
-    border: 1px solid #dd4956;
-    color: #dd4956;
-  }
+.default-checkbox + label {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  user-select: none;
+  font-size: 13px;
+  padding-left: 25px;
+  white-space: initial;
+}
+.default-checkbox + label::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.default-checkbox:checked + label::before {
+  border-color: #0b76ef;
+  background-color: #0b76ef;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.default-checkbox:not(:disabled):not(:checked) + label:hover::before {
+  border-color: #b3d7ff;
+}
+/* стили для активного состояния чекбокса (при нажатии на него) */
+.default-checkbox:not(:disabled):active + label::before {
+  background-color: #b3d7ff;
+  border-color: #b3d7ff;
+}
+/* стили для чекбокса, находящегося в фокусе */
+.default-checkbox:focus + label::before {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.default-checkbox:focus:not(:checked) + label::before {
+  border-color: #80bdff;
+}
+/* стили для чекбокса, находящегося в состоянии disabled */
+.default-checkbox:disabled + label::before {
+  background-color: #e9ecef;
+}
+
+.input__field {
+  display: block;
+  font-size: 18px;
+  padding: 25px 15px;
+  width: 100%;
+  background: 0 0;
+  border: 1px solid #616d7d;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 0px;
+  font-family: "Noto Sans Light";
+  color: #ffff;
+}
+
+.input__field:focus {
+  outline: none;
+}
+
+.label__field {
+  font-family: "Noto Sans Light";
+  font-size: 18px;
+  line-height: 35px;
+  color: #ffffff;
+  position: absolute;
+  pointer-events: none;
+  left: 23px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.input__field:focus + .label__field,
+.input__field:valid + .label__field {
+  top: 0;
+  transform: unset;
+  color: #616d7d;
+  font-family: "Noto Sans Light";
+  font-size: 12px;
+  line-height: 35px;
+}
+
+.input__field--not-valid{
+  border: 1px solid #dd4956;
+  color: #dd4956;
+}
 
 .input-fields-popup {
   .input-group {
