@@ -1,7 +1,5 @@
-.accordion{}
-
-
 .accordion-button {
+    padding: 20px 30px;
     border-top: 1px gray solid;
     background-color: unset;
     color: #ffffff;
@@ -36,7 +34,6 @@
   
   .services-wrap {
     min-height: inherit;
-    padding: 0 20px;
     @media (min-width: 1230px) {
       display: none;
     }
@@ -88,7 +85,7 @@
   }
   
   .accordion-wrap {
-    padding: 20px;
+    padding: 20px 30px;
   }
   
   .accordion-button:focus {

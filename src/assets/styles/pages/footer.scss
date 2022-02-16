@@ -81,8 +81,8 @@
 
     @media (max-width: 1230px) {
         white-space: normal;
-        font-size: 20px;
-        line-height: 35px;
+        font-size: 15px;
+        line-height: 25px;
         margin-bottom: 50px;
     }
 }
@@ -195,7 +195,8 @@
 
 .feedback {
     margin-top: 17px;
-
+    border-color: rgb(255 255 255 / 40%);
+    
     @media (max-width: 1230px) {
         padding: 0 20px;
     }

@@ -1,3 +1,16 @@
+.page-swiper{
+  max-height: 100vh;
+  overflow: hidden;
+
+  .swiper-slide{
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+
+  .swiper-slide::-webkit-scrollbar {
+    width: 0px;
+  }
+}
 
 
 .clients {
@@ -26,7 +39,7 @@
 
     &--news {
       @media (max-width: 1230px) {
-        padding: 0 20px;
+        padding: 0 30px;
       }
     }
 
@@ -142,7 +155,6 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
-  margin-bottom: 80px;
 
   @media (max-width: 1230px) {
     white-space: normal;
@@ -198,7 +210,6 @@
   border: solid rgba(255, 255, 255, 0.2);
 
   @media (max-width: 1230px) {
-    padding: 0 20px;
     border: unset;
     margin-bottom: 30px;
   }
