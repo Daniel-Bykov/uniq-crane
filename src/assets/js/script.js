@@ -19,7 +19,8 @@ function swipersInit() {
       onlyInViewport: false,
     },
     pagination: {
-      el: ".pagination",
+      el: ".pages-pagination",
+      clickable: true,
       type: "bullets",
     },
   });
