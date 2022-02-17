@@ -1,5 +1,5 @@
 
-.services-description {
+.features-description {
     flex: 1;
     min-width: 455px;
     white-space: normal;
@@ -37,7 +37,7 @@
     }
   }
   
-  .services-list {
+  .features-list {
     flex: 1;
     min-width: 455px;
     margin-bottom: 20px;
@@ -47,7 +47,7 @@
     }
   }
   
-  .services-list-wrap {
+  .features-list-wrap {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -63,7 +63,7 @@
     }
   }
   
-  .services-list-item {
+  .features-list-item {
     display: flex;
     flex: 1;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);

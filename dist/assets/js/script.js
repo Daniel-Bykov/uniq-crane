@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   dualSwitcher(document.querySelector(".cranes"));
-  dualSwitcher(document.querySelector(".services"));
+  dualSwitcher(document.querySelector(".features"));
   swipersInit();
   handleTabletChange();
 });
