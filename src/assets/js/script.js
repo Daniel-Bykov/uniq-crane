@@ -9,11 +9,17 @@ function swipersInit() {
 
   const pageSwiper = new Swiper(".page-swiper", {
     direction: 'vertical',
-    effect: 'fade',
-    mousewheel: {
-      thresholdDelta: 0,
-      eventsTarget: ''
+    // effect: 'fade',
+    // enabled: false,
+    breakpoints: {
+      1230:{
+        enabled: true,
+      }
     },
+    // mousewheel: {
+    //   thresholdDelta: 0,
+    //   eventsTarget: ''
+    // },
     keyboard: {
       enabled: true,
       onlyInViewport: false,
@@ -38,10 +44,6 @@ function swipersInit() {
     pageSwiper.slides[pageSwiper.realIndex].scrollTo(0, 0)
     fractionUpdate ()
   });
-
-
-
-
 
 
   const reviews = new Swiper(".review-box", {

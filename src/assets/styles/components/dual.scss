@@ -1,7 +1,6 @@
 .dual {
     min-height: inherit;
     padding: 0 30px;
-    margin-bottom: 30px;
 
     &__background {
         position: absolute;
@@ -52,7 +51,6 @@
         height: 100%;
         bottom: 0;
         width: 50%;
-        
         object-fit: cover;
         z-index: -1;
 
@@ -107,6 +105,7 @@
 .dual-box {
     display: flex;
     min-height: inherit;
+    height: calc(100% - 120px);
 
     @media (max-width: 1230px) {
         flex-wrap: wrap;
@@ -166,19 +165,6 @@
                 margin: 0;
             }
         }
-
-        // &--footer {
-        //     @media (max-width: 1230px) {
-        //         position: relative;
-        //     }
-
-        //     @media (max-width: 379px) {
-        //         width: 100%;
-        //         position: relative;
-        //         padding: 0;
-        //         margin: 0;
-        //     }
-        // }
 
         .features-list__background {
             left: 0px;

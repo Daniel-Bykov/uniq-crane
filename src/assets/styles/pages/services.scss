@@ -1,0 +1,102 @@
+.services-description {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  white-space: normal;
+
+  &__wrap {
+    margin: 50px 0;
+  }
+
+  &__text {
+    margin-bottom: 95px;
+    margin-top: 35x;
+    font-family: "Noto Sans Light";
+    font-weight: 300;
+    font-size: 23px;
+    line-height: 35px;
+    white-space: pre-line;
+
+    @media (max-width: 1230px) {
+      margin-bottom: 20px;
+      margin-top: 10px;
+      font-size: 13px;
+      line-height: 23px;
+      white-space: normal;
+    }
+  }
+}
+
+.services-list {
+  position: absolute;
+  min-height: inherit;
+  height: inherit;
+  width: 50%;
+  right: 0;
+
+  @media (max-width: 1230px) {
+    position: unset;
+    width: 100%;
+  }
+}
+
+.services-list-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  min-height: inherit;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  @media (max-width: 1230px) {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
+.services-list-item {
+  display: flex;
+  flex: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+
+  &__text {
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+    flex: 7;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 1.5px;
+
+    @media (max-width: 1465px) {
+      font-size: 20px;
+    }
+
+    @media (max-width: 1230px) {
+      font-size: 20px;
+      line-height: 20px;
+      white-space: normal;
+      width: 50%;
+    }
+  }
+
+  &__number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 40px;
+    color: $red-reg;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+
+    @media (max-width: 1230px) {
+      padding: 15px 15px;
+    }
+  }
+}
