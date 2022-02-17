@@ -1,36 +1,52 @@
-.pages-pagination {
+.pages-selector {
   position: absolute;
-  right: 70px!important;
-  bottom: 50%;
+  right: 70px !important;
+  top: 50%;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
   min-height: fit-content;
   left: unset;
   display: flex;
   flex-direction: column;
-  transform: translateY(50%);
+  transform: translateY(-50%);
   z-index: 5;
 
   @media (max-width: 730px) {
     display: none;
   }
 
-  .swiper-pagination-bullet {
-    position: relative;
-    min-width: 21px;
-    min-height: 21px;
-    padding: 5px;
-    margin-bottom: 30px!important;
-    background: #000;
-    border: 2px solid white;
+  &__all{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 22px;
+  }
 
-    &::before{
-      content: "•";
-      display: block;
-      color: #fff;
-      font-size: 30px;
-      position: absolute;
-      line-height: 0;
-      top: 9px;
-      right: 5px;
+  &__active{
+    color: white;
+    font-size: 30px;
+  }
+
+  &__pagination {
+    transform: unset!important;
+
+    .swiper-pagination-bullet {
+      position: relative;
+      min-width: 21px;
+      min-height: 21px;
+      padding: 5px;
+      margin-bottom: 30px !important;
+      background: unset;
+      border: 2px solid white;
+
+      &::before {
+        content: "•";
+        display: block;
+        color: #fff;
+        font-size: 30px;
+        position: absolute;
+        line-height: 0;
+        top: 9px;
+        right: 5px;
+      }
     }
   }
 }

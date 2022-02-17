@@ -19,15 +19,28 @@ function swipersInit() {
       onlyInViewport: false,
     },
     pagination: {
-      el: ".pages-pagination",
+      el: ".pages-selector__pagination",
       clickable: true,
       type: "bullets",
     },
   });
 
+  let pageSelectorActive = document.querySelector('.pages-selector__active')
+  let pageSelectorAll = document.querySelector('.pages-selector__all')
+
+  function fractionUpdate(){
+    pageSelectorAll.innerHTML = `/ ${pageSwiper.slides.length }`
+    pageSelectorActive.innerHTML = `${pageSwiper.realIndex + 1}`
+  }
+  fractionUpdate ()
+
   pageSwiper.on('slideChange', function () {
     pageSwiper.slides[pageSwiper.realIndex].scrollTo(0, 0)
+    fractionUpdate ()
   });
+
+
+
 
 
 

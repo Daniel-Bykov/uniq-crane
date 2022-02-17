@@ -9,6 +9,10 @@
       .swiper-container{
         width: 100%;
       }
+
+      .swiper-slide{
+        overflow: hidden;
+      }
   
       @media (max-width: 579px) {
         margin-bottom: 40px;
