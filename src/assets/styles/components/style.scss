@@ -2,6 +2,10 @@
   max-height: 100vh;
   overflow: hidden;
 
+  &--disabled{
+    overflow: auto;
+  }
+
   .swiper-slide{
     overflow: scroll;
     overflow-x: hidden;
@@ -44,8 +48,9 @@
 
   &__header {
     display: flex;
-    margin-bottom: 39px;
+    margin-bottom: 40px;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     &--news {
       @media (max-width: 1230px) {

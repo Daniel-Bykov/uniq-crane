@@ -32,11 +32,9 @@
   }
   
   .countries {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    
     max-width: 50%;
-    grid-column-gap: 20px;
-  
+
     &__list {
       margin-bottom: 40px;
   

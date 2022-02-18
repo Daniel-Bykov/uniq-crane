@@ -1,3 +1,41 @@
+.footer {
+    .section__title {
+        font-size: 44px;
+        line-height: 52px;
+        margin-top: 33px;
+        max-width: 565px;
+        white-space: pre-line;
+    }
+
+    .title__md {
+        margin: 35px 0 25px 0;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 50px;
+
+        @media (max-width: 1400px) {
+            margin-top: 30px;
+        }
+
+        @media (max-width: 500px) {
+            flex-direction: column;
+            align-items: center;
+        }
+        &--regular {
+            display: flex;
+            padding-bottom: 50px;
+            padding-top: 50px;
+            justify-content: space-between;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            z-index: 1;
+            position: relative;
+        }
+    }
+}
+
 .achievements {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -15,7 +53,7 @@
     }
 
     &__item {
-        margin-right: 40px;
+        margin-right: 30px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -48,11 +86,19 @@
         margin-bottom: 10px;
     }
 
+    &__title {
+        font-size: 24px;
+        line-height: 25px;
+        white-space: initial;
+    text-align: center;
+    }
+
     &__text {
         font-family: "Bebas Neue";
         font-size: 24px;
         line-height: 25px;
         max-width: 100px;
+        letter-spacing: 0.05em;
         margin: 0 auto;
         text-align: center;
         white-space: pre-line;
@@ -71,13 +117,16 @@
 }
 
 .about-company {
+    max-width: 450px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
     white-space: initial;
     font-family: "Noto Sans Light";
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
     line-height: 30px;
-    margin-bottom: 50px;
+    border-bottom: 1px #8080802b solid;
 
     @media (max-width: 1230px) {
         white-space: normal;
@@ -88,7 +137,7 @@
 }
 
 .man {
-    z-index: 0;
+    z-index: -1;
     position: absolute;
     right: 50%;
     bottom: 0px;
@@ -103,121 +152,16 @@
     }
 }
 
-.check__element {
-    position: absolute;
-    z-index: -1;
-    display: none;
-
-    & + label {
-        display: inline-flex;
-        align-items: end;
-        font-family: "Noto Sans Light";
-        max-width: 455px;
-        font-size: 14px;
-        line-height: 16px;
-        white-space: initial;
-        color: #fff;
-        line-height: 19px;
-    }
-
-    & + label::before {
-        content: "";
-        display: inline-block;
-        width: 15px;
-        height: 15px;
-        flex-shrink: 0;
-        flex-grow: 0;
-        border-radius: 0;
-        position: relative;
-        top: 5px;
-        margin-right: 0.5em;
-        background-repeat: no-repeat;
-        background-position: center center;
-        border: 1px rgba(128, 128, 128, 0.2) solid;
-        background-color: #e8ebed00;
-    }
-
-    &:checked + label {
-        &::before {
-            border: 1px rgba(128, 128, 128, 0.2) solid;
-            background-color: #2e527b00;
-            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='9' viewBox='0 0 11 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.7071 1.70718L3.99995 8.41429L0.292847 4.70718L1.70706 3.29297L3.99995 5.58586L9.29285 0.292969L10.7071 1.70718Z' fill='%23B5212E'/%3e%3c/svg%3e ");
-        }
-    }
-
-    &:not(:disabled):active + label::before {
-        background-color: #e8ebed00;
-        border: 1px rgba(128, 128, 128, 0.2) solid;
-        color: #428bca;
-    }
-
-    &:disabled + label::before {
-        border: 1px rgba(128, 128, 128, 0.2) solid;
-        background-color: #e8ebed00;
-    }
-}
-
-.footer {
-    .section__title {
-        font-size: 44px;
-        line-height: 52px;
-        margin-top: 33px;
-        max-width: 565px;
-        white-space: pre-line;
-    }
-
-    &__bottom {
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 50px;
-
-        @media (max-width: 1400px) {
-            margin-top: 30px;
-        }
-
-        @media (max-width: 500px) {
-            flex-direction: column;
-            align-items: center;
-        }
-        &--regular {
-            display: flex;
-            padding-bottom: 50px;
-            padding-top: 50px;
-            justify-content: space-between;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            z-index: 1;
-            position: relative;
-        }
-
-
-    }
-}
-
 .feedback {
     margin-top: 17px;
     border-color: rgb(255 255 255 / 40%);
-    
+
     @media (max-width: 1230px) {
         padding: 0 20px;
     }
-    &-popup {
-        &__title {
-            font-family: "Bebas Neue";
-            font-weight: bold;
-            font-size: 48px;
-            line-height: 70px;
-            color: #051223;
-            text-align: center;
-        }
 
-        &__text {
-            font-family: "Noto Sans Light";
-            font-size: 24px;
-            line-height: 30px;
-            text-align: center;
-            color: #616d7d;
-            margin-bottom: 35px;
-        }
+    .title__lg {
+        margin-bottom: 20px;
     }
 
     &__text {
@@ -226,51 +170,5 @@
         line-height: 35px;
         white-space: normal;
         margin-bottom: 27px;
-    }
-
-    &-wrap {
-        position: relative;
-        z-index: 1;
-        margin-left: 41px;
-        margin-bottom: 30px;
-
-        @media (max-width: 600px) {
-            margin: 20px;
-            margin-bottom: 30px;
-            padding-top: 40px;
-        }
-
-        .clients__header {
-            margin-bottom: 17px;
-        }
-    }
-
-    &-wrap-2 {
-        position: relative;
-        z-index: 1;
-
-        .button {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    }
-
-    &__title {
-        font-weight: bold;
-        font-size: 64px;
-        line-height: 70px;
-        max-width: 565px;
-        white-space: pre-line;
-        letter-spacing: 3px;
-
-        @media (max-width: 600px) {
-            font-weight: 700;
-            font-size: 30px;
-            line-height: 35px;
-            max-width: 565px;
-            white-space: pre-line;
-        }
     }
 }

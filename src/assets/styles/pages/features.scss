@@ -1,4 +1,10 @@
 
+.features-accordion{
+  position: absolute;
+    width: 100%;
+    left: 0;
+}
+
 .features-description {
     flex: 1;
     min-width: 455px;
@@ -34,6 +40,14 @@
         margin-top: 10px;
         white-space: normal;
       }
+    }
+  }
+
+  .features-wrap{
+    padding: 0 30px;
+
+    .title__lg{
+      margin-top: 30px;
     }
   }
   

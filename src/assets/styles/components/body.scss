@@ -45,21 +45,10 @@ html {
     border-bottom: 1px solid #dbdbdb;
   }
 
-  &__title {
-    font-weight: bold;
-    font-size: 64px;
-    letter-spacing: 0.05em;
+  &__header {
+    margin-top: 80px;
     margin-bottom: 33px;
     margin: 0 auto;
-    white-space: initial;
-
-    @media (max-width: 700px) {
-      font-size: 30px;
-    }
-
-    &--1 {
-      font-size: 48px;
-    }
   }
 
   &__text {
@@ -159,4 +148,8 @@ html {
   min-height: inherit;
   max-width: 1460px;
   margin: 0 auto;
+
+  @media (max-width: 1230px) {
+    margin: 30px;
+  }
 }

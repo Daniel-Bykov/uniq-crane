@@ -5,47 +5,15 @@ document.addEventListener("DOMContentLoaded", function () {
   handleTabletChange();
 });
 
+function isMobile(){
+  let device = ((window.matchMedia('(max-width: 1230px)')).matches || ('ontouchstart' in window))
+  return device
+}
+
 function swipersInit() {
 
-  const pageSwiper = new Swiper(".page-swiper", {
-    direction: 'vertical',
-    // effect: 'fade',
-    // enabled: false,
-    breakpoints: {
-      1230:{
-        enabled: true,
-      }
-    },
-    // mousewheel: {
-    //   thresholdDelta: 0,
-    //   eventsTarget: ''
-    // },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
-    pagination: {
-      el: ".pages-selector__pagination",
-      clickable: true,
-      type: "bullets",
-    },
-  });
-
-  let pageSelectorActive = document.querySelector('.pages-selector__active')
-  let pageSelectorAll = document.querySelector('.pages-selector__all')
-
-  function fractionUpdate(){
-    pageSelectorAll.innerHTML = `/ ${pageSwiper.slides.length }`
-    pageSelectorActive.innerHTML = `${pageSwiper.realIndex + 1}`
-  }
-  fractionUpdate ()
-
-  pageSwiper.on('slideChange', function () {
-    pageSwiper.slides[pageSwiper.realIndex].scrollTo(0, 0)
-    fractionUpdate ()
-  });
-
-
+  pageSlider ()
+  
   const reviews = new Swiper(".review-box", {
     pagination: {
       el: ".swiper-pagination",
@@ -57,8 +25,6 @@ function swipersInit() {
       prevEl: ".swiper-button-prev",
     },
   });
-
-
 
 
   const swiperRegular = new Swiper(".mySwiper-Regular", {
@@ -149,5 +115,45 @@ function handleTabletChange(e) {
         fullpage_api.moveTo(1);
       });
     }
+  }
+}
+
+
+function pageSlider (){
+  
+  let mainContainer = document.querySelector('.page-swiper')
+  let pageSelectorActive = document.querySelector('.pages-selector__active')
+  let pageSelectorAll = document.querySelector('.pages-selector__all')
+  
+  if(isMobile()){
+    mainContainer.classList.add('page-swiper--disabled')
+    mainContainer.firstElementChild.style = "flex-direction: column"
+  }
+  
+  else {
+    const swiper = new Swiper(".page-swiper", {
+      direction: 'vertical',
+      keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+      },
+      pagination: {
+        el: ".pages-selector__pagination",
+        clickable: true,
+        type: "bullets",
+      },
+    });
+  
+    function fractionUpdate() {
+      pageSelectorAll.innerHTML = `/ ${swiper.slides.length }`
+      pageSelectorActive.innerHTML = `${swiper.realIndex + 1}`
+    };
+    
+    fractionUpdate()
+
+    swiper.on('slideChange', function () {
+      swiper.slides[swiper.realIndex].scrollTo(0, 0)
+      fractionUpdate()
+    });
   }
 }

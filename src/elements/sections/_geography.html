@@ -7,18 +7,18 @@
     <div class="geography--mobile">
 
       <header class="clients__header clients__header--news">
-        <h2 class="section__title">ГЕОГРАФИЯ ДЕЯТЕЛЬНОСТИ</h2>
+        <h2 class="title__lg">ГЕОГРАФИЯ ДЕЯТЕЛЬНОСТИ</h2>
       </header>
 
       <div class="accordion" id="countriesToggle">
         <div class="accordion-item">
           <header class="accordion-header" id="country__header-1">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#country-1" aria-expanded="false" aria-controls="country-1">
-              <h3 class="country__name">Россия</h3>
+            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+              data-bs-target="#country-1" aria-expanded="true" aria-controls="country-1">
+              <h3 class="title__md">Россия</h3>
             </button>
           </header>
-          <div id="country-1" class="accordion-collapse collapse" aria-labelledby="country__header-1"
+          <div id="country-1" class="accordion-collapse collapse show" aria-labelledby="country__header-1"
             data-bs-parent="#countriesToggle">
             <div class="accordion-body">
               <div class="accordion-wrap">
@@ -60,7 +60,7 @@
           <header class="accordion-header" id="country__header-2">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#country-2" aria-expanded="false" aria-controls="country-2">
-              <h3 class="country__name">Казахстан</h3>
+              <h3 class="title__md">Казахстан</h3>
             </button>
           </header>
           <div id="country-2" class="accordion-collapse collapse" aria-labelledby="country__header-2"
@@ -85,7 +85,7 @@
           <header class="accordion-header" id="country__header-3">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#country-3" aria-expanded="false" aria-controls="country-3">
-              <h3 class="country__name">Беларусь</h3>
+              <h3 class="title__md">Беларусь</h3>
             </button>
           </header>
           <div id="country-3" class="accordion-collapse collapse" aria-labelledby="country__header-3"
@@ -111,7 +111,7 @@
           <header class="accordion-header" id="country__header-4">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#country-4" aria-expanded="false" aria-controls="country-4">
-              <h3 class="country__name">Туркменистан</h3>
+              <h3 class="title__md">Туркменистан</h3>
             </button>
           </header>
           <div id="country-4" class="accordion-collapse collapse" aria-labelledby="country__header-4"
@@ -133,72 +133,79 @@
 
 
       <header class="geography__header">
-        <h2 class="section__title">География деятельности</h2>
+        <h2 class="title__lg">География деятельности</h2>
       </header>
 
-      <div class="countries">
-        <ul class="countries__list">
-          <h3 class="countries__name">Россия</h3>
-          <li class="country__city">Санкт Петербург</li>
-          <li class="country__city">Тюмень</li>
-          <li class="country__city">Новосибирск</li>
-          <li class="country__city">Владивосток</li>
-          <li class="country__city">Хабаровск</li>
-          <li class="country__city">Нижний Новгород</li>
-          <li class="country__city">Уфа</li>
-          <li class="country__city">Южно-Сахалинск</li>
-          <li class="country__city">Екатеринбург</li>
-          <li class="country__city">Нижневартовск</li>
-          <li class="country__city">Красноярск</li>
-          <li class="country__city">Кемерово</li>
-          <li class="country__city">Иркутск</li>
-          <li class="country__city">Ростов-на-Дону</li>
-          <li class="country__city">Анадырь</li>
-          <li class="country__city">Волгоград</li>
-          <li class="country__city">Петропавловск Камчатский</li>
-        </ul>
+      <div class="countries row">
+        <div class="col-4">
+          <ul class="countries__list">
 
-        <ul class="countries__list">
-          <h3 class="countries__name">Россия</h3>
-          <li class="country__city">Нальчик</li>
-          <li class="country__city">Белгород</li>
-          <li class="country__city">Брянск</li>
-          <li class="country__city">Краснодар</li>
-          <li class="country__city">Вологда</li>
-          <li class="country__city">Ярославль</li>
-          <li class="country__city">Иваново</li>
-          <li class="country__city">Киров</li>
-          <li class="country__city">Калининград</li>
-          <li class="country__city">Петрозаводск</li>
-        </ul>
+            <h3 class="country__name">Россия</h3>
+            <li class="country__city">Санкт Петербург</li>
+            <li class="country__city">Тюмень</li>
+            <li class="country__city">Новосибирск</li>
+            <li class="country__city">Владивосток</li>
+            <li class="country__city">Хабаровск</li>
+            <li class="country__city">Нижний Новгород</li>
+            <li class="country__city">Уфа</li>
+            <li class="country__city">Южно-Сахалинск</li>
+            <li class="country__city">Екатеринбург</li>
+            <li class="country__city">Нижневартовск</li>
+            <li class="country__city">Красноярск</li>
+            <li class="country__city">Кемерово</li>
+            <li class="country__city">Иркутск</li>
+            <li class="country__city">Ростов-на-Дону</li>
+            <li class="country__city">Анадырь</li>
+            <li class="country__city">Волгоград</li>
+            <li class="country__city">Петропавловск Камчатский</li>
+          </ul>
+        </div>
+        <div class="col-4">
+          <ul class="countries__list">
+            <h3 class="country__name">Россия</h3>
+            <li class="country__city">Нальчик</li>
+            <li class="country__city">Белгород</li>
+            <li class="country__city">Брянск</li>
+            <li class="country__city">Краснодар</li>
+            <li class="country__city">Вологда</li>
+            <li class="country__city">Ярославль</li>
+            <li class="country__city">Иваново</li>
+            <li class="country__city">Киров</li>
+            <li class="country__city">Калининград</li>
+            <li class="country__city">Петрозаводск</li>
+          </ul>
 
-        <ul class="countries__list">
-          <h3 class="countries__name">Казахстан</h3>
-          <li class="country__city">Тараз</li>
-          <li class="country__city">Алматы</li>
-          <li class="country__city">Нур-Султан</li>
-          <li class="country__city">Караганда</li>
-          <li class="country__city">Уштобе</li>
-          <li class="country__city">Талдыкорган</li>
-          <li class="country__city">г. Туркестан</li>
-        </ul>
+          <ul class="countries__list">
+            <h3 class="country__name">Туркменистан</h3>
+            <li class="country__city">Ашхабад</li>
+          </ul>
+        </div>
 
-        <ul class="countries__list">
-          <h3 class="countries__name">Беларусь</h3>
-          <li class="country__city">Минск</li>
-          <li class="country__city">Могилев</li>
-          <li class="country__city">Жлобин</li>
-          <li class="country__city">Гомель</li>
-          <li class="country__city">Житковичи</li>
-          <li class="country__city">Витебск</li>
-          <li class="country__city">Борисов</li>
-          <li class="country__city">Гродно</li>
-        </ul>
+        <div class="col-4">
+          <ul class="countries__list">
+            <h3 class="country__name">Казахстан</h3>
+            <li class="country__city">Тараз</li>
+            <li class="country__city">Алматы</li>
+            <li class="country__city">Нур-Султан</li>
+            <li class="country__city">Караганда</li>
+            <li class="country__city">Уштобе</li>
+            <li class="country__city">Талдыкорган</li>
+            <li class="country__city">г. Туркестан</li>
+          </ul>
 
-        <ul class="countries__list">
-          <h3 class="countries__name">Туркменистан</h3>
-          <li class="country__city">Ашхабад</li>
-        </ul>
+          <ul class="countries__list">
+            <h3 class="country__name">Беларусь</h3>
+            <li class="country__city">Минск</li>
+            <li class="country__city">Могилев</li>
+            <li class="country__city">Жлобин</li>
+            <li class="country__city">Гомель</li>
+            <li class="country__city">Житковичи</li>
+            <li class="country__city">Витебск</li>
+            <li class="country__city">Борисов</li>
+            <li class="country__city">Гродно</li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </div>

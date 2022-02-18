@@ -1,6 +1,6 @@
 .dual {
     min-height: inherit;
-    padding: 0 30px;
+    padding: 0 15px;
 
     &__background {
         position: absolute;
@@ -52,7 +52,7 @@
         bottom: 0;
         width: 50%;
         object-fit: cover;
-        z-index: -1;
+        z-index: -2;
 
         @media (min-width: 1230px) {
             min-height: calc(100% + 120px);
@@ -119,11 +119,11 @@
 
     &__left {
         width: 50%;
-        padding: 85px 140px 0 0;
+        padding: 85px 130px 0 0;
        
         @media (max-width: 1230px) {
             width: 100%;
-            padding: 45px 0px;
+            padding: 0;
         }
 
         .services-list__background {
@@ -143,7 +143,7 @@
         }
 
         @media (max-width: 380px) {
-            width: 320px;
+            width: 280px;
             margin: 0 auto;
         }
 

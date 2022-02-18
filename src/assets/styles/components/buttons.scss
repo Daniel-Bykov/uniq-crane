@@ -35,3 +35,22 @@
     }
   }
 }
+
+
+.button-hollow {
+  width: 170px;
+  height: 50px;
+  font-family: "Bebas Neue";
+  border: 1.5px solid $red-reg;
+  box-sizing: border-box;
+  font-weight: bold;
+  color: inherit;
+
+  &:hover {
+    border: 1.5px solid $red-hover;
+  }
+
+  @media (max-width: 1810px) {
+    display: none;
+  }
+}

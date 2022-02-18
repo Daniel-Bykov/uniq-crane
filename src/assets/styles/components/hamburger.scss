@@ -1,0 +1,40 @@
+
+.hamburger {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 19px;
+    margin-right: 10px;
+    cursor: pointer;
+  
+    @media (max-width: 1190px) {
+      margin-right: 0px;
+    }
+  
+    &__lines {
+      left: 0;
+      width: 16px;
+      height: 3px;
+      background: $red-reg;
+      transition: $animation-reg;
+  
+      &::before, &::after  {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 16px;
+        height: 3px;
+        background: $red-reg;
+        transition: $animation-reg;
+      }
+  
+      &::before{
+        top: 0px;
+      }
+  
+      &::after {
+        bottom: 0;
+      }
+    }
+  }

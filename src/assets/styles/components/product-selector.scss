@@ -33,46 +33,48 @@
     }
 
     &__item {
+      position: relative;
       display: flex;
       align-items: center;
-      justify-content: center;
       flex: 1;
       width: 100%;
-      padding: 0;
+      padding-left: 250px;
+      color: white;
       border: 1px solid rgba(255, 255, 255, 0.2);
       border-top: none;
+      text-align: left;
 
       @media (max-width: 1230px) {
         padding-right: 50px;
         display: none;
       }
+
+      &::before{
+        content: '';
+        position: absolute;
+        right: 20px;
+        width: 20px;
+        height: 40px;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='23' height='42' viewBox='0 0 23 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.70712 0.292969L22.4142 21.0001L1.70712 41.7072L0.292908 40.293L19.5858 21.0001L0.292908 1.70718L1.70712 0.292969Z' fill='white'/%3e%3c/svg%3e ");
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0;
+      }
     
-      &:hover {
+      &:hover, &--active {
         background: rgba(181, 33, 46, 0.5);
         backdrop-filter: blur(12px);
       }
-    
-      &--active {
-        background: rgba(181, 33, 46, 0.5);
-        backdrop-filter: blur(12px);
+     
+      &:hover::before, &--active::before {
+        opacity: 1;
       }
     
     }
 
-    &__text {
-      color: white;
-      font-family: "Bebas Neue";
-      font-style: normal;
-      font-weight: bold;
-      font-size: 30px;
-      line-height: 40px;
-      letter-spacing: 0.05em;
-      min-width: 390px;
-      text-align: start;
-  
-      @media (max-width: 1600px) {
-        font-size: 25px;
-      }
+    .title__sm{
+      width: 100%;
+      max-width: 500px;
     }
   }
 
@@ -122,18 +124,10 @@
     justify-content: flex-end;
     width: 100%;
     height: 100%;
+    min-height: 750px;
     padding-left: 110px;
     padding-bottom: 150px;
-
-    &--active{
-      display: flex;
-
-      img{
-        display: block;
-      }
-    }
-
-  
+   
     @media (max-width: 1230px) {
       display: flex;
       padding-left: unset;
@@ -147,6 +141,10 @@
     @media (max-width: 1365px) {
       padding-left: 20px;
     }
+
+    &--active{
+      display: flex;
+    }
   
     &__text {
       font-family:"Noto Sans Light";
@@ -158,22 +156,8 @@
       margin-bottom: 30px;
     }
   
-    &__title {
-      font-weight: bold;
-      font-size: 64px;
-      line-height: 70px;
-      letter-spacing: 0.05em;
-      white-space: pre-line;
-  
-      @media (max-width: 1230px) {
-        font-size: 32px;
-        line-height: 26px;
-        letter-spacing: 0;
-        white-space: initial;
-      }
-    }
-  
     &__price {
+      margin-bottom: 45px;
       font-weight: bold;
       font-size: 48px;
       line-height: 70px;
@@ -187,10 +171,9 @@
   
     &__img {
       position: absolute;
-      display: none;
-      object-fit: cover;
+      object-fit: contain;
       right: 0;
-      z-index: 0;
+      z-index: -1;
       bottom: 0;
       top: 0;
       max-height: 100%;
@@ -201,7 +184,7 @@
         right: 0;
         z-index: 0;
         height: unset;
-        width: 130px;
+        width: 100%;
         opacity: 1;
         visibility: visible;
       }

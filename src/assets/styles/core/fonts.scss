@@ -56,3 +56,67 @@
     font-family: "Noto Sans Light";
     src: url("../fonts/noto-sans-light.woff");
   }
+
+.title, 
+.title__xl, // h1
+.title__lg, // h2
+.title__md, // h3
+.title__xl, // h4
+.title__sm, // h5
+.title__xs  // h6
+{
+  color: inherit;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  white-space: initial;
+
+  &__xl {
+    font-size: 100px;
+    line-height: 100px;
+
+    @media (max-width: 700px) {
+      font-size: 50px;
+      line-height: 50px;
+    }
+  }
+
+  &__lg {
+    font-size: 64px;
+    line-height: 70px;
+
+    @media (max-width: 700px) {
+      font-size: 32px;
+      line-height: 35px;
+    }
+  }
+
+  &__md {
+    font-size: 44px;
+    line-height: 52px;
+
+    @media (max-width: 700px) {
+      font-size: 22px;
+      line-height: 26px;
+    }
+  }
+
+  &__sm {
+    font-size: 30px;
+    line-height: 30px;
+    
+    @media (max-width: 700px) {
+      font-size: 15px;
+      line-height: 15px;
+    }
+  }
+
+  &__xs {
+    font-size: 24px;
+    line-height: 30px;
+
+    @media (max-width: 700px) {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+}
