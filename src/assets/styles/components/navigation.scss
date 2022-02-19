@@ -1,19 +1,24 @@
 .pages-selector {
   position: absolute;
+  display: flex;
+  flex-direction: column;
   right: 70px !important;
   top: 50%;
   min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
   min-height: fit-content;
   left: unset;
-  display: flex;
-  flex-direction: column;
   transform: translateY(-50%);
   z-index: 5;
 
-  @media (max-width: 730px) {
+  @media (max-width: 1230px) {
     display: none;
   }
+
+  @media (max-width: 1750px) {
+    right: 35px !important;
+  }
+
 
   &__all{
     color: rgba(255, 255, 255, 0.5);
@@ -36,6 +41,10 @@
       margin-bottom: 30px !important;
       background: unset;
       border: 2px solid white;
+
+      @media (max-width: 1500px) {
+        margin-bottom: 15px !important;
+      }
 
       &::before {
         content: "•";
