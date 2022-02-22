@@ -1,0 +1,24 @@
+.page-slider {
+    color: white;
+
+    .logo {
+        img {
+            filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(114deg) brightness(2000%) contrast(200);
+        }
+    }
+}
+
+.page {
+    color: black;
+
+    .header {
+        display: flex;
+    }
+
+    .footer {
+        color: white;
+        .header {
+            display: none !important;
+        }
+    }
+}

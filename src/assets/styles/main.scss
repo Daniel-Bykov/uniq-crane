@@ -11,6 +11,7 @@
 @import "components/modals/request.scss";
 @import "components/header.scss";
 @import "components/hamburger.scss";
+@import "components/breadcrumb.scss";
 @import "components/inputs.scss";
 @import "components/buttons.scss";
 @import "components/navigation.scss";
@@ -22,6 +23,7 @@
 
 
 //Pages
+@import "pages/types.scss";
 @import "pages/welcome.scss";
 @import "pages/benefits.scss";
 @import "pages/geography.scss";

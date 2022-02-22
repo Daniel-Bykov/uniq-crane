@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap" rel="stylesheet">
@@ -12,78 +13,78 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/styles/main.min.css">
-  <title>Home</title>
+  <title>UNIQ-CRANE</title>
 </head>
 <body>
 
-<body class="regular-page">
+  
+<div class="modal fade" tabindex="-1" id="requestModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
 
+      <div class="modal-request modal-body">
+        <button type="button" class="modal-request__close" data-bs-dismiss="modal" aria-label="Close"></button>
 
+        <header class="modal-request__header">
+          <h1 class="modal-request__title">Оставьте заявку</h1>
+          <h3>и мы вам перезвоним!</p>
+        </header>
 
-  <div class="container container--regular">
-    <header class="header">
-      <a href="#" class="logo"><img src="./assets/img/logo-r.svg" alt=""></a>
-      <div class="dsp-f">
-        <div class="header__content">
-          <button class="product-catalog product-catalog--regular">
-            <div class="burger">
-              <div class="burger__lines"></div>
-            </div>
-            <span class="product-catalog__title product-catalog__title--regular">Каталог продукции</span>
-          </button>
-          <nav class="header-nav">
-            <a class="header-nav__item" href="">Прайс</a>
-            <a class="header-nav__item" href="equipment.html">Оборудование</a>
-            <a class="header-nav__item" href="crane-service.html">Сервис</a>
-            <a class="header-nav__item" href="">Информация</a>
-            <a class="header-nav__item" href="about-factory.html">О заводе</a>
-            <a class="header-nav__item" href="contacts.html">Контакты</a>
-          </nav>
-          <div class="dsp-f">
-            <a class="phone phone--regular" href="tel:+74955405053"> <span class="phone__text">+7 495 540 50 53</span></a>
+        <form class="form">
+          <div class="form__row">
+            <input type="text" class="input__field" value="" required>
+            <label class="label__field">Введите ваше имя</label>
           </div>
-        </div>
-        <button class="leave-request request request--regular">оставить заявку</button>
-      </div>
-    </header>   
-  </div>
 
+          <div class="form__row">
+            <input type="number" class="input__field" value="" required>
+            <label class="label__field">Введите ваш телефон</label>
+          </div>
 
-  <div class="popup">
-    <div class="popup__block" style="max-width: 460px;">
-      <div class="popup__close"></div>
-      <div class="enter-form__header">
-        <p class="recall-popup__title">Оставьте заявку</p>
-        <p class="recall-popup__text">и мы вам перезвоним!</p>
-      </div>
+          <button class="button button--modal mg-bt-40" type="submit"> <span class="button__text"> оставить
+              заявку</span></button>
 
+          <footer class="form__footer">
+            <input type="checkbox" class="default-checkbox" id="privacy-policy" name="privacy-policy" required>
+            <label for="privacy-policy"> <span>Нажимая на кнопку «Оставить заявку», <a href="#"> с
+                  политикой конфиденциальности</a> </label></span>
 
-      <div class="input-fields-popup">
-
-        <div class="input-group">
-          <input type="text" required>
-          <label>Введите ваше имя</label>
-        </div>
+          </footer>
+        </form>
         
-        <div class="input-group">
-          <input type="number" required>
-          <label>Введите ваш телефон</label>
-        </div>
-    </div>
-
-      <div class="enter-form__button-wrap">
-        <button class="button  button--popup mg-bt-40"> <span class="button__text">отправить запрос</span> </button>
-              <div>
-                <input type="checkbox" class="check__element" id="privacy-policy" name="privacy-policy" value="yes">
-                <label for="privacy-policy">
-                  <a href="#"><span>Нажимая на кнопку «Получить консультацию», вы соглашаетесь
-                      с политикой конфиденциальности</span></a> </label>
-              </div>
       </div>
-
     </div>
   </div>
+</div>
 
+
+<header class="header">
+  <a href="#" class="logo"><img src="./assets/img/logo-r.svg" alt="Uniq Crane"/></a>
+
+  <div class="header__content">
+    <button class="product-catalog">
+      <div class="hamburger">
+        <div class="hamburger__lines"></div>
+      </div>
+      <span class="product-catalog__title">Каталог продукции</span>
+    </button>
+
+    <nav class="header-nav">
+      <a class="header-nav__item" href="">Прайс</a>
+      <a class="header-nav__item" href="equipment.html">Оборудование</a>
+      <a class="header-nav__item" href="crane-service.html">Сервис</a>
+      <a class="header-nav__item" href="">Информация</a>
+      <a class="header-nav__item" href="about-factory.html">О заводе</a>
+      <a class="header-nav__item" href="">Контакты</a>
+    </nav>
+
+    <a class="phone" href="tel:+74955405053">
+      <span>+7 495 540 50 53</span></a>
+  </div>
+
+  <button type="button" class="button-hollow" data-bs-toggle="modal" data-bs-target="#requestModal">оставить
+    заявку</button>
+</header>
 <div style="position:relative">
 
   <div class="page-navigation__wrap">
@@ -926,132 +927,142 @@
 
 </div>
 
-<div class="footer section section-bg-2 section--footer" style="color:white">
+<section class="section footer section-bg-2">
 
-  <div class="dual">
-    
-    <img class="men men--regular" src="./assets/img/backgrounds/men.png" alt="">
-    <div class="content-container content-container--footer">
-      <div class="dual-box">
+  <header class="header">
+  <a href="#" class="logo"><img src="./assets/img/logo-r.svg" alt="Uniq Crane"/></a>
 
-        <div class="dual-box__left">
-          <header class="clients__header mg-bt-25">
-            <h2 class="section__title">Завод кранов UNIQ CRANE.
-              С 2011 года производим краны.
-              Качественно, быстро и надёжно.</h2>
-          </header>
+  <div class="header__content">
+    <button class="product-catalog">
+      <div class="hamburger">
+        <div class="hamburger__lines"></div>
+      </div>
+      <span class="product-catalog__title">Каталог продукции</span>
+    </button>
 
-          <div class="about-company" style="   border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
+    <nav class="header-nav">
+      <a class="header-nav__item" href="">Прайс</a>
+      <a class="header-nav__item" href="equipment.html">Оборудование</a>
+      <a class="header-nav__item" href="crane-service.html">Сервис</a>
+      <a class="header-nav__item" href="">Информация</a>
+      <a class="header-nav__item" href="about-factory.html">О заводе</a>
+      <a class="header-nav__item" href="">Контакты</a>
+    </nav>
 
-            <p>UNIQ CRANE — производственная компания с высокими стандартами. Мы предлагаем комплексные решения
+    <a class="phone" href="tel:+74955405053">
+      <span>+7 495 540 50 53</span></a>
+  </div>
+
+  <button type="button" class="button-hollow" data-bs-toggle="modal" data-bs-target="#requestModal">оставить
+    заявку</button>
+</header>
+
+
+  <div class="container content-container--footer">
+
+
+    <div class="content">
+      <div class="dual footer">
+        <div class="dual-box">
+
+          <img class="man" src="./assets/img/backgrounds/man.png" alt="">
+          <div class="dual-box__left">
+
+            <h3 class="title__md">Завод кранов UNIQ CRANE. <br>
+                С 2011 года производим краны. <br>
+                Качественно, быстро и надёжно.</h3>
+
+            <p class="about-company">UNIQ CRANE — производственная компания с высокими стандартами. Мы предлагаем
+              комплексные решения
               в области грузоподъёмного оборудования, начиная от разработки проектной документации и заканчивая сдачей
               кранов в эксплуатацию.</p>
 
-          </div>
-
-          <div class="achievements">
-
-            <div class="mg-r-40">
-              <div class="achievements-items">
-                <p class="achievements-items__numbers">7 лет</p>
+            <div class="achievements">
+              <div class="achievements__item">
+                <div class="achievements__wreath">
+                  <p class="achievements__value">7 лет</p>
+                </div>
+                <p class="achievements__title">работы</p>
               </div>
-              <p class="achievements-items__text">работы</p>
+
+              <div class="achievements__item">
+                <div class="achievements__wreath">
+                  <p class="achievements__value">418</p>
+                </div>
+                <p class="achievements__title">клиентов</p>
+              </div>
+
+              <div class="achievements__item">
+                <div class="achievements__wreath">
+                  <p class="achievements__value">637</p>
+                </div>
+                <p class="achievements__title">отгружено кранов</p>
+              </div>
             </div>
 
-            <div class="mg-r-40">
-              <div class="achievements-items">
-                <p class="achievements-items__numbers">418</p>
-              </div>
-              <p class="achievements-items__text">клиентов</p>
-            </div>
+            <a href="#" class="section__link">Подробнее о компании</a>
 
-            <div class="mg-r-40">
-              <div class="achievements-items">
-                <p class="achievements-items__numbers">637</p>
-              </div>
-              <p class="achievements-items__text">отгружено кранов</p>
-            </div>
           </div>
 
-          <a href="#" class="section__link">Подробнее о компании</a>
+          <div class="dual-box__right dual-box__right--footer">
 
-        </div>
+            <img class="dual__background-right dual__background-right--footer" src="./assets/img/backgrounds/7.png"
+              alt="">
 
-        <div class="dual-box__right dual-box__right--footer">
+            <div class="feedback">
 
-          <div >
-            <img class="dual__background-right dual__background-right--regular" src="./assets/img/backgrounds/7.png" alt="">
-          </div>
-
-
-          <div class="recall-wrap">
-            <div class="recall-wrap-2">
-              <header class="clients__header">
-                <h2 class="recall__title">Бесплатный выезд
+              <h2 class="title__lg">Бесплатный выезд
                   специалиста</h2>
-              </header>
 
-              <div class="recall">
-                <p class="recall__text"> Нет времени изучать? Мы сами перезвоним
-                  и проконсультируем по любым вопросам</p>
+              <p class="feedback__text"> Нет времени изучать? Мы сами перезвоним
+                и проконсультируем по любым вопросам</p>
 
-              </div>
+              <form class="form">
 
-              <div class="input-fields-footer">
-
-                <div class="input-group">
-                  <input type="text" required>
-                  <label>Введите ваше имя</label>
+                <div class="form__row">
+                  <input type="text" class="input__field" value="" required>
+                  <label class="label__field">Введите ваше имя</label>
                 </div>
-                
-                <div class="input-group">
-                  <input type="number" required>
-                  <label>Введите ваш телефон</label>
-                </div>
-            </div>
 
-              <button class="button mg-bt-40"> <span class="button__text">отправить запрос</span> </button>
-              <div>
-                <input type="checkbox" class="check__element" id="privacy-policy" name="privacy-policy" value="yes">
-                <label for="privacy-policy">
-                  <a href="#"><span>Нажимая на кнопку «Получить консультацию», вы соглашаетесь
-                      с политикой конфиденциальности</span></a> </label>
-              </div>
-            </div>
-          </div>
-          <div class="footer__bottom--mobile">
-            <div class="copyright">
-              <p>© 2021 «Uniq Crane» Все права защищены</p>
-            </div>
-            <div class="studio">
-            <a href="" class="dsp-f"><p>Разработка сайта —</p> 
-            <div class="studio__logo"> <img src="./assets/img/Forestweb-tree.svg" alt=""><img src="./assets/img/Forestweb.svg" alt=""></div> </a>
+                <div class="form__row">
+                  <input type="number" class="input__field" value="" required>
+                  <label class="label__field">Введите ваш телефон</label>
+                </div>
+
+                <button class="button mg-bt-40" type="submit">отправить запрос</button>
+
+                <footer class="form__footer">
+                  <input type="checkbox" class="default-checkbox" id="privacy-policy" name="privacy-policy" required>
+                  <label for="privacy-policy"> <span>Нажимая на кнопку «Получить консультацию», вы соглашаетесь     <a href="#"> с политикой конфиденциальности</a> </span>
+                </label>
+                </footer>
+              </form>
+
             </div>
           </div>
         </div>
 
+        <footer class="footer__bottom">
+          <div class="copyright">
+            <p>© 2021 «Uniq Crane» Все права защищены</p>
+          </div>
+          <div class="studio">
+            <a href="" class="dsp-f">
+              <p>Разработка сайта —</p>
+              <div class="studio__logo"> <img src="./assets/img/Forestweb-tree.svg" alt=""><img
+                  src="./assets/img/Forestweb.svg" alt=""></div>
+            </a>
+          </div>
+        </footer>
       </div>
-
-      <div class="footer__bottom footer__bottom--regular">
-        <div class="copyright">
-          <p>© 2021 «Uniq Crane» Все права защищены</p>
-        </div>
-        <div class="studio">
-        <a href="" class="dsp-f"><p>Разработка сайта —</p> 
-        <div class="studio__logo"> <img src="./assets/img/Forestweb-tree.svg" alt=""><img src="./assets/img/Forestweb.svg" alt=""></div> </a>
-        </div>
-      </div>
-    </div>
-
-      
-
-  </div>
 
 </div>
-<script type="module" src="./assets/js/script.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</section>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+<script type="module" src="./assets/js/script.js"></script>
 </body>
 
 </html>

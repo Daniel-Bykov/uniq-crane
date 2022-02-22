@@ -293,22 +293,7 @@
 }
 
 
-.nav-pages {
-  font-family: "Noto Sans Light";
-  font-size: 12px;
-  line-height: 20px;
-  font-feature-settings: "pnum" on, "lnum" on;
-  color: #616d7d;
 
-  &:hover {
-    text-decoration: underline;
-  }
-
-  &__slash {
-    margin-right: 6px;
-    margin-left: 5px;
-  }
-}
 
 .page-description {
   display: flex;

@@ -17,12 +17,53 @@
 </head>
 <body>
 
-<div class="swiper-container page-swiper">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">
-      <section class="section top-section section-bg-1">
+  
+<div class="modal fade" tabindex="-1" id="requestModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-request modal-body">
+        <button type="button" class="modal-request__close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+        <header class="modal-request__header">
+          <h1 class="modal-request__title">Оставьте заявку</h1>
+          <h3>и мы вам перезвоним!</p>
+        </header>
+
+        <form class="form">
+          <div class="form__row">
+            <input type="text" class="input__field" value="" required>
+            <label class="label__field">Введите ваше имя</label>
+          </div>
+
+          <div class="form__row">
+            <input type="number" class="input__field" value="" required>
+            <label class="label__field">Введите ваш телефон</label>
+          </div>
+
+          <button class="button button--modal mg-bt-40" type="submit"> <span class="button__text"> оставить
+              заявку</span></button>
+
+          <footer class="form__footer">
+            <input type="checkbox" class="default-checkbox" id="privacy-policy" name="privacy-policy" required>
+            <label for="privacy-policy"> <span>Нажимая на кнопку «Оставить заявку», <a href="#"> с
+                  политикой конфиденциальности</a> </label></span>
+
+          </footer>
+        </form>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-slider">
+  <div class="swiper-container page-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <section class="section top-section section-bg-1">
   <header class="header">
-  <a href="#" class="logo"><img src="./assets/img/logo-w.svg" alt="Uniq Crane"/></a>
+  <a href="#" class="logo"><img src="./assets/img/logo-r.svg" alt="Uniq Crane"/></a>
 
   <div class="header__content">
     <button class="product-catalog">
@@ -58,11 +99,11 @@
   </div>
 </section>
 
-    </div>
-    <div class="swiper-slide">
-      <section class="section section-bg-2">
+      </div>
+      <div class="swiper-slide">
+        <section class="section section-bg-2">
   <header class="header">
-  <a href="#" class="logo"><img src="./assets/img/logo-w.svg" alt="Uniq Crane"/></a>
+  <a href="#" class="logo"><img src="./assets/img/logo-r.svg" alt="Uniq Crane"/></a>
 
   <div class="header__content">
     <button class="product-catalog">
@@ -242,11 +283,11 @@
   </div>
 </section>
 
-    </div>
-    <div class="swiper-slide">
-      <section class="section section-bg-3 test">
+      </div>
+      <div class="swiper-slide">
+        <section class="section section-bg-3 test">
   <header class="header">
-  <a href="#" class="logo"><img src="./assets/img/logo-w.svg" alt="Uniq Crane"/></a>
+  <a href="#" class="logo"><img src="./assets/img/logo-r.svg" alt="Uniq Crane"/></a>
 
   <div class="header__content">
     <button class="product-catalog">
@@ -382,11 +423,11 @@
   </div>
 </section>
 
-    </div>
-    <div class="swiper-slide">
-      <section class="section section-bg-2">
+      </div>
+      <div class="swiper-slide">
+        <section class="section section-bg-2">
   <header class="header">
-  <a href="#" class="logo"><img src="./assets/img/logo-w.svg" alt="Uniq Crane"/></a>
+  <a href="#" class="logo"><img src="./assets/img/logo-r.svg" alt="Uniq Crane"/></a>
 
   <div class="header__content">
     <button class="product-catalog">
@@ -469,12 +510,12 @@
     </div>
   </div>
 </section>
-    </div>
-    <div class="swiper-slide">
-      
+      </div>
+      <div class="swiper-slide">
+        
 <section class="section section-bg-2">
     <header class="header">
-  <a href="#" class="logo"><img src="./assets/img/logo-w.svg" alt="Uniq Crane"/></a>
+  <a href="#" class="logo"><img src="./assets/img/logo-r.svg" alt="Uniq Crane"/></a>
 
   <div class="header__content">
     <button class="product-catalog">
@@ -760,11 +801,11 @@
         </div>
       </div>
     </section>
-    </div>
-    <div class="swiper-slide">
-      <section class="section section-bg-2">
+      </div>
+      <div class="swiper-slide">
+        <section class="section section-bg-2">
   <header class="header">
-  <a href="#" class="logo"><img src="./assets/img/logo-w.svg" alt="Uniq Crane"/></a>
+  <a href="#" class="logo"><img src="./assets/img/logo-r.svg" alt="Uniq Crane"/></a>
 
   <div class="header__content">
     <button class="product-catalog">
@@ -892,9 +933,9 @@
   </div>
 </section>
 
-    </div>
-    <div class="swiper-slide">
-      <section class="section section-bg-2">
+      </div>
+      <div class="swiper-slide">
+        <section class="section section-bg-2">
   <div class="features-wrap">
       <h2 class="title__lg">НАШИ УСЛУГИ</h2>
 
@@ -908,7 +949,7 @@
           </button>
         </header>
 
-        <div id="feature-1" class="accordion-collapse collapse" data-bs-parent="#featuresToggle">
+        <div id="feature-1" class="accordion-collapse collapse show" data-bs-parent="#featuresToggle">
           <div class="accordion-body">
             <img class="accordion-features-background" src="./assets/img/backgrounds/features/1.png" alt="garanty" />
 
@@ -1048,7 +1089,7 @@
   </div>
 
   <header class="header">
-  <a href="#" class="logo"><img src="./assets/img/logo-w.svg" alt="Uniq Crane"/></a>
+  <a href="#" class="logo"><img src="./assets/img/logo-r.svg" alt="Uniq Crane"/></a>
 
   <div class="header__content">
     <button class="product-catalog">
@@ -1177,11 +1218,11 @@
     </div>
   </div>
 </section>
-    </div>
-    <div class="swiper-slide">
-      <section class="section section-bg-2">
+      </div>
+      <div class="swiper-slide">
+        <section class="section section-bg-2">
   <header class="header">
-  <a href="#" class="logo"><img src="./assets/img/logo-w.svg" alt="Uniq Crane"/></a>
+  <a href="#" class="logo"><img src="./assets/img/logo-r.svg" alt="Uniq Crane"/></a>
 
   <div class="header__content">
     <button class="product-catalog">
@@ -1417,12 +1458,12 @@
     </div>
   </div>
 </section>
-    </div>
-    <div class="swiper-slide">
-      <section class="section footer section-bg-2">
+      </div>
+      <div class="swiper-slide">
+        <section class="section footer section-bg-2">
 
   <header class="header">
-  <a href="#" class="logo"><img src="./assets/img/logo-w.svg" alt="Uniq Crane"/></a>
+  <a href="#" class="logo"><img src="./assets/img/logo-r.svg" alt="Uniq Crane"/></a>
 
   <div class="header__content">
     <button class="product-catalog">
@@ -1558,57 +1599,16 @@
 </body>
 
 </html>
-    </div>
-  </div>
-
-</div>
-
-
-<div class="pages-selector">
-  <div class="pages-selector__pagination"></div>
-  <div class="pages-selector__fraction">
-    <span class="pages-selector__active"></span><span class="pages-selector__all"></span>
-  </div>
-</div>
-
-
-
-
-<div class="modal fade" tabindex="-1" id="requestModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-      <div class="modal-request modal-body">
-        <button type="button" class="modal-request__close" data-bs-dismiss="modal" aria-label="Close"></button>
-
-        <header class="modal-request__header">
-          <h1 class="modal-request__title">Оставьте заявку</h1>
-          <h3>и мы вам перезвоним!</p>
-        </header>
-
-        <form class="form">
-          <div class="form__row">
-            <input type="text" class="input__field" value="" required>
-            <label class="label__field">Введите ваше имя</label>
-          </div>
-
-          <div class="form__row">
-            <input type="number" class="input__field" value="" required>
-            <label class="label__field">Введите ваш телефон</label>
-          </div>
-
-          <button class="button button--modal mg-bt-40" type="submit"> <span class="button__text"> оставить
-              заявку</span></button>
-
-          <footer class="form__footer">
-            <input type="checkbox" class="default-checkbox" id="privacy-policy" name="privacy-policy" required>
-            <label for="privacy-policy"> <span>Нажимая на кнопку «Оставить заявку», <a href="#"> с
-                  политикой конфиденциальности</a> </label></span>
-
-          </footer>
-        </form>
-
       </div>
     </div>
+
   </div>
+
+  <div class="pages-selector">
+    <div class="pages-selector__pagination"></div>
+    <div class="pages-selector__fraction">
+      <span class="pages-selector__active"></span><span class="pages-selector__all"></span>
+    </div>
+  </div>
+
 </div>
