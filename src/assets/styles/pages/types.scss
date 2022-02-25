@@ -1,6 +1,11 @@
 .page-slider {
     color: white;
 
+    .header {
+        color: white;
+        
+    }
+
     .logo {
         img {
             filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(114deg) brightness(2000%) contrast(200);
@@ -9,10 +14,16 @@
 }
 
 .page {
+    position: relative;
     color: black;
+    
+    .container{
+        border-bottom: 1px solid #dbdbdb;
+    }
 
     .header {
         display: flex;
+        border-bottom: 1px solid rgba(230, 232, 233, 1);
     }
 
     .footer {

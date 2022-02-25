@@ -101,3 +101,62 @@
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='9' viewBox='0 0 15 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath opacity='0.4' fill-rule='evenodd' clip-rule='evenodd' d='M7.5 0L15 7.43278L13.4186 9L7.5 3.13445L1.5814 9L0 7.43278L7.5 0Z' fill='white'/%3e%3c/svg%3e ");
   }
 }
+
+
+.page-navigation {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+  top: 200px;
+  margin-bottom: 50px;
+  padding: 0 40px 0 0;
+  z-index: 1;
+  background: #fff;
+  box-shadow: 0 4px 64px rgb(0 0 0 / 5%);
+
+  &--map {
+    margin-left: 0;
+    margin-bottom: 50px;
+    position: absolute;
+    left: 0;
+    white-space: initial;
+  }
+
+  &__wrap {
+    position: absolute;
+    height: calc(100% - 120px);
+    right: 250px;
+
+    &--map {
+      right: unset;
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  &__button {
+    font-family: "Bebas Neue";
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 0.83;
+    letter-spacing: 0.05em;
+    padding: 32px 0 25px 40px;
+    text-align: inherit;
+    border-bottom: 1px solid #dbdbdb;
+
+    &:nth-last-child(1) {
+      border-bottom: unset;
+    }
+
+    &--active {
+      color: $red-reg;
+      border-left: 2px $red-reg solid;
+    }
+
+    &:hover {
+      color: $red-hover;
+    }
+  }
+}
+
