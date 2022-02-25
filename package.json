@@ -1,5 +1,5 @@
 {
-  "name": "fls-gulp",
+  "name": "uniq-crane",
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Daniel-Bykov/Oishi-Sushi.git"
+    "url": "git+https://github.com/Daniel-Bykov/uniq-crane.git"
   },
   "author": "Daniel Bykov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Daniel-Bykov/Oishi-Sushi/issues"
+    "url": "https://github.com/Daniel-Bykov/uniq-crane/issues"
   },
-  "homepage": "https://github.com/Daniel-Bykov/Oishi-Sushi#readme",
+  "homepage": "https://github.com/Daniel-Bykov/uniq-crane#readme",
   "devDependencies": {
     "browser-sync": "^2.26.14",
     "del": "^6.0.0",
