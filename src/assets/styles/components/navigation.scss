@@ -110,10 +110,17 @@
   width: 340px;
   top: 200px;
   margin-bottom: 50px;
-  padding: 0 40px 0 0;
   z-index: 1;
   background: #fff;
   box-shadow: 0 4px 64px rgb(0 0 0 / 5%);
+
+  .active{
+      background-color: unset;
+      border: unset;
+      border-bottom: 1px solid #dbdbdb;
+      color: $red-reg;
+      border-left: 2px $red-reg solid;
+  }
 
   &--map {
     margin-left: 0;
@@ -147,11 +154,6 @@
 
     &:nth-last-child(1) {
       border-bottom: unset;
-    }
-
-    &--active {
-      color: $red-reg;
-      border-left: 2px $red-reg solid;
     }
 
     &:hover {

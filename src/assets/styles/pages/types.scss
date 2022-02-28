@@ -32,4 +32,8 @@
             display: none !important;
         }
     }
+
+    .benefits-item__logo img{
+        filter: brightness(.1);
+    }
 }

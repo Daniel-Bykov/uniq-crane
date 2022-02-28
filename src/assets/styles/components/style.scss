@@ -1,18 +1,16 @@
-.page-swiper{
+.page-swiper {
   max-height: 100vh;
   overflow: hidden;
 
-  &--disabled{
+  &--disabled {
     overflow: auto;
   }
 
-  .swiper-slide{
+  .swiper-slide {
     overflow: scroll;
     overflow-x: hidden;
   }
-
 }
-
 
 .clients {
   &-box {
@@ -24,7 +22,7 @@
     width: 100%;
 
     @media (min-width: 1230px) {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
 
     &--regular {
@@ -61,7 +59,6 @@
     align-items: center;
 
     &--regular {
-      width: 25%;
       border-bottom: 1px solid #dbdbdb;
       border-left: 1px solid #dbdbdb;
       padding: 0;
@@ -89,71 +86,8 @@
 }
 
 
-.swiper-pagination--regular {
-  color: #051223;
-  border-top: 1px solid #dbdbdb;
-  padding-top: 15px;
-  position: absolute;
-  text-align: center;
-
-  .swiper-pagination-current {
-    font-size: 30px;
-    line-height: 30px;
-    text-align: center;
-    letter-spacing: 0.05em;
-    color: #051223;
-  }
-
-  .swiper-pagination-total {
-    font-size: 22px;
-    line-height: 30px;
-    text-align: center;
-    letter-spacing: 0.05em;
-  }
-
-  .about-company {
-    white-space: initial;
-    font-family: "Noto Sans Light";
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 58px;
-    max-width: 465px;
-    min-height: 158px;
-
-    @media (max-width: 1230px) {
-      white-space: normal;
-      font-size: 12px;
-      line-height: 21px;
-      margin-bottom: 30px;
-    }
-  }
-}
-
-.swiper-pagination {
-  color: rgba(255, 255, 255, 0.4);
-  border-top: 1px #37414f solid;
-  padding-top: 15px;
-}
-
-.swiper-pagination-current {
-  font-size: 30px;
-  line-height: 30px;
-  text-align: center;
-  letter-spacing: 0.05em;
-  color: #ffffff;
-}
-
-.swiper-pagination-total {
-  font-size: 22px;
-  line-height: 30px;
-  text-align: center;
-  letter-spacing: 0.05em;
-}
-
 .direction-company {
-  font-family:"Noto Sans Light";
+  font-family: "Noto Sans Light";
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
@@ -176,7 +110,7 @@
   }
 
   &__item {
-    font-family:"Noto Sans Light";
+    font-family: "Noto Sans Light";
     font-weight: 300;
     font-size: 16px;
     line-height: 36px;
@@ -235,7 +169,7 @@
     }
 
     &__data {
-      font-family:"Noto Sans Light";
+      font-family: "Noto Sans Light";
       font-weight: 300;
       font-size: 12px;
       line-height: 24px;
@@ -258,15 +192,14 @@
   }
 }
 
-
 .copyright {
-  font-family:"Noto Sans Light";
+  font-family: "Noto Sans Light";
   font-size: 12px;
   line-height: 20px;
 }
 
 .studio {
-  font-family:"Noto Sans Light";
+  font-family: "Noto Sans Light";
   font-size: 12px;
   line-height: 20px;
   display: flex;
@@ -276,7 +209,6 @@
     align-items: center;
   }
 }
-
 
 .page-description {
   display: flex;
@@ -331,7 +263,6 @@
   }
 }
 
-
 .arrow {
   position: absolute;
   width: 16px;
@@ -343,40 +274,6 @@
 
   @media (max-width: 500px) {
     right: 20px;
-  }
-}
-
-
-
-
-.platform-list {
-  font-family:"Noto Sans Light";
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-
-  &__item {
-    display: flex;
-    align-items: baseline;
-    font-family: "Noto Sans Light";
-    font-size: 18px;
-    line-height: 22px;
-    margin-bottom: 20px;
-
-    &::before {
-      margin-right: 15px;
-      content: "";
-      border: 3px solid #b5212e;
-      box-sizing: border-box;
-      border-radius: 7px;
-      width: 10px;
-      height: 10px;
-      display: block;
-      background: white;
-    }
-  }
-
-  &__text {
   }
 }
 
@@ -417,25 +314,41 @@ div.cp-lightoverlay.cp-lightoverlay-in {
 }
 
 .certificats-frame {
-  width: 305px;
-  height: 399.28px;
-  background-image: url("../img/icons/certificats-box.svg");
+  width: 258px;
+  height: 350px;
+  background-image: url("../img/icons/certificats-frame.svg");
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  &:hover .cards-mask--gallery {
-    background: #dd4956;
-    transform: translateY(0);
-    padding: 40px;
+  &:hover {
+    background-color: rgb(221 73 86 / 80%);
   }
+
+  &:hover::before {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-image: url(/assets/img/icons/zoom.svg);
+  }
+
+  // &:hover .cards-mask--gallery {
+  //   background: #dd4956;
+  //   transform: translateY(0);
+  //   padding: 40px;
+  // }
 
   &__image {
     width: 205.81px;
     height: 299.72px;
+    z-index: -1;
     overflow: hidden;
     display: flex;
     justify-content: center;
+
+
   }
 }
 

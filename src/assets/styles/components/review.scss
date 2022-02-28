@@ -24,12 +24,13 @@
     }
   
     &__text {
+      display: flex;
       white-space: initial;
       font-family:"Noto Sans Light";
       font-weight: 300;
       font-size: 18px;
       line-height: 30px;
-      padding: 15px 15px 75px;
+      padding: 40px 40px 75px;
   
       @media (max-width: 580px) {
         font-size: 13px;
@@ -93,6 +94,15 @@
       }
     }
   }
+
+  .review-footer {
+    border-top: solid rgba(255, 255, 255, 0.2);
+    
+    &--regular {
+      border-top: 1px solid #dbdbdb;
+    }
+  
+  }
   
   .review-prev {
     height: 20px;
@@ -135,4 +145,68 @@
     @media (max-width: 580px) {
       right: 70px;
     }
+  }
+
+  .swiper-pagination--regular {
+    color: #051223;
+    border-top: 1px solid #dbdbdb;
+    padding-top: 15px;
+    position: absolute;
+    text-align: center;
+  
+    .swiper-pagination-current {
+      font-size: 30px;
+      line-height: 30px;
+      text-align: center;
+      letter-spacing: 0.05em;
+      color: #051223;
+    }
+  
+    .swiper-pagination-total {
+      font-size: 22px;
+      line-height: 30px;
+      text-align: center;
+      letter-spacing: 0.05em;
+    }
+  
+    .about-company {
+      white-space: initial;
+      font-family: "Noto Sans Light";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 58px;
+      max-width: 465px;
+      min-height: 158px;
+  
+      @media (max-width: 1230px) {
+        white-space: normal;
+        font-size: 12px;
+        line-height: 21px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  
+  .swiper-pagination {
+    padding: 25px 0px;
+    bottom: 0;
+  }
+  
+  .swiper-pagination-current {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: inherit;
+  }
+  
+  .swiper-pagination-total {
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: inherit;
   }

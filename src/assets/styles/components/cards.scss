@@ -50,15 +50,9 @@
             background-color: #efefef00;
             cursor: pointer;
 
-            &:hover {
-                background: unset;
+            &:hover{
+                background-color: unset;
             }
-
-            //   &:hover .cards-mask--gallery {
-            //     background: #dd4956;
-            //     transform: translateY(0);
-            //     padding: 40px;
-            //   }
         }
 
         &--gallery:hover .cards-mask,

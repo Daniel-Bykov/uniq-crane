@@ -54,7 +54,6 @@ function swipersInit() {
       nextRevButt.addEventListener("click", () => {
         sw.slideNext();
       });
-
       prevRevButt.addEventListener("click", () => {
         sw.slidePrev();
       });
@@ -69,6 +68,7 @@ function swipersInit() {
   sliderNavigation(
     document.querySelector(".review-next"),
     document.querySelector(".review-prev"),
+    reviews
   );
 }
 
@@ -130,7 +130,7 @@ function pageSlider (){
     mainContainer.firstElementChild.style = "flex-direction: column"
   }
   
-  else {
+  else if(mainContainer) {
     const swiper = new Swiper(".page-swiper", {
       direction: 'vertical',
       keyboard: {
