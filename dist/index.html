@@ -15,8 +15,7 @@
   <link rel="stylesheet" href="./assets/styles/main.min.css">
   <title>UNIQ-CRANE</title>
 </head>
-<body data-bs-spy="scroll" data-bs-target="#page-navigation" data-bs-offset="0" class="scrollspy-example" tabindex="0"
-style="position: relative;   overflow: scroll;">
+<body>
 
   
 <div class="modal fade" tabindex="-1" id="requestModal">
@@ -58,6 +57,15 @@ style="position: relative;   overflow: scroll;">
   </div>
 </div>
 
+<div class="modal" tabindex="-1"  id="pictureModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button type="button" class="btn-close pictureModal__close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <img class="pictureModal__picture" src="" alt="">
+    </div>
+  </div>
+</div>
+
 <div class="page-slider">
   <div class="swiper-container page-swiper">
     <div class="swiper-wrapper">
@@ -80,7 +88,7 @@ style="position: relative;   overflow: scroll;">
       <a class="header-nav__item" href="crane-service.html">Сервис</a>
       <a class="header-nav__item" href="">Информация</a>
       <a class="header-nav__item" href="about-factory.html">О заводе</a>
-      <a class="header-nav__item" href="">Контакты</a>
+      <a class="header-nav__item" href="contacts.html">Контакты</a>
     </nav>
 
     <a class="phone" href="tel:+74955405053">
@@ -120,7 +128,7 @@ style="position: relative;   overflow: scroll;">
       <a class="header-nav__item" href="crane-service.html">Сервис</a>
       <a class="header-nav__item" href="">Информация</a>
       <a class="header-nav__item" href="about-factory.html">О заводе</a>
-      <a class="header-nav__item" href="">Контакты</a>
+      <a class="header-nav__item" href="contacts.html">Контакты</a>
     </nav>
 
     <a class="phone" href="tel:+74955405053">
@@ -304,7 +312,7 @@ style="position: relative;   overflow: scroll;">
       <a class="header-nav__item" href="crane-service.html">Сервис</a>
       <a class="header-nav__item" href="">Информация</a>
       <a class="header-nav__item" href="about-factory.html">О заводе</a>
-      <a class="header-nav__item" href="">Контакты</a>
+      <a class="header-nav__item" href="contacts.html">Контакты</a>
     </nav>
 
     <a class="phone" href="tel:+74955405053">
@@ -442,7 +450,7 @@ style="position: relative;   overflow: scroll;">
       <a class="header-nav__item" href="crane-service.html">Сервис</a>
       <a class="header-nav__item" href="">Информация</a>
       <a class="header-nav__item" href="about-factory.html">О заводе</a>
-      <a class="header-nav__item" href="">Контакты</a>
+      <a class="header-nav__item" href="contacts.html">Контакты</a>
     </nav>
 
     <a class="phone" href="tel:+74955405053">
@@ -530,7 +538,7 @@ style="position: relative;   overflow: scroll;">
       <a class="header-nav__item" href="crane-service.html">Сервис</a>
       <a class="header-nav__item" href="">Информация</a>
       <a class="header-nav__item" href="about-factory.html">О заводе</a>
-      <a class="header-nav__item" href="">Контакты</a>
+      <a class="header-nav__item" href="contacts.html">Контакты</a>
     </nav>
 
     <a class="phone" href="tel:+74955405053">
@@ -820,7 +828,7 @@ style="position: relative;   overflow: scroll;">
       <a class="header-nav__item" href="crane-service.html">Сервис</a>
       <a class="header-nav__item" href="">Информация</a>
       <a class="header-nav__item" href="about-factory.html">О заводе</a>
-      <a class="header-nav__item" href="">Контакты</a>
+      <a class="header-nav__item" href="contacts.html">Контакты</a>
     </nav>
 
     <a class="phone" href="tel:+74955405053">
@@ -1104,7 +1112,7 @@ style="position: relative;   overflow: scroll;">
       <a class="header-nav__item" href="crane-service.html">Сервис</a>
       <a class="header-nav__item" href="">Информация</a>
       <a class="header-nav__item" href="about-factory.html">О заводе</a>
-      <a class="header-nav__item" href="">Контакты</a>
+      <a class="header-nav__item" href="contacts.html">Контакты</a>
     </nav>
 
     <a class="phone" href="tel:+74955405053">
@@ -1237,7 +1245,7 @@ style="position: relative;   overflow: scroll;">
       <a class="header-nav__item" href="crane-service.html">Сервис</a>
       <a class="header-nav__item" href="">Информация</a>
       <a class="header-nav__item" href="about-factory.html">О заводе</a>
-      <a class="header-nav__item" href="">Контакты</a>
+      <a class="header-nav__item" href="contacts.html">Контакты</a>
     </nav>
 
     <a class="phone" href="tel:+74955405053">
@@ -1478,7 +1486,7 @@ style="position: relative;   overflow: scroll;">
       <a class="header-nav__item" href="crane-service.html">Сервис</a>
       <a class="header-nav__item" href="">Информация</a>
       <a class="header-nav__item" href="about-factory.html">О заводе</a>
-      <a class="header-nav__item" href="">Контакты</a>
+      <a class="header-nav__item" href="contacts.html">Контакты</a>
     </nav>
 
     <a class="phone" href="tel:+74955405053">
@@ -1594,6 +1602,7 @@ style="position: relative;   overflow: scroll;">
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 <script src="./assets/js/bootstrap.bundle.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 <script type="module" src="./assets/js/script.js"></script>
 </body>
 

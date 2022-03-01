@@ -45,8 +45,9 @@
         }
 
         &--certificats {
-            width: 297px;
-            height: 399.28px;
+            height: unset;
+            max-width: 260px;
+            min-width: unset;
             background-color: #efefef00;
             cursor: pointer;
 
@@ -106,6 +107,7 @@
         padding-left: 38px;
         position: absolute;
         top: 38px;
+        z-index: 1;
     }
 
     &__image {
@@ -239,3 +241,36 @@
         }
     }
 }
+
+
+
+.certificats-frame {
+    padding: 25px;
+    height: 350px;
+    background-image: url("../img/icons/certificats-frame.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &:hover {
+      background-color: rgb(221 73 86 / 80%);
+    }
+  
+    &:hover::before {
+      content: "";
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      transform: translate(50%, -50%);
+      top: 50%;
+      right: 50%;
+      background-image: url(/assets/img/icons/zoom.svg);
+    }
+    
+    &__image {
+      width: 100%;
+      z-index: -1;
+      overflow: hidden;
+      position: relative;
+    }
+  }
+  

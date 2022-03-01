@@ -15,8 +15,7 @@
   <link rel="stylesheet" href="./assets/styles/main.min.css">
   <title>UNIQ-CRANE</title>
 </head>
-<body data-bs-spy="scroll" data-bs-target="#page-navigation" data-bs-offset="0" class="scrollspy-example" tabindex="0"
-style="position: relative;   overflow: scroll;">
+<body>
 
   
 <div class="modal fade" tabindex="-1" id="requestModal">
@@ -58,8 +57,14 @@ style="position: relative;   overflow: scroll;">
   </div>
 </div>
 
-
-
+<div class="modal" tabindex="-1"  id="pictureModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button type="button" class="btn-close pictureModal__close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <img class="pictureModal__picture" src="" alt="">
+    </div>
+  </div>
+</div>
 
 <div class="page">
 
@@ -80,7 +85,7 @@ style="position: relative;   overflow: scroll;">
       <a class="header-nav__item" href="crane-service.html">Сервис</a>
       <a class="header-nav__item" href="">Информация</a>
       <a class="header-nav__item" href="about-factory.html">О заводе</a>
-      <a class="header-nav__item" href="">Контакты</a>
+      <a class="header-nav__item" href="contacts.html">Контакты</a>
     </nav>
 
     <a class="phone" href="tel:+74955405053">
@@ -94,17 +99,16 @@ style="position: relative;   overflow: scroll;">
   <img class="page-description__background" src="./assets/img/backgrounds/about-factory.png" alt="">
 
 
-  <div class="page-navigation__wrap">
-    <div  class="page-navigation list-group" id="page-navigation">
-      <a class="list-group-item list-group-item-action page-navigation__button" href="#history"> <span>История</span> </a>
-      <a class="list-group-item list-group-item-action page-navigation__button" href="#production"> <span>Производство</span> </a>
-      <a class="list-group-item list-group-item-action page-navigation__button" href="#certificats"> <span>Сертификаты</span> </a>
-      <a class="list-group-item list-group-item-action page-navigation__button" href="#features"> <span>Преимущества</span> </a>
+  <div class="page-navigation">
+    <div class="page-navigation__wrap list-group" id="page-navigation">
+      <a class="list-group-item list-group-item-action page-navigation__button" href="#history"> <span>История</span></a>
+      <a class="list-group-item list-group-item-action page-navigation__button" href="#production"><span>Производство</span> </a>
+      <a class="list-group-item list-group-item-action page-navigation__button" href="#certificats"><span>Сертификаты</span> </a>
+      <a class="list-group-item list-group-item-action page-navigation__button" href="#features"><span>Преимущества</span> </a>
       <a class="list-group-item list-group-item-action page-navigation__button" href="#clients"> <span>Наши клиенты</span> </a>
       <a class="list-group-item list-group-item-action page-navigation__button" href="#reviews"> <span>Отзывы</span> </a>
     </div>
   </div>
-  <div>
 
     <div class="container" id="history">
 
@@ -114,7 +118,7 @@ style="position: relative;   overflow: scroll;">
 
           <nav class="breadcrumb">
             <a class="breadcrumb__link" href="index.html">Главная</a>
-            <div class="breadcrumb__separator">/</div>
+            <span class="breadcrumb__separator">/</span>
             <a class="breadcrumb__link" href="about-factory.html">О заводе</a>
           </nav>
 
@@ -132,38 +136,25 @@ style="position: relative;   overflow: scroll;">
             </div>
           </section>
 
-
           <section class="section section--regular">
-
-            <div id="regular-page" class="content-container content-container--regular">
-
-              <div class="content-wrap">
                 <p class="page-description__title-1 mg-bt-60 mg-t-70">Все это позволяет компании UNIQ Crane сохранять
                   стабильную динамику
                   развития и открывать для себя все новые высоты в области краностроения!</p>
 
                 <div class="time-line">
-                  <!-- Left vertical line -->
                   <div class="time-line__line"></div>
 
-                  <!-- The timeline items time-line -->
                   <ul class="time-line__items">
-                    <!-- Each timeline item -->
+
                     <li class="time-line__item">
-                      <!-- The circle and title -->
                       <div class="time-line__top">
-                        <!-- The circle -->
                         <div class="time-line__circle">
                           <div class="time-line__circle-mini"></div>
                         </div>
-
-                        <!-- The title -->
-                        <div class="time-line__title">
+                        <div class="title__lg">
                           2011
                         </div>
                       </div>
-
-                      <!-- The description -->
                       <div class="time-line__desc">
                         <p>Компания начинает деятельность по обслуживанию, монтажу и модернизации грузоподъёмного
                           оборудования, осуществляя параллельно поставку запчастей и комплектующих для кранов</p>
@@ -171,20 +162,14 @@ style="position: relative;   overflow: scroll;">
                     </li>
 
                     <li class="time-line__item">
-                      <!-- The circle and title -->
                       <div class="time-line__top">
-                        <!-- The circle -->
                         <div class="time-line__circle">
                           <div class="time-line__circle-mini"></div>
                         </div>
-
-                        <!-- The title -->
-                        <div class="time-line__title">
+                        <div class="title__lg">
                           2013
                         </div>
                       </div>
-
-                      <!-- The description -->
                       <div class="time-line__desc">
                         <p>Компания образовывает собственное производство кранов мостовых, консольных, лёгких козловых
                           кранов и несущих металлоконструкций (эстакад, крановых путей)</p>
@@ -192,20 +177,14 @@ style="position: relative;   overflow: scroll;">
                     </li>
 
                     <li class="time-line__item">
-                      <!-- The circle and title -->
                       <div class="time-line__top">
-                        <!-- The circle -->
                         <div class="time-line__circle">
                           <div class="time-line__circle-mini"></div>
                         </div>
-
-                        <!-- The title -->
-                        <div class="time-line__title">
+                        <div class="title__lg">
                           2014
                         </div>
                       </div>
-
-                      <!-- The description -->
                       <div class="time-line__desc">
                         <p class="mg-bt-30">Компания расширяет объёмы производства и диверсифицирует свою продукцию.
                           Освоено
@@ -244,25 +223,20 @@ style="position: relative;   overflow: scroll;">
                     </li>
 
                     <li class="time-line__item">
-                      <!-- The circle and title -->
                       <div class="time-line__top">
-                        <!-- The circle -->
                         <div class="time-line__circle">
                           <div class="time-line__circle-mini"></div>
                         </div>
-
-                        <!-- The title -->
-                        <div class="time-line__title">
+                        <div class="title__lg">
                           Миссия компании
-
                         </div>
                       </div>
                     </li>
-
+                    
                   </ul>
                 </div>
 
-                <div class="mg-l-70">
+                <div>
                   <p class="section__text mg-bt-50">Поставка оборудования, которое отвечает всем потребностям клиента
                     и обеспечивает максимально безопасную, и в тоже время эффективную эксплуатацию</p>
                   <p class="section__text section__text-1">Поставка оборудования в оговорённые сроки, является
@@ -281,9 +255,6 @@ style="position: relative;   overflow: scroll;">
                   <p class="section__text section__text-1">Дорогие клиенты, используйте свой разум и опыт, а не желание
                     обмануть логику и здравый смысл.</p>
                 </div>
-              </div>
-
-            </div>
           </section>
         </div>
       </div>
@@ -379,34 +350,34 @@ style="position: relative;   overflow: scroll;">
                 <div class="cards cards--gallery">
 
                   <div class="cards__item cards__item--certificats">
-                    <div class="certificats-frame">
+                    <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
                       <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
-                    </div>
+                    </button>
                   </div>
                   <div class="cards__item cards__item--certificats">
-                    <div class="certificats-frame">
+                    <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
                       <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
-                    </div>
+                    </button>
                   </div>
                   <div class="cards__item cards__item--certificats">
-                    <div class="certificats-frame">
+                    <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
                       <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
-                    </div>
+                    </button>
                   </div>
                   <div class="cards__item cards__item--certificats">
-                    <div class="certificats-frame">
+                    <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
                       <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
-                    </div>
+                    </button>
                   </div>
                   <div class="cards__item cards__item--certificats">
-                    <div class="certificats-frame">
+                    <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
                       <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
-                    </div>
+                    </button>
                   </div>
                   <div class="cards__item cards__item--certificats">
-                    <div class="certificats-frame">
+                    <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
                       <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
-                    </div>
+                    </button>
                   </div>
 
                 </div>
@@ -697,9 +668,9 @@ style="position: relative;   overflow: scroll;">
                           взятые на себя обстоятельства
                         </p>
                         <div class="cards__item cards__item--certificats">
-                          <div class="certificats-frame">
+                          <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
                             <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
-                          </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -722,9 +693,9 @@ style="position: relative;   overflow: scroll;">
                           взятые на себя обстоятельства
                         </p>
                         <div class="cards__item cards__item--certificats">
-                          <div class="certificats-frame">
+                          <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
                             <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
-                          </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -747,9 +718,9 @@ style="position: relative;   overflow: scroll;">
                           взятые на себя обстоятельства
                         </p>
                         <div class="cards__item cards__item--certificats">
-                          <div class="certificats-frame">
+                          <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
                             <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
-                          </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -772,9 +743,9 @@ style="position: relative;   overflow: scroll;">
                           взятые на себя обстоятельства
                         </p>
                         <div class="cards__item cards__item--certificats">
-                          <div class="certificats-frame">
+                          <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
                             <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
-                          </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -797,9 +768,9 @@ style="position: relative;   overflow: scroll;">
                           взятые на себя обстоятельства
                         </p>
                         <div class="cards__item cards__item--certificats">
-                          <div class="certificats-frame">
+                          <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
                             <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
-                          </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -822,9 +793,9 @@ style="position: relative;   overflow: scroll;">
                           взятые на себя обстоятельства
                         </p>
                         <div class="cards__item cards__item--certificats">
-                          <div class="certificats-frame">
+                          <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
                             <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
-                          </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -847,9 +818,9 @@ style="position: relative;   overflow: scroll;">
                           взятые на себя обстоятельства
                         </p>
                         <div class="cards__item cards__item--certificats">
-                          <div class="certificats-frame">
+                          <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
                             <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
-                          </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -872,9 +843,9 @@ style="position: relative;   overflow: scroll;">
                           взятые на себя обстоятельства
                         </p>
                         <div class="cards__item cards__item--certificats">
-                          <div class="certificats-frame">
+                          <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
                             <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
-                          </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -897,9 +868,9 @@ style="position: relative;   overflow: scroll;">
                           взятые на себя обстоятельства
                         </p>
                         <div class="cards__item cards__item--certificats">
-                          <div class="certificats-frame">
+                          <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
                             <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
-                          </div>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -916,7 +887,6 @@ style="position: relative;   overflow: scroll;">
         </div>
       </div>
     </div>
-  </div>
 
 </div>
 </div>
@@ -941,7 +911,7 @@ style="position: relative;   overflow: scroll;">
       <a class="header-nav__item" href="crane-service.html">Сервис</a>
       <a class="header-nav__item" href="">Информация</a>
       <a class="header-nav__item" href="about-factory.html">О заводе</a>
-      <a class="header-nav__item" href="">Контакты</a>
+      <a class="header-nav__item" href="contacts.html">Контакты</a>
     </nav>
 
     <a class="phone" href="tel:+74955405053">
@@ -1057,6 +1027,7 @@ style="position: relative;   overflow: scroll;">
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 <script src="./assets/js/bootstrap.bundle.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 <script type="module" src="./assets/js/script.js"></script>
 </body>
 

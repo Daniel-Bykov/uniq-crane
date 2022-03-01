@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -16,8 +15,7 @@
   <link rel="stylesheet" href="./assets/styles/main.min.css">
   <title>UNIQ-CRANE</title>
 </head>
-<body data-bs-spy="scroll" data-bs-target="#page-navigation" data-bs-offset="0" class="scrollspy-example" tabindex="0"
-style="position: relative;   overflow: scroll;">
+<body>
 
   
 <div class="modal fade" tabindex="-1" id="requestModal">
@@ -59,8 +57,17 @@ style="position: relative;   overflow: scroll;">
   </div>
 </div>
 
+<div class="modal" tabindex="-1"  id="pictureModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button type="button" class="btn-close pictureModal__close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <img class="pictureModal__picture" src="" alt="">
+    </div>
+  </div>
+</div>
+<div class="page">
 
-<header class="header">
+  <header class="header">
   <a href="index.html" class="logo"><img src="./assets/img/logo-r.svg" alt="Uniq Crane"/></a>
 
   <div class="header__content">
@@ -77,7 +84,73 @@ style="position: relative;   overflow: scroll;">
       <a class="header-nav__item" href="crane-service.html">Сервис</a>
       <a class="header-nav__item" href="">Информация</a>
       <a class="header-nav__item" href="about-factory.html">О заводе</a>
-      <a class="header-nav__item" href="">Контакты</a>
+      <a class="header-nav__item" href="contacts.html">Контакты</a>
+    </nav>
+
+    <a class="phone" href="tel:+74955405053">
+      <span>+7 495 540 50 53</span></a>
+  </div>
+
+  <button type="button" class="button-hollow" data-bs-toggle="modal" data-bs-target="#requestModal">оставить
+    заявку</button>
+</header>
+
+  <div class="container">
+    <div class="content">
+      <div class="content__wrapper">
+        <nav class="breadcrumb">
+          <a class="breadcrumb__link" href="index.html">Главная</a>
+          <span class="breadcrumb__separator">/</span>
+          <a class="breadcrumb__link" href="contacts.html">Контакты</a>
+        </nav>
+        <section class="mg-bt-50">
+          <h1 class="title__lg">Контакты</h1>
+        </section>
+
+
+      </div>
+    </div>
+  </div>
+  <div id="map" class="map">
+    <div class="map__navigation">
+      <button class="map__button map__button--active" data-map-uid="55.593873, 37.351905">
+        <p class="map__title">Адрес офиса: </p>
+        <span class="map__name">г. Москва г. Московский ул. Хабарова д. 2 </span>
+      </button>
+      <button class="map__button" data-map-uid="55.685554, 37.983330">
+        <p class="map__title">Адрес производства Московская область:</p>
+        <span class="map__name">д. Машково, Новомарусинский проезд, д. 10</span>
+      </button>
+      <button class="map__button" data-map-uid="49.636560, 41.690408">
+        <p class="map__title">Адрес производства Ростовская область:</p>
+        <span class="map__name">Район, п. Шолоховский, ул. Социалистическая д.7 </span>
+      </button>
+    </div>
+  </div>
+
+</div>
+
+<div class="page">
+  <section class="section footer section-bg-2">
+
+  <header class="header">
+  <a href="index.html" class="logo"><img src="./assets/img/logo-r.svg" alt="Uniq Crane"/></a>
+
+  <div class="header__content">
+    <button class="product-catalog">
+      <div class="hamburger">
+        <div class="hamburger__lines"></div>
+      </div>
+      <span class="product-catalog__title">Каталог продукции</span>
+    </button>
+
+    <nav class="header-nav">
+      <a class="header-nav__item" href="">Прайс</a>
+      <a class="header-nav__item" href="equipment.html">Оборудование</a>
+      <a class="header-nav__item" href="crane-service.html">Сервис</a>
+      <a class="header-nav__item" href="">Информация</a>
+      <a class="header-nav__item" href="about-factory.html">О заводе</a>
+      <a class="header-nav__item" href="contacts.html">Контакты</a>
     </nav>
 
     <a class="phone" href="tel:+74955405053">
@@ -89,86 +162,113 @@ style="position: relative;   overflow: scroll;">
 </header>
 
 
-<div id="regular-page" class="content-container content-container--regular ">
-  
-  <nav class="site-navigation">
-    <nav class="mg-bt-35">
-      <a class="nav-pages" href="index.html">Главная</a>
-      <span class="nav-pages__slash">/</span>
-      <a class="nav-pages" href="crane-service.html">Крановый сервис</a>
-    </nav>
-  </nav>
+  <div class="container content-container--footer">
 
-  <section class="mg-bt-50">
-    <h1 class="section__title mg-bt-35">Контакты</h1>
-    </section>
 
+    <div class="content">
+      <div class="dual footer">
+        <div class="dual-box">
+
+          <img class="man" src="./assets/img/backgrounds/man.png" alt="">
+          <div class="dual-box__left">
+
+            <h3 class="title__md">Завод кранов UNIQ CRANE. <br>
+                С 2011 года производим краны. <br>
+                Качественно, быстро и надёжно.</h3>
+
+            <p class="about-company">UNIQ CRANE — производственная компания с высокими стандартами. Мы предлагаем
+              комплексные решения
+              в области грузоподъёмного оборудования, начиная от разработки проектной документации и заканчивая сдачей
+              кранов в эксплуатацию.</p>
+
+            <div class="achievements">
+              <div class="achievements__item">
+                <div class="achievements__wreath">
+                  <p class="achievements__value">7 лет</p>
+                </div>
+                <p class="achievements__title">работы</p>
+              </div>
+
+              <div class="achievements__item">
+                <div class="achievements__wreath">
+                  <p class="achievements__value">418</p>
+                </div>
+                <p class="achievements__title">клиентов</p>
+              </div>
+
+              <div class="achievements__item">
+                <div class="achievements__wreath">
+                  <p class="achievements__value">637</p>
+                </div>
+                <p class="achievements__title">отгружено кранов</p>
+              </div>
+            </div>
+
+            <a href="#" class="section__link">Подробнее о компании</a>
+
+          </div>
+
+          <div class="dual-box__right dual-box__right--footer">
+
+            <img class="dual__background-right dual__background-right--footer" src="./assets/img/backgrounds/7.png"
+              alt="">
+
+            <div class="feedback">
+
+              <h2 class="title__lg">Бесплатный выезд
+                  специалиста</h2>
+
+              <p class="feedback__text"> Нет времени изучать? Мы сами перезвоним
+                и проконсультируем по любым вопросам</p>
+
+              <form class="form">
+
+                <div class="form__row">
+                  <input type="text" class="input__field" value="" required>
+                  <label class="label__field">Введите ваше имя</label>
+                </div>
+
+                <div class="form__row">
+                  <input type="number" class="input__field" value="" required>
+                  <label class="label__field">Введите ваш телефон</label>
+                </div>
+
+                <button class="button mg-bt-40" type="submit">отправить запрос</button>
+
+                <footer class="form__footer">
+                  <input type="checkbox" class="default-checkbox" id="privacy-policy" name="privacy-policy" required>
+                  <label for="privacy-policy"> <span>Нажимая на кнопку «Получить консультацию», вы соглашаетесь     <a href="#"> с политикой конфиденциальности</a> </span>
+                </label>
+                </footer>
+              </form>
+
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer__bottom">
+          <div class="copyright">
+            <p>© 2021 «Uniq Crane» Все права защищены</p>
+          </div>
+          <div class="studio">
+            <a href="" class="dsp-f">
+              <p>Разработка сайта —</p>
+              <div class="studio__logo"> <img src="./assets/img/Forestweb-tree.svg" alt=""><img
+                  src="./assets/img/Forestweb.svg" alt=""></div>
+            </a>
+          </div>
+        </footer>
+      </div>
 
 </div>
 
-<div id="map" style="width: 100%; height: 800px">
-
-  <div id="regular-page" class="content-container content-container--regular ">
-  <div class="page-navigation__wrap page-navigation__wrap--map">
-
-    <div class="page-navigation page-navigation--map">
-    
-      <button class="page-navigation__button page-navigation__button--active"> <span>г. Москва г. Московский
-        ул. Хабарова д. 2
-        </span> </button>
-      <button class="page-navigation__button"> <span>д. Машково, Новомарусинский
-        проезд, д. 10
-        </span> </button>
-      <button class="page-navigation__button"> <span>Район, п. Шолоховский, 
-        ул. Социалистическая д.7
-        </span> </button>
-
-    </div></div>
-  </div>
-</div>
-
+</section>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-<script type="text/javascript">
-  ymaps.ready(init);
-  
-  function init () {
-      var myMap = new ymaps.Map("map", {
-          center:[55.593873, 37.351905],
-          zoom: 12,
-          controls: ['smallMapDefaultSet']
-      }); 
-              
-      var myGeoObjects = [];
-      
-      // Метка 1
-      myGeoObjects[0] = new ymaps.Placemark([55.593873, 37.351905],{
-                      balloonContentBody: 'Текст в балуне',
-                      },{
-                      iconLayout: 'default#image',
-                      iconImageHref: './assets/img/icons/map.svg', 
-                      iconImageSize: [70, 70],
-                      iconImageOffset: [-35, -35]
-      });
-      
-      // Метка 2
-      myGeoObjects[1] = new ymaps.Placemark([56.800151390638646,38.61400201562497],{
-                      balloonContentBody: 'Текст в балуне',
-                      },{
-                      iconLayout: 'default#image',
-                      iconImageHref: './assets/img/address.png', 
-                      iconImageSize: [70, 70],
-                      iconImageOffset: [-35, -35]
-      });
-                  
-      var clusterer = new ymaps.Clusterer({
-          clusterDisableClickZoom: false,
-          clusterOpenBalloonOnClick: false,
-      });
-      
-      clusterer.add(myGeoObjects);
-      myMap.geoObjects.add(clusterer);
-      // myMap.behaviors.disable('scrollZoom');
-  
-  }
-  </script>    
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script type="module" src="./assets/js/script.js"></script>
+</body>
 
+</html>
+</div>

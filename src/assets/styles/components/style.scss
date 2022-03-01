@@ -16,14 +16,10 @@
   &-box {
     display: grid;
     grid-auto-rows: minmax(100px, auto);
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     border-right: 1px solid rgba(255, 255, 255, 0.2);
     width: 100%;
-
-    @media (min-width: 1230px) {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
 
     &--regular {
       border-top: 1px solid #dbdbdb;
@@ -73,7 +69,7 @@
       max-height: 115px;
 
       img {
-        height: 50%;
+        // height: 50%;
       }
     }
 
@@ -216,7 +212,7 @@
 
   &__background {
     position: absolute;
-    min-height: 700px;
+    min-height: 580px;
     object-fit: cover;
     top: 0;
     z-index: -1;
@@ -224,6 +220,7 @@
   }
 
   &__text {
+    flex: 1;
     font-family: "Noto Sans Light";
     font-weight: 300;
     font-size: 18px;
@@ -231,17 +228,23 @@
     display: flex;
     flex-wrap: wrap;
     white-space: initial;
-    width: 50%;
     min-width: 300px;
+
+
 
     p {
       margin-bottom: 20px;
     }
 
     &--24 {
-      font-size: 24px;
-      line-height: 39px;
-      width: 66%;
+      font-size: 19px;
+      line-height: 25px;
+
+      @media (min-width:700px) {
+        font-size: 24px;
+        line-height: 39px;
+  
+      }
     }
 
     &--16 {
@@ -310,45 +313,6 @@ div.cp-lightoverlay.cp-lightoverlay-in {
     width: 300.06px;
     height: 239.62px;
     background: #efefef;
-  }
-}
-
-.certificats-frame {
-  width: 258px;
-  height: 350px;
-  background-image: url("../img/icons/certificats-frame.svg");
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &:hover {
-    background-color: rgb(221 73 86 / 80%);
-  }
-
-  &:hover::before {
-    content: "";
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    background-image: url(/assets/img/icons/zoom.svg);
-  }
-
-  // &:hover .cards-mask--gallery {
-  //   background: #dd4956;
-  //   transform: translateY(0);
-  //   padding: 40px;
-  // }
-
-  &__image {
-    width: 205.81px;
-    height: 299.72px;
-    z-index: -1;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-
-
   }
 }
 

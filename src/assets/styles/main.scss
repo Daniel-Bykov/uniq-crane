@@ -9,6 +9,7 @@
 @import "components/body.scss";
 @import "components/style.scss";
 @import "components/modals/request.scss";
+@import "components/modals/picture.scss";
 @import "components/header.scss";
 @import "components/hamburger.scss";
 @import "components/breadcrumb.scss";
@@ -24,11 +25,13 @@
 @import "components/timeline.scss";
 
 
+//Blocks
+
+@import "blocks/benefits.scss";
 
 //Pages
 @import "pages/types.scss";
 @import "pages/welcome.scss";
-@import "pages/benefits.scss";
 @import "pages/geography.scss";
 @import "pages/features.scss";
 @import "pages/services.scss";

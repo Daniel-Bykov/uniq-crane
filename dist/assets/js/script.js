@@ -1,19 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
+  ymaps.ready(mapInit);
   dualSwitcher(document.querySelector(".cranes"));
   dualSwitcher(document.querySelector(".features"));
   swipersInit();
   handleTabletChange();
+  addScrollSpy();
+  pictureModal();
 });
 
-function isMobile(){
-  let device = ((window.matchMedia('(max-width: 1230px)')).matches || ('ontouchstart' in window))
-  return device
+function isMobile() {
+  let device =
+    window.matchMedia("(max-width: 1230px)").matches ||
+    "ontouchstart" in window;
+  return device;
 }
 
 function swipersInit() {
+  pageSlider();
 
-  pageSlider ()
-  
   const reviews = new Swiper(".review-box", {
     pagination: {
       el: ".swiper-pagination",
@@ -25,7 +29,6 @@ function swipersInit() {
       prevEl: ".swiper-button-prev",
     },
   });
-
 
   const swiperRegular = new Swiper(".mySwiper-Regular", {
     pagination: {
@@ -118,21 +121,37 @@ function handleTabletChange(e) {
   }
 }
 
+function addScrollSpy() {
+  let scrollSpy = document.querySelector(".page-navigation");
 
-function pageSlider (){
-  
-  let mainContainer = document.querySelector('.page-swiper')
-  let pageSelectorActive = document.querySelector('.pages-selector__active')
-  let pageSelectorAll = document.querySelector('.pages-selector__all')
-  
-  if(isMobile()){
-    mainContainer.classList.add('page-swiper--disabled')
-    mainContainer.firstElementChild.style = "flex-direction: column"
+  if (scrollSpy) {
+    setAttributes(document.body, {
+      "data-bs-spy": "scroll",
+      "data-bs-target": "#page-navigation",
+      "data-bs-offset": "0",
+      class: "page-navigation__scrollspy",
+      tabindex: "0",
+    });
   }
-  
-  else if(mainContainer) {
+}
+
+function setAttributes(el, attrs) {
+  for (var key in attrs) {
+    el.setAttribute(key, attrs[key]);
+  }
+}
+
+function pageSlider() {
+  let mainContainer = document.querySelector(".page-swiper");
+  let pageSelectorActive = document.querySelector(".pages-selector__active");
+  let pageSelectorAll = document.querySelector(".pages-selector__all");
+
+  if (isMobile() && mainContainer) {
+    mainContainer.classList.add("page-swiper--disabled");
+    mainContainer.firstElementChild.style = "flex-direction: column";
+  } else if (mainContainer) {
     const swiper = new Swiper(".page-swiper", {
-      direction: 'vertical',
+      direction: "vertical",
       keyboard: {
         enabled: true,
         onlyInViewport: false,
@@ -143,17 +162,94 @@ function pageSlider (){
         type: "bullets",
       },
     });
-  
-    function fractionUpdate() {
-      pageSelectorAll.innerHTML = `/ ${swiper.slides.length }`
-      pageSelectorActive.innerHTML = `${swiper.realIndex + 1}`
-    };
-    
-    fractionUpdate()
 
-    swiper.on('slideChange', function () {
-      swiper.slides[swiper.realIndex].scrollTo(0, 0)
-      fractionUpdate()
+    function fractionUpdate() {
+      pageSelectorAll.innerHTML = `/ ${swiper.slides.length}`;
+      pageSelectorActive.innerHTML = `${swiper.realIndex + 1}`;
+    }
+
+    fractionUpdate();
+
+    swiper.on("slideChange", function () {
+      swiper.slides[swiper.realIndex].scrollTo(0, 0);
+      fractionUpdate();
     });
   }
+}
+
+function pictureModal() {
+  document.addEventListener("click", (event) => {
+    if (event.target.getAttribute("data-bs-target") === "#pictureModal") {
+      let src = event.target.querySelector("img").getAttribute("src");
+      let pictureModal = document.querySelector(".pictureModal__picture");
+      pictureModal.setAttribute("src", src);
+    }
+  });
+}
+
+function mapInit() {
+  let mapElement = document.querySelector(".map");
+  let objectUid = document.querySelectorAll('.map__button')
+  var myGeoObjects = [];
+  let longtitude = null;
+  let latitude = null;
+
+  objectUid.forEach((item)=>{
+    let coord = item.getAttribute("data-map-uid") 
+    longtitude = coord.split(", ")[0];
+    latitude = coord.split(", ")[1];
+    addMarker(longtitude,latitude)
+    clusterer.add(myGeoObjects);
+  })
+
+  getCoord ()
+
+  function getCoord(){
+    longtitude = objectUid.split(", ")[0];
+    latitude = objectUid.split(", ")[1];
+  }
+
+  mapElement.addEventListener("click", (event) => {
+    objectUid = event.target
+      .closest(".map__button")
+      .getAttribute("data-map-uid");
+      getCoord()
+      addMarker(longtitude,latitude)
+      myMap.setCenter([longtitude, latitude]);
+  });
+
+  var myMap = new ymaps.Map("map", {
+    center: [longtitude, latitude],
+    zoom: 12,
+    controls: ["smallMapDefaultSet"],
+  });
+
+
+
+function addMarker(longtitude,latitude){
+
+    myGeoObjects.push(new ymaps.Placemark(
+      [longtitude,latitude],
+      {
+        balloonContentBody: "Текст в балуне",
+      },
+      {
+        iconLayout: "default#image",
+        iconImageHref: "./assets/img/icons/map.svg",
+        iconImageSize: [70, 70],
+        iconImageOffset: [-35, -35],
+      }
+    ))
+
+    console.log(myGeoObjects)
+   
+}
+
+  var clusterer = new ymaps.Clusterer({
+    clusterDisableClickZoom: false,
+    clusterOpenBalloonOnClick: false,
+  });
+
+
+  myMap.geoObjects.add(clusterer);
 }

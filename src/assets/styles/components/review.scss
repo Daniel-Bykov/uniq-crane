@@ -24,17 +24,24 @@
     }
   
     &__text {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat( auto-fill, minmax(240px, 1fr));
+      grid-gap: 20px;
       white-space: initial;
       font-family:"Noto Sans Light";
       font-weight: 300;
       font-size: 18px;
       line-height: 30px;
-      padding: 40px 40px 75px;
+      padding: 40px 40px 100px;
   
       @media (max-width: 580px) {
+        padding: 20px 20px 100px;
         font-size: 13px;
         line-height: 21px;
+      }
+
+      p{
+        grid-column: span 2;
       }
     }
   }
