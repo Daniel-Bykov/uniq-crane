@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   handleTabletChange();
   addScrollSpy();
   pictureModal();
+  sendForm();
 });
 
 function isMobile() {
@@ -13,6 +14,24 @@ function isMobile() {
     window.matchMedia("(max-width: 1230px)").matches ||
     "ontouchstart" in window;
   return device;
+}
+
+function sendForm(){
+  let form = document.querySelector('.form')
+  let loader = document.querySelector('.spinner-border')
+  let success = document.querySelector('.form-success')
+
+  form.addEventListener('submit', (event)=>{
+    let promise = new Promise(function(resolve, reject) {
+      event.preventDefault();
+      form.classList.add('visually-hidden')
+      loader.classList.remove('visually-hidden')
+      setTimeout(() => resolve(
+        loader.classList.add('visually-hidden'),
+        success.classList.remove('visually-hidden')
+        ), 5000);
+    });  
+  })
 }
 
 function swipersInit() {
@@ -188,68 +207,71 @@ function pictureModal() {
 }
 
 function mapInit() {
-  let mapElement = document.querySelector(".map");
-  let objectUid = document.querySelectorAll('.map__button')
-  var myGeoObjects = [];
+  let mapElement = document.querySelector('.map');
+  let addressList = document.querySelectorAll(".map__button");
+  let myGeoObjects = [];
   let longtitude = null;
   let latitude = null;
+  let defaultCoord = addressList[0].getAttribute("data-map-uid");
 
-  objectUid.forEach((item)=>{
-    let coord = item.getAttribute("data-map-uid") 
-    longtitude = coord.split(", ")[0];
-    latitude = coord.split(", ")[1];
-    addMarker(longtitude,latitude)
-    clusterer.add(myGeoObjects);
-  })
-
-  getCoord ()
-
-  function getCoord(){
-    longtitude = objectUid.split(", ")[0];
-    latitude = objectUid.split(", ")[1];
-  }
-
-  mapElement.addEventListener("click", (event) => {
-    objectUid = event.target
-      .closest(".map__button")
-      .getAttribute("data-map-uid");
-      getCoord()
-      addMarker(longtitude,latitude)
-      myMap.setCenter([longtitude, latitude]);
-  });
-
-  var myMap = new ymaps.Map("map", {
-    center: [longtitude, latitude],
-    zoom: 12,
-    controls: ["smallMapDefaultSet"],
-  });
-
-
-
-function addMarker(longtitude,latitude){
-
-    myGeoObjects.push(new ymaps.Placemark(
-      [longtitude,latitude],
-      {
-        balloonContentBody: "Текст в балуне",
-      },
-      {
-        iconLayout: "default#image",
-        iconImageHref: "./assets/img/icons/map.svg",
-        iconImageSize: [70, 70],
-        iconImageOffset: [-35, -35],
-      }
-    ))
-
-    console.log(myGeoObjects)
-   
-}
+  setCoord(defaultCoord);
 
   var clusterer = new ymaps.Clusterer({
     clusterDisableClickZoom: false,
     clusterOpenBalloonOnClick: false,
   });
 
+  var officeMap = new ymaps.Map("map", {
+    center: [longtitude, latitude],
+    zoom: 12,
+    controls: ["smallMapDefaultSet"],
+  },{
+    autoFitToViewport: 'always'
+  });
 
-  myMap.geoObjects.add(clusterer);
+  officeMap.geoObjects.add(clusterer);
+
+  addressList.forEach((item) => {
+    let coord = item.getAttribute("data-map-uid");
+    longtitude = coord.split(", ")[0];
+    latitude = coord.split(", ")[1];
+    addMarker(longtitude, latitude);
+    clusterer.add(myGeoObjects);
+  });
+
+  mapElement.addEventListener("click", (event) => {
+    let address = event.target
+      .closest(".map__button")
+      .getAttribute("data-map-uid");
+    addressList.forEach((item) => {
+      item.classList.remove("map__button--active");
+    });
+    event.target
+      .closest(".map__button")
+      .classList.toggle("map__button--active");
+    setCoord(address);
+    officeMap.setCenter([longtitude, latitude]);
+  });
+
+  function setCoord(coord) {
+    longtitude = coord.split(", ")[0];
+    latitude = coord.split(", ")[1];
+  }
+
+  function addMarker(longtitude, latitude) {
+    myGeoObjects.push(
+      new ymaps.Placemark(
+        [longtitude, latitude],
+        {
+          balloonContentBody: "Текст в балуне",
+        },
+        {
+          iconLayout: "default#image",
+          iconImageHref: "./assets/img/icons/map.svg",
+          iconImageSize: [70, 70],
+          iconImageOffset: [-35, -35],
+        }
+      )
+    );
+  }
 }

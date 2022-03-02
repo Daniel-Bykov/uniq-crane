@@ -169,19 +169,32 @@
 .map {
   position: relative;
   width: 100%;
-  height: 800px;
   color: inherit;
+  white-space: initial;
+
+  &__instance{
+    position: relative;
+    height: 400px;
+  
+    @media (min-width: 1300px) {
+      height: 800px;
+    }
+  }
 
   &__navigation {
-    position: absolute;
-    top: 250px;
-    left: 250px;
-    width: 460px;
+    position: relative;
     min-width: 300px;
     display: flex;
     flex-direction: column;
     z-index: 1;
     background-color: white;
+
+    @media (min-width: 1300px) {
+      position: absolute;
+      width: 460px;
+      top: 250px;
+      left: 250px;
+    }
   }
 
   &__button {
