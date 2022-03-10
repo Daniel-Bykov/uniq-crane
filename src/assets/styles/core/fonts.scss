@@ -63,7 +63,7 @@
 .title__md, // h3
 .title__xl, // h4
 .title__sm, // h5
-.title__xs  // h6
+.title__xs // h6
 {
   color: inherit;
   font-weight: bold;
@@ -117,6 +117,16 @@
     @media (max-width: 700px) {
       font-size: 12px;
       line-height: 15px;
+    }
+
+    &--s{
+        font-size: 18px;
+        line-height: 30px;
+    
+        @media (max-width: 700px) {
+          font-size: 10px;
+          line-height: 15px;
+        }
     }
   }
 }

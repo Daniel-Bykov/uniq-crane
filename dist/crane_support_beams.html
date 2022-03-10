@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href=" https://unpkg.com/pageable@latest/dist/pageable.min.css ">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/styles/main.min.css">
+  <title>UNIQ-CRANE</title>
+</head>
+
+<body>
+
+
+  <div class="modal fade" tabindex="-1" id="requestModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+
+        <div class="modal-request modal-body">
+          <button type="button" class="modal-request__close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+          <div class="d-flex justify-content-center align-items-center">
+            <div class="spinner-border visually-hidden" style="width: 5rem; height: 5rem;" role="status">
+            </div>
+          </div>
+          <form class="form">
+
+            <header class="modal-request__header">
+              <h1 class="modal-request__title">Оставьте заявку</h1>
+              <h3>и мы вам перезвоним!</p>
+            </header>
+
+            <div class="form__row">
+              <input type="text" class="input__field" value="" required>
+              <label class="label__field">Введите ваше имя</label>
+            </div>
+
+            <div class="form__row">
+              <input type="number" class="input__field" value="" required>
+              <label class="label__field">Введите ваш телефон</label>
+            </div>
+
+            <button class="button button--modal mg-bt-40" type="submit"> <span class="button__text"> оставить
+                заявку</span></button>
+
+            <footer class="form__footer">
+              <input type="checkbox" class="default-checkbox" id="privacy-policy" name="privacy-policy" required>
+              <label for="privacy-policy"> <span>Нажимая на кнопку «Оставить заявку», <a href="#"> с
+                    политикой конфиденциальности</a> </label></span>
+            </footer>
+          </form>
+
+          <div class="form-success visually-hidden">
+            <h1 class="form-success__title">Заявка отправлена</h1>
+            <p class="form-success__description">Наш специалист свяжется
+              с Вами в ближайшее время</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" tabindex="-1" id="pictureModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <button type="button" class="btn-close pictureModal__close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <img class="pictureModal__picture" src="" alt="">
+      </div>
+    </div>
+  </div>
+
+<div class="page">
+
+  <header class="header">
+  <a href="index.html" class="logo"><img src="./assets/img/logo-r.svg" alt="Uniq Crane"/></a>
+
+  <div class="header__content">
+    <button class="product-catalog">
+      <div class="hamburger">
+        <div class="hamburger__lines"></div>
+      </div>
+      <span class="product-catalog__title">Каталог продукции</span>
+    </button>
+
+    <nav class="header-nav">
+      <a class="header-nav__item" href="">Прайс</a>
+      <a class="header-nav__item" href="equipment.html">Оборудование</a>
+      <a class="header-nav__item" href="crane-service.html">Сервис</a>
+      <a class="header-nav__item" href="">Информация</a>
+      <a class="header-nav__item" href="about-factory.html">О заводе</a>
+      <a class="header-nav__item" href="contacts.html">Контакты</a>
+    </nav>
+
+    <a class="phone" href="tel:+74955405053">
+      <span>+7 495 540 50 53</span></a>
+  </div>
+
+  <button type="button" class="button-hollow" data-bs-toggle="modal" data-bs-target="#requestModal">оставить
+    заявку</button>
+</header>
+
+  <img class="page-description__background" src="" alt="">
+
+
+  <div class="page-navigation">
+    <div class="page-navigation__wrap list-group" id="page-navigation">
+      <a class="list-group-item list-group-item-action page-navigation__button" href="#history">
+        <span>Описание</span></a>
+      <a class="list-group-item list-group-item-action page-navigation__button"
+        href="#production"><span>Характеристики</span> </a>
+      <a class="list-group-item list-group-item-action page-navigation__button"
+        href="#certificats"><span>Преимущества</span> </a>
+      <a class="list-group-item list-group-item-action page-navigation__button" href="#features"><span>Модели</span>
+      </a>
+      <a class="list-group-item list-group-item-action page-navigation__button" href="#clients"> <span>Фото и
+          видео</span> </a>
+      <a class="list-group-item list-group-item-action page-navigation__button" href="#reviews"> <span>Отзывы</span>
+      </a>
+      <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#requestModal"><span
+          class="button__text">отправить запрос</span></button>
+    </div>
+  </div>
+
+  <div class="container" id="history">
+
+    <div class="content">
+
+      <div class="content__wrapper content__wrapper--scrollspy">
+
+        <nav class="breadcrumb">
+          <a class="breadcrumb__link" href="index.html">Главная</a>
+          <span class="breadcrumb__separator">/</span>
+          <a class="breadcrumb__link" href="about-factory.html">Краны</a>
+          <span class="breadcrumb__separator">/</span>
+          <a class="breadcrumb__link" href="about-factory.html">Краны-балки</a>
+          <span class="breadcrumb__separator">/</span>
+          <a class="breadcrumb__link" href="about-factory.html">Опорные краны-балки</a>
+        </nav>
+
+        <section class="mg-bt-50">
+          <h1 class="title__lg mg-bt-60">Опорные кран-балки
+          </h1>
+
+          <div class="page-description__text page-description__text--16">
+            <p>Опорные кран балки широко распространены в промышленной области и других сферах, где требуется
+              перемещение мало- и крупногабаритного груза.
+            </p>
+
+            <div class="characteristics">
+              <div class="characteristics__item">
+                <div class="characteristics__text">
+                  <h6 class="title title__xs--s">грузоподъемность</h6>
+                  <p class="characteristics__param">от 0,5 до 20 тонн</p>
+                </div>
+              </div>
+              <div class="characteristics__item">
+                <div class="characteristics__text">
+                  <h6 class="title title__xs--s">Высота подъема </h6>
+                  <p class="characteristics__param">3-50 метров</p>
+                </div>
+              </div>
+            </div>
+
+            <img src="./assets/img/crane_support_beams/crane_support_beams_1.png" alt=""
+              style="position: relative; top: -70px; max-width: 1300px;">
+
+          </div>
+          
+          <h3 class="title title__md mg-bt-45">Описание</h3>
+
+          <p class="section__text mg-bt-50">Кран-балка относится к типу мостовых кранов, но её главное конструктивное отличие от мостового
+            подъёмника — наличие одного несущего балочного элемента. Преимущества такого конструктивного решения —
+            лёгкость, простота эксплуатации, обслуживания и монтажа оборудования. 
+
+          </p>
+
+          <p class="section__text">Опорными кран-балки называются из-за способа крепления моста к концевым балкам. В этом случае балка,
+            к которой крепится грузоподъёмный механизм (тельфер) расположена поверх концевых балок. Концевые балки
+            в свою очередь устанавливаются на крановые пути, по которым передвигается вся конструкция.</p>
+
+            <img src="./assets/img/crane_support_beams/crane_support_beams_1.png" alt=""
+            style="position: relative; top: -70px; max-width: 1600px;">
+        </section>
+
+        <section class="section section--regular">
+          <p class="page-description__title-1 mg-bt-60 mg-t-70">Все это позволяет компании UNIQ Crane сохранять
+            стабильную динамику
+            развития и открывать для себя все новые высоты в области краностроения!</p>
+
+          <div class="time-line">
+            <div class="time-line__line"></div>
+
+            <ul class="time-line__items">
+
+              <li class="time-line__item">
+                <div class="time-line__top">
+                  <div class="time-line__circle">
+                    <div class="time-line__circle-mini"></div>
+                  </div>
+                  <div class="title__lg">
+                    2011
+                  </div>
+                </div>
+                <div class="time-line__desc">
+                  <p>Компания начинает деятельность по обслуживанию, монтажу и модернизации грузоподъёмного
+                    оборудования, осуществляя параллельно поставку запчастей и комплектующих для кранов</p>
+                </div>
+              </li>
+
+              <li class="time-line__item">
+                <div class="time-line__top">
+                  <div class="time-line__circle">
+                    <div class="time-line__circle-mini"></div>
+                  </div>
+                  <div class="title__lg">
+                    2013
+                  </div>
+                </div>
+                <div class="time-line__desc">
+                  <p>Компания образовывает собственное производство кранов мостовых, консольных, лёгких козловых
+                    кранов и несущих металлоконструкций (эстакад, крановых путей)</p>
+                </div>
+              </li>
+
+              <li class="time-line__item">
+                <div class="time-line__top">
+                  <div class="time-line__circle">
+                    <div class="time-line__circle-mini"></div>
+                  </div>
+                  <div class="title__lg">
+                    2014
+                  </div>
+                </div>
+                <div class="time-line__desc">
+                  <p class="mg-bt-30">Компания расширяет объёмы производства и диверсифицирует свою продукцию.
+                    Освоено
+                    производство кранов мостовых взрыво и пожароопасного исполнения (до 32 тн), а также выпущен
+                    первый
+                    козловой электрический кран г/п 32 т. Происходит ребрендинг и появляется новое торговое
+                    название
+                    UNIQ CRANE.</p>
+
+                  <div class="achievements">
+                    <div class="achievements__item">
+                      <div class="achievements__wreath">
+                        <p class="achievements__value">362</p>
+                      </div>
+                      <p class="achievements__title">Поставленных
+                        кранов</p>
+                    </div>
+
+                    <div class="achievements__item">
+                      <div class="achievements__wreath">
+                        <p class="achievements__value">84</p>
+                      </div>
+                      <p class="achievements__title">установлинных эстакад
+                        и крановых путей</p>
+                    </div>
+
+                    <div class="achievements__item">
+                      <div class="achievements__wreath">
+                        <p class="achievements__value">512</p>
+                      </div>
+                      <p class="achievements__title">Смонтированных подъемных
+                        механизмов</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="time-line__item">
+                <div class="time-line__top">
+                  <div class="time-line__circle">
+                    <div class="time-line__circle-mini"></div>
+                  </div>
+                  <div class="title__lg">
+                    Миссия компании
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+
+          <div>
+            <p class="section__text mg-bt-50">Поставка оборудования, которое отвечает всем потребностям клиента
+              и обеспечивает максимально безопасную, и в тоже время эффективную эксплуатацию</p>
+            <p class="section__text section__text-1">Поставка оборудования в оговорённые сроки, является
+              для нас очень
+              важным качеством надёжного поставщика. Мы постоянно работаем и совершенствуемся над сроками
+              производства
+              кранового оборудования. При всем этом мы понимаем, что качество нашей продукции не должно
+              из-за этого
+              страдать. Поэтому мы делаем все планомерно и выверено.</p>
+            <p class="section__text section__text-1">Мы предлагаем клиентам различные виды условий в поставке
+              ГПО и пытаемся во всем совершенствоваться, идя в ногу со всеми тенденциями на рынке!</p>
+            <p class="section__text section__text-1">Но просим также наших клиентов помнить! Быстро, дёшево
+              и качественно — вместе, это взаимоисключающие факторы. Все это было выдумано недобросовестными
+              поставщиками, которые ставят целью лишь привлечение клиентов, а не удовлетворение их потребностей.
+            </p>
+            <p class="section__text section__text-1">Дорогие клиенты, используйте свой разум и опыт, а не желание
+              обмануть логику и здравый смысл.</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="production">
+
+    <div class="content">
+
+      <div class="content__wrapper content__wrapper--scrollspy">
+
+        <section class="section section--regular">
+
+          <div class="content-wrap">
+            <h3 class="title__md mg-bt-40">Производство</h3>
+
+            <p class="section__text mg-bt-50">В настоящее время производственные мощности кранового завода UNIQ CRANE
+              занимают 1350 квадратных метров и базируются на двух площадках:</p>
+
+            <ul class="list">
+              <li class="list__item">
+                <p><b>г. Железнодорожный </b> (Московская область, г. Железнодорожный, ул. Промышленная д.37)</p>
+              </li>
+              <li class="list__item">
+                <p> <b>п. Шолоховский </b> (Ростовская область, Белокалитвинский район, п. Шолоховский, ул.
+                  Социалистический д.7).</p>
+              </li>
+            </ul>
+
+            <p class="section__text section__text-1">В Железнодорожном происходит изготовление небольших изделий,
+              таких
+              как профильные пролетные балки, концевые балки, крановые тележки и токарные изделия. Крупные изделия,
+              такие как, например, мостовые балки крана производятся в Ростовской области. Само помещение, включая
+              земельный фонд в Ростовской области, находится в собственности завода.</p>
+            <p class="section__text section__text-1"> Мы предлагаем Вам посетить и увидеть наши производственные
+              возможности на любой из площадок. Посещения согласовываются по предварительной договоренности за 1
+              рабочий
+              день.</p>
+
+
+            <div class="cards cards--gallery">
+
+              <div class="cards__item cards__item--gallery">
+              </div>
+
+              <div class="cards__item cards__item--gallery">
+              </div>
+
+              <div class="cards__item cards__item--gallery">
+              </div>
+
+              <div class="cards__item cards__item--gallery">
+              </div>
+
+              <div class="cards__item cards__item--gallery">
+              </div>
+
+              <div class="cards__item cards__item--gallery">
+              </div>
+
+              <div class="cards__item cards__item--gallery">
+              </div>
+
+              <div class="cards__item cards__item--gallery">
+              </div>
+
+              <div class="cards__item cards__item--gallery">
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="container" id="certificats">
+
+    <div class="content">
+
+      <div class="content__wrapper content__wrapper--scrollspy">
+
+        <section class="section section--regular">
+
+          <div id="regular-page" class="content-container content-container--regular">
+
+            <div class="content-wrap">
+              <p class="title__md mg-bt-40">Сертификаты</p>
+
+              <div class="cards cards--gallery">
+
+                <div class="cards__item cards__item--certificats">
+                  <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
+                    <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
+                  </button>
+                </div>
+                <div class="cards__item cards__item--certificats">
+                  <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
+                    <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
+                  </button>
+                </div>
+                <div class="cards__item cards__item--certificats">
+                  <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
+                    <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
+                  </button>
+                </div>
+                <div class="cards__item cards__item--certificats">
+                  <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
+                    <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
+                  </button>
+                </div>
+                <div class="cards__item cards__item--certificats">
+                  <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
+                    <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
+                  </button>
+                </div>
+                <div class="cards__item cards__item--certificats">
+                  <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
+                    <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+        </section>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="container" id="features">
+
+    <div class="content">
+
+      <div class="content__wrapper content__wrapper--scrollspy">
+        <section class="section section--regular">
+
+          <div id="regular-page" class="content-container content-container--regular">
+
+            <div class="content-wrap">
+              <p class="title__md mg-bt-40">Наши приемущества</p>
+
+              <div class="benefits">
+                <div class="benefits-box">
+                  <div class="benefits-item">
+                    <div class="benefits-item__logo">
+                      <img src="./assets/img/benefits/shield 1.svg" alt="" />
+                    </div>
+
+                    <div class="benefits-box__wrap">
+                      <h2 class="benefits-item__title">НАДЁЖНЫЙ КРАНОВЫЙ ЗАВОД</h2>
+                      <ul class="benefits-item__list">
+                        <li>Более 7 лет активной работы на рынке России и СНГ</li>
+                        <li>Доверительный уровень компании по всем базам.</li>
+                        <li>Отсутствие судебной истории.</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="benefits-item">
+                    <div class="benefits-item__logo">
+                      <img src="./assets/img/benefits/shield 2.svg" alt="" />
+                    </div>
+
+                    <div class="benefits-box__wrap">
+                      <h2 class="benefits-item__title">
+                        ВЫСОКОЕ КАЧЕСТВО ОБОРУДОВАНИЯ
+                      </h2>
+                      <ul class="benefits-item__list">
+                        <li>Собственный отдел технического контроля</li>
+                        <li>Полуавтоматическая сварка металлоконструкций и кранов</li>
+                        <li>Болтовое соединение всех электрических кранов</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="benefits-item">
+                    <div class="benefits-item__logo">
+                      <img src="./assets/img/benefits/shield 3.svg" alt="" />
+                    </div>
+
+                    <div class="benefits-box__wrap">
+                      <h2 class="benefits-item__title">РАБОТА В СЖАТЫЕ СРОКИ</h2>
+                      <ul class="benefits-item__list">
+                        <li>Изготовление кранов от 15 рабочих дней</li>
+                        <li>Поставка строго в обозначенные Договором сроки</li>
+                        <li>
+                          Возможность выезда на монтаж в день поставки оборудования
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="benefits-item">
+                    <div class="benefits-item__logo">
+                      <img src="./assets/img/benefits/shield 4.svg" alt="" />
+                    </div>
+
+                    <div class="benefits-box__wrap">
+                      <h2 class="benefits-item__title">
+                        ВЫГОДНЫЕ ЦЕНЫ НА ОБОРУДОВАНИЕ
+                      </h2>
+                      <ul class="benefits-item__list">
+                        <li>Постоянные скидки, сезонные и от объёма</li>
+                        <li>Дополнительное оборудование по ценам производителей</li>
+                        <li>Минимальная доплата за дополнительные опции</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="benefits-item">
+                    <div class="benefits-item__logo">
+                      <img src="./assets/img/benefits/shield 5.svg" alt="" />
+                    </div>
+
+                    <div class="benefits-box__wrap">
+                      <h2 class="benefits-item__title">СЕРВИС ВЫСОКОГО УРОВНЯ</h2>
+                      <ul class="benefits-item__list">
+                        <li>Возможность срочного монтажа и ремонта в день обращения</li>
+                        <li>Возможность срочного монтажа и ремонта в день обращения</li>
+                        <li>Возможность проведения работ в выходные дни</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="benefits-item">
+                    <div class="benefits-item__logo">
+                      <img src="./assets/img/benefits/shield 6.svg" alt="" />
+                    </div>
+
+                    <div class="benefits-box__wrap">
+                      <h2 class="benefits-item__title">
+                        ВЫГОДНЫЕ УСЛОВИЯ СОТРУДНИЧЕСТВА
+                      </h2>
+                      <ul class="benefits-item__list">
+                        <li>Выгодная доставка по всей России и СНГ</li>
+                        <li>Возможна оплата по факту выполнения работ</li>
+                        <li>Возможна работа по на ваших условиях</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      </section>
+
+    </div>
+
+  </div>
+
+  <div class="container" id="clients">
+
+    <div class="content">
+
+      <div class="content__wrapper content__wrapper--scrollspy">
+
+        <section class="section section--regular">
+
+          <div id="regular-page" class="content-container content-container--regular">
+
+            <div class="content-wrap">
+              <p class="title__md mg-bt-40">Наши клиенты</p>
+
+
+              <div class="clients-box clients-box--regular">
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/1.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/2.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/3.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/4.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/5.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/6.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/7.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/8.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/1.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/2.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/3.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/4.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/5.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/6.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/7.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/8.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/1.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/2.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/3.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/4.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/5.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/6.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/7.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/8.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/1.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/2.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/3.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/4.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/5.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/6.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/7.png" alt="">
+                </div>
+                <div class="clients__item clients__item--regular"><img src="./assets/img/clients/regular/8.png" alt="">
+                </div>
+              </div>
+
+
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="container" id="reviews">
+
+    <div class="content">
+
+      <div class="content__wrapper content__wrapper--scrollspy">
+        <section class="section section--regular">
+
+          <div class="content-wrap">
+            <h3 class="title__md mg-bt-40">Отзывы</h3>
+
+            <div class="swiper-container review-box">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="review-wrap review-wrap--regular">
+                    <header class="review-header review-header--regular">
+                      <h3 class="title__xs">ЗАО «ЭРПАК»</h3>
+                      <a href="#" class="review-header__scan-link">Смотреть скан отзыва</a>
+                    </header>
+                    <div class="review__text">
+                      <p>
+                        Выражаю компании ЮНИК КРАН свою благодарность за
+                        поставку мостового однобалочного крана с талью в
+                        оговоренный Договором срок (13 рабочих дней). Всё
+                        оборудование было поставлено высокого качества и в
+                        полном комплекте. Таким образом компания ЮНИК КРАН
+                        зарекомендовала себя как надежный и грамотный поставщик
+                        грузоподъемного оборудования, полностью выполняющий
+                        взятые на себя обстоятельства
+                      </p>
+                      <div class="cards__item cards__item--certificats">
+                        <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
+                          <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="review-wrap review-wrap--regular">
+                    <header class="review-header review-header--regular">
+                      <h3 class="title__xs">ЗАО «ЭРПАК»</h3>
+                      <a href="#" class="review-header__scan-link">Смотреть скан отзыва</a>
+                    </header>
+                    <div class="review__text">
+                      <p>
+                        Выражаю компании ЮНИК КРАН свою благодарность за
+                        поставку мостового однобалочного крана с талью в
+                        оговоренный Договором срок (13 рабочих дней). Всё
+                        оборудование было поставлено высокого качества и в
+                        полном комплекте. Таким образом компания ЮНИК КРАН
+                        зарекомендовала себя как надежный и грамотный поставщик
+                        грузоподъемного оборудования, полностью выполняющий
+                        взятые на себя обстоятельства
+                      </p>
+                      <div class="cards__item cards__item--certificats">
+                        <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
+                          <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="review-wrap review-wrap--regular">
+                    <header class="review-header review-header--regular">
+                      <h3 class="title__xs">ЗАО «ЭРПАК»</h3>
+                      <a href="#" class="review-header__scan-link">Смотреть скан отзыва</a>
+                    </header>
+                    <div class="review__text">
+                      <p>
+                        Выражаю компании ЮНИК КРАН свою благодарность за
+                        поставку мостового однобалочного крана с талью в
+                        оговоренный Договором срок (13 рабочих дней). Всё
+                        оборудование было поставлено высокого качества и в
+                        полном комплекте. Таким образом компания ЮНИК КРАН
+                        зарекомендовала себя как надежный и грамотный поставщик
+                        грузоподъемного оборудования, полностью выполняющий
+                        взятые на себя обстоятельства
+                      </p>
+                      <div class="cards__item cards__item--certificats">
+                        <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
+                          <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="review-wrap review-wrap--regular">
+                    <header class="review-header review-header--regular">
+                      <h3 class="title__xs">ЗАО «ЭРПАК»</h3>
+                      <a href="#" class="review-header__scan-link">Смотреть скан отзыва</a>
+                    </header>
+                    <div class="review__text">
+                      <p>
+                        Выражаю компании ЮНИК КРАН свою благодарность за
+                        поставку мостового однобалочного крана с талью в
+                        оговоренный Договором срок (13 рабочих дней). Всё
+                        оборудование было поставлено высокого качества и в
+                        полном комплекте. Таким образом компания ЮНИК КРАН
+                        зарекомендовала себя как надежный и грамотный поставщик
+                        грузоподъемного оборудования, полностью выполняющий
+                        взятые на себя обстоятельства
+                      </p>
+                      <div class="cards__item cards__item--certificats">
+                        <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
+                          <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="review-wrap review-wrap--regular">
+                    <header class="review-header review-header--regular">
+                      <h3 class="title__xs">ЗАО «ЭРПАК»</h3>
+                      <a href="#" class="review-header__scan-link">Смотреть скан отзыва</a>
+                    </header>
+                    <div class="review__text">
+                      <p>
+                        Выражаю компании ЮНИК КРАН свою благодарность за
+                        поставку мостового однобалочного крана с талью в
+                        оговоренный Договором срок (13 рабочих дней). Всё
+                        оборудование было поставлено высокого качества и в
+                        полном комплекте. Таким образом компания ЮНИК КРАН
+                        зарекомендовала себя как надежный и грамотный поставщик
+                        грузоподъемного оборудования, полностью выполняющий
+                        взятые на себя обстоятельства
+                      </p>
+                      <div class="cards__item cards__item--certificats">
+                        <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
+                          <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="review-wrap review-wrap--regular">
+                    <header class="review-header review-header--regular">
+                      <h3 class="title__xs">ЗАО «ЭРПАК»</h3>
+                      <a href="#" class="review-header__scan-link">Смотреть скан отзыва</a>
+                    </header>
+                    <div class="review__text">
+                      <p>
+                        Выражаю компании ЮНИК КРАН свою благодарность за
+                        поставку мостового однобалочного крана с талью в
+                        оговоренный Договором срок (13 рабочих дней). Всё
+                        оборудование было поставлено высокого качества и в
+                        полном комплекте. Таким образом компания ЮНИК КРАН
+                        зарекомендовала себя как надежный и грамотный поставщик
+                        грузоподъемного оборудования, полностью выполняющий
+                        взятые на себя обстоятельства
+                      </p>
+                      <div class="cards__item cards__item--certificats">
+                        <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
+                          <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="review-wrap review-wrap--regular">
+                    <header class="review-header review-header--regular">
+                      <h3 class="title__xs">ЗАО «ЭРПАК»</h3>
+                      <a href="#" class="review-header__scan-link">Смотреть скан отзыва</a>
+                    </header>
+                    <div class="review__text">
+                      <p>
+                        Выражаю компании ЮНИК КРАН свою благодарность за
+                        поставку мостового однобалочного крана с талью в
+                        оговоренный Договором срок (13 рабочих дней). Всё
+                        оборудование было поставлено высокого качества и в
+                        полном комплекте. Таким образом компания ЮНИК КРАН
+                        зарекомендовала себя как надежный и грамотный поставщик
+                        грузоподъемного оборудования, полностью выполняющий
+                        взятые на себя обстоятельства
+                      </p>
+                      <div class="cards__item cards__item--certificats">
+                        <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
+                          <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="review-wrap review-wrap--regular">
+                    <header class="review-header review-header--regular">
+                      <h3 class="title__xs">ЗАО «ЭРПАК»</h3>
+                      <a href="#" class="review-header__scan-link">Смотреть скан отзыва</a>
+                    </header>
+                    <div class="review__text">
+                      <p>
+                        Выражаю компании ЮНИК КРАН свою благодарность за
+                        поставку мостового однобалочного крана с талью в
+                        оговоренный Договором срок (13 рабочих дней). Всё
+                        оборудование было поставлено высокого качества и в
+                        полном комплекте. Таким образом компания ЮНИК КРАН
+                        зарекомендовала себя как надежный и грамотный поставщик
+                        грузоподъемного оборудования, полностью выполняющий
+                        взятые на себя обстоятельства
+                      </p>
+                      <div class="cards__item cards__item--certificats">
+                        <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
+                          <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="review-wrap review-wrap--regular">
+                    <header class="review-header review-header--regular">
+                      <h3 class="title__xs">ЗАО «ЭРПАК»</h3>
+                      <a href="#" class="review-header__scan-link">Смотреть скан отзыва</a>
+                    </header>
+                    <div class="review__text">
+                      <p>
+                        Выражаю компании ЮНИК КРАН свою благодарность за
+                        поставку мостового однобалочного крана с талью в
+                        оговоренный Договором срок (13 рабочих дней). Всё
+                        оборудование было поставлено высокого качества и в
+                        полном комплекте. Таким образом компания ЮНИК КРАН
+                        зарекомендовала себя как надежный и грамотный поставщик
+                        грузоподъемного оборудования, полностью выполняющий
+                        взятые на себя обстоятельства
+                      </p>
+                      <div class="cards__item cards__item--certificats">
+                        <button class="certificats-frame" data-bs-toggle="modal" data-bs-target="#pictureModal">
+                          <img class="certificats-frame__image" src="./assets/img/icons/certificats-item.svg" alt="">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <button class="review-next"></button>
+              <button class="review-prev"></button>
+              <div class="swiper-pagination review-footer--regular"></div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<div class="page">
+  <section class="section footer section-bg-2">
+
+  <header class="header">
+  <a href="index.html" class="logo"><img src="./assets/img/logo-r.svg" alt="Uniq Crane"/></a>
+
+  <div class="header__content">
+    <button class="product-catalog">
+      <div class="hamburger">
+        <div class="hamburger__lines"></div>
+      </div>
+      <span class="product-catalog__title">Каталог продукции</span>
+    </button>
+
+    <nav class="header-nav">
+      <a class="header-nav__item" href="">Прайс</a>
+      <a class="header-nav__item" href="equipment.html">Оборудование</a>
+      <a class="header-nav__item" href="crane-service.html">Сервис</a>
+      <a class="header-nav__item" href="">Информация</a>
+      <a class="header-nav__item" href="about-factory.html">О заводе</a>
+      <a class="header-nav__item" href="contacts.html">Контакты</a>
+    </nav>
+
+    <a class="phone" href="tel:+74955405053">
+      <span>+7 495 540 50 53</span></a>
+  </div>
+
+  <button type="button" class="button-hollow" data-bs-toggle="modal" data-bs-target="#requestModal">оставить
+    заявку</button>
+</header>
+
+
+  <div class="container content-container--footer">
+
+
+    <div class="content">
+      <div class="dual footer">
+        <div class="dual-box">
+
+          <img class="man" src="./assets/img/backgrounds/man.png" alt="">
+          <div class="dual-box__left">
+
+            <h3 class="title__md">Завод кранов UNIQ CRANE. <br>
+                С 2011 года производим краны. <br>
+                Качественно, быстро и надёжно.</h3>
+
+            <p class="about-company">UNIQ CRANE — производственная компания с высокими стандартами. Мы предлагаем
+              комплексные решения
+              в области грузоподъёмного оборудования, начиная от разработки проектной документации и заканчивая сдачей
+              кранов в эксплуатацию.</p>
+
+            <div class="achievements">
+              <div class="achievements__item">
+                <div class="achievements__wreath">
+                  <p class="achievements__value">7 лет</p>
+                </div>
+                <p class="achievements__title">работы</p>
+              </div>
+
+              <div class="achievements__item">
+                <div class="achievements__wreath">
+                  <p class="achievements__value">418</p>
+                </div>
+                <p class="achievements__title">клиентов</p>
+              </div>
+
+              <div class="achievements__item">
+                <div class="achievements__wreath">
+                  <p class="achievements__value">637</p>
+                </div>
+                <p class="achievements__title">отгружено кранов</p>
+              </div>
+            </div>
+
+            <a href="#" class="section__link">Подробнее о компании</a>
+
+          </div>
+
+          <div class="dual-box__right dual-box__right--footer">
+
+            <img class="dual__background-right dual__background-right--footer" src="./assets/img/backgrounds/7.png"
+              alt="">
+
+            <div class="feedback">
+
+              <h2 class="title__lg">Бесплатный выезд
+                  специалиста</h2>
+
+              <p class="feedback__text"> Нет времени изучать? Мы сами перезвоним
+                и проконсультируем по любым вопросам</p>
+
+              <form class="form">
+
+                <div class="form__row">
+                  <input type="text" class="input__field" value="" required>
+                  <label class="label__field">Введите ваше имя</label>
+                </div>
+
+                <div class="form__row">
+                  <input type="number" class="input__field" value="" required>
+                  <label class="label__field">Введите ваш телефон</label>
+                </div>
+
+                <button class="button mg-bt-40" type="submit"><span class="button__text">Оставить заявку</span></button>
+
+                <footer class="form__footer">
+                  <input type="checkbox" class="default-checkbox" id="privacy-policy" name="privacy-policy" required>
+                  <label for="privacy-policy"> <span>Нажимая на кнопку «Получить консультацию», вы соглашаетесь     <a href="#"> с политикой конфиденциальности</a> </span>
+                </label>
+                </footer>
+              </form>
+
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer__bottom">
+          <div class="copyright">
+            <p>© 2021 «Uniq Crane» Все права защищены</p>
+          </div>
+          <div class="studio">
+            <a href="" class="dsp-f">
+              <p>Разработка сайта —</p>
+              <div class="studio__logo"> <img src="./assets/img/Forestweb-tree.svg" alt=""><img
+                  src="./assets/img/Forestweb.svg" alt=""></div>
+            </a>
+          </div>
+        </footer>
+      </div>
+
+</div>
+
+</section>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script type="module" src="./assets/js/script.js"></script>
+</body>
+
+</html>
+</div>
