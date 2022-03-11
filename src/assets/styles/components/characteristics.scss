@@ -24,5 +24,9 @@
     &__param{
         color: $red-reg;
         letter-spacing: 0.01em;
+
+        &--sm{
+            font-size: 24px;
+        }
     }
 }

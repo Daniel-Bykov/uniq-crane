@@ -1,3 +1,18 @@
+.image-in-text{
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+
+  @media (max-width: 1869px) {
+    max-width: 100% !important;
+    width: 100%!important;
+    top: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+  }
+}
+
+
 .page-swiper {
   max-height: 100vh;
   overflow: hidden;
