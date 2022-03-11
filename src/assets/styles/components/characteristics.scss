@@ -1,4 +1,18 @@
 .characteristics{
+    
+    .title__sm{
+        margin-bottom: 20px;
+    }
+    .section__text{
+        margin-bottom: 50px;
+    }
+
+    &__section{
+        margin-bottom:100px ;
+    }
+}
+
+.main-characteristics{
     display: grid;
     min-width: 100%;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -7,6 +21,10 @@
 
     .title{
         margin-bottom: 15px;
+    }
+
+    &__img{
+        margin-right: 25px;
     }
 
     &__item{
