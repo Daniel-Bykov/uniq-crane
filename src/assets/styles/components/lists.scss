@@ -1,6 +1,10 @@
 .list {
   padding-left: 10px;
 
+  &--close{
+    padding-left: 0;
+  }
+
   b {
     font-weight: bold;
   }
@@ -12,6 +16,10 @@
     font-size: 18px;
     line-height: 22px;
     margin-bottom: 20px;
+
+    &--close{
+      margin-bottom: 0px;
+    }
 
     &::before {
       content: "";

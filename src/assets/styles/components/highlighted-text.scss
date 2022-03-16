@@ -1,0 +1,24 @@
+.highlighted-text{
+
+    position: relative;
+
+    &__item{
+        &::before {
+            content: "";
+            display: block;
+            left: -50px;
+            position: absolute;
+            width: 3px;
+            height: 100%;
+            background-color: #b5212e;
+        }
+
+        &--close{
+
+            &::before {
+                left: -30px;
+            }
+           
+        }
+    }
+}

@@ -20,18 +20,8 @@
     }
 
     &__title {
-        position: relative;
         font-size: 30px;
         font-weight: 700;
-        &::before {
-            content: "";
-            display: block;
-            left: -50px;
-            position: absolute;
-            width: 3px;
-            height: 100%;
-            background-color: #b5212e;
-        }
     }
 
     &__description {
