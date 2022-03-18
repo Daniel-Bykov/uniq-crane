@@ -1,0 +1,23 @@
+.attention-block{
+    border: 10px solid #b5212d34;
+    padding: 50px;
+    
+    &__text{
+        display: flex;
+        text-align: left;
+        white-space: break-spaces;
+        font-family: 'Bebas Neue';
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+
+        &::before{
+            content: '';
+            display: block;
+            min-width: 100px;
+            height: 100px;
+            margin-right: 20px;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='97' height='99' viewBox='0 0 97 99' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M48.4997 90.75C26.1776 90.75 8.08301 72.2824 8.08301 49.5C8.08301 26.7176 26.1776 8.25 48.4997 8.25C70.8218 8.25 88.9163 26.7176 88.9163 49.5C88.9163 72.2824 70.8218 90.75 48.4997 90.75ZM44.458 61.875V70.125H52.5413V61.875H44.458ZM44.458 28.875V53.625H52.5413V28.875H44.458Z' fill='%23B5212E'/%3e%3c/svg%3e ");
+        }
+    }
+}

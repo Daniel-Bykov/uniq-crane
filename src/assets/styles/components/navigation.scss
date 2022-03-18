@@ -10,6 +10,14 @@
   left: unset;
   transform: translateY(-50%);
   z-index: 5;
+  transition: 1s linear;
+
+  &--highligth{
+    transform: translateY(-50%) scale(1.1);
+    .swiper-pagination-bullet{
+      opacity: 1 !important;
+    }
+  }
 
   @media (max-width: 1230px) {
     display: none;
@@ -40,6 +48,7 @@
       margin-bottom: 30px !important;
       background: unset;
       border: 2px solid white;
+      transition: 1s linear;
 
       @media (max-width: 1500px) {
         margin-bottom: 15px !important;

@@ -7,6 +7,10 @@
         grid-template-columns: repeat(auto-fill, minmax(280px, 240px));
     }
 
+    &--sm{
+        grid-template-columns: repeat(auto-fill,minmax(280px,300px));
+    }
+
     &__item {
         position: relative;
         max-width: 460px;
@@ -102,7 +106,6 @@
         line-height: 36px;
         min-height: 76px;
         border-left: 3px solid #b5212e;
-        max-width: 50%;
         white-space: initial;
         padding-left: 38px;
         position: absolute;

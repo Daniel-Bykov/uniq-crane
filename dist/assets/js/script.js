@@ -7,7 +7,21 @@ document.addEventListener("DOMContentLoaded", function () {
   addScrollSpy();
   pictureModal();
   sendForm();
+  navigationHighLigth();
 });
+
+function navigationHighLigth(){
+  const navigation = document.querySelector('.pages-selector')
+
+  if(navigation){
+    document.addEventListener('wheel', (e)=>{
+      navigation.classList.add('pages-selector--highligth')
+      setTimeout(() => {
+        navigation.classList.remove('pages-selector--highligth')
+      }, 500);
+  })
+  }
+}
 
 function isMobile() {
   let device =
@@ -207,52 +221,56 @@ function pictureModal() {
 }
 
 function mapInit() {
+
   let mapElement = document.querySelector('.map');
-  let addressList = document.querySelectorAll(".map__button");
-  let myGeoObjects = [];
-  let longtitude = null;
-  let latitude = null;
-  let defaultCoord = addressList[0].getAttribute("data-map-uid");
 
-  setCoord(defaultCoord);
-
-  var clusterer = new ymaps.Clusterer({
-    clusterDisableClickZoom: false,
-    clusterOpenBalloonOnClick: false,
-  });
-
-  var officeMap = new ymaps.Map("map", {
-    center: [longtitude, latitude],
-    zoom: 12,
-    controls: ["smallMapDefaultSet"],
-  },{
-    autoFitToViewport: 'always'
-  });
-
-  officeMap.geoObjects.add(clusterer);
-
-  addressList.forEach((item) => {
-    let coord = item.getAttribute("data-map-uid");
-    longtitude = coord.split(", ")[0];
-    latitude = coord.split(", ")[1];
-    addMarker(longtitude, latitude);
-    clusterer.add(myGeoObjects);
-  });
-
-  mapElement.addEventListener("click", (event) => {
-    let address = event.target
-      .closest(".map__button")
-      .getAttribute("data-map-uid");
-    addressList.forEach((item) => {
-      item.classList.remove("map__button--active");
+  if(mapElement){
+    let addressList = document.querySelectorAll(".map__button");
+    let myGeoObjects = [];
+    let longtitude = null;
+    let latitude = null;
+    let defaultCoord = addressList[0].getAttribute("data-map-uid");
+  
+    setCoord(defaultCoord);
+  
+    var clusterer = new ymaps.Clusterer({
+      clusterDisableClickZoom: false,
+      clusterOpenBalloonOnClick: false,
     });
-    event.target
-      .closest(".map__button")
-      .classList.toggle("map__button--active");
-    setCoord(address);
-    officeMap.setCenter([longtitude, latitude]);
-  });
+  
+    var officeMap = new ymaps.Map("map", {
+      center: [longtitude, latitude],
+      zoom: 12,
+      controls: ["smallMapDefaultSet"],
+    },{
+      autoFitToViewport: 'always'
+    });
+  
+    officeMap.geoObjects.add(clusterer);
+  
+    addressList.forEach((item) => {
+      let coord = item.getAttribute("data-map-uid");
+      longtitude = coord.split(", ")[0];
+      latitude = coord.split(", ")[1];
+      addMarker(longtitude, latitude);
+      clusterer.add(myGeoObjects);
+    });
+  
+    mapElement.addEventListener("click", (event) => {
+      let address = event.target
+        .closest(".map__button")
+        .getAttribute("data-map-uid");
+      addressList.forEach((item) => {
+        item.classList.remove("map__button--active");
+      });
+      event.target
+        .closest(".map__button")
+        .classList.toggle("map__button--active");
+      setCoord(address);
+      officeMap.setCenter([longtitude, latitude]);
+    });
 
+    
   function setCoord(coord) {
     longtitude = coord.split(", ")[0];
     latitude = coord.split(", ")[1];
@@ -274,4 +292,7 @@ function mapInit() {
       )
     );
   }
+  }
+
+
 }
