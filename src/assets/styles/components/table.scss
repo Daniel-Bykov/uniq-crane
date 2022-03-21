@@ -1,0 +1,38 @@
+.table{
+
+    overflow-x: auto;
+
+    table{
+        width: 100%;
+        border: 1px solid #dddddd;
+    }
+
+    &__head{
+        font-weight: bold;
+        color: white;
+        background-color: $red-reg;
+
+        .table__item{
+            font-family: 'Bebas Neue';
+        }
+    }
+
+    &__item:first-child{
+        font-weight: bold;
+    }
+
+    &__item{
+        text-align: center;
+        font-family: 'Noto Sans Light';
+        padding: 20px;
+        border: 1px solid #dddddd;
+    }
+
+    tbody{
+        .table__row:nth-child(odd){
+            background-color: #FAFAFA;
+        }
+    }
+
+
+}
